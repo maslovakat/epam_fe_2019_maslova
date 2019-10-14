@@ -1,0 +1,32 @@
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{0}: merge develop: Fast-forward
+ca74ee4 (feature2, feature1) HEAD@{1}: checkout: moving from develop to HW1-Git
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{2}: merge feature4: Fast-forward
+ca74ee4 (feature2, feature1) HEAD@{3}: checkout: moving from feature4 to develop
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{4}: rebase: checkout feature4
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{5}: checkout: moving from feature4 to feature3
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{6}: rebase finished: returning to refs/heads/feature4
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{7}: rebase: checkout feature3
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{8}: rebase: checkout feature3
+ca74ee4 (feature2, feature1) HEAD@{9}: checkout: moving from feature4 to develop
+7b4f884 HEAD@{10}: commit: add text about mops
+ca74ee4 (feature2, feature1) HEAD@{11}: checkout: moving from develop to feature4
+ca74ee4 (feature2, feature1) HEAD@{12}: checkout: moving from feature3 to develop
+5facd5f (HEAD -> HW1-Git, feature4, feature3, develop) HEAD@{13}: commit: add text about doberman
+ca74ee4 (feature2, feature1) HEAD@{14}: checkout: moving from develop to feature3
+ca74ee4 (feature2, feature1) HEAD@{15}: checkout: moving from HW1-Git to develop
+ca74ee4 (feature2, feature1) HEAD@{16}: merge develop: Fast-forward
+3229920 (master) HEAD@{17}: checkout: moving from HW1-Git to HW1-Git
+3229920 (master) HEAD@{18}: checkout: moving from feature2 to HW1-Git
+ca74ee4 (feature2, feature1) HEAD@{19}: checkout: moving from feature1 to feature2
+ca74ee4 (feature2, feature1) HEAD@{20}: merge develop: Fast-forward
+cbeff59 HEAD@{21}: checkout: moving from develop to feature1
+ca74ee4 (feature2, feature1) HEAD@{22}: merge feature2: Fast-forward
+cbeff59 HEAD@{23}: merge feature1: Fast-forward
+eb626f8 HEAD@{24}: checkout: moving from feature2 to develop
+ca74ee4 (feature2, feature1) HEAD@{25}: commit: connect index.css to index.html
+f70b2d5 HEAD@{26}: commit: create styles folder with index.css inside
+cbeff59 HEAD@{27}: checkout: moving from feature1 to feature2
+cbeff59 HEAD@{28}: commit: add images in index.html file
+d96cc33 HEAD@{29}: commit: create images folder with two images
+eb626f8 HEAD@{30}: checkout: moving from develop to feature1
+eb626f8 HEAD@{31}: commit: create HW1-GIT folder and index.html file inside
