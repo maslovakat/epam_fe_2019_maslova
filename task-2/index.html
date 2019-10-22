@@ -178,6 +178,99 @@
             </fieldset>
           </form>
         </article>
+        <article class="feedback-form">
+          <header><h1>Feedback</h1></header>
+          <form method="post" action="/">
+            <fieldset>
+              <legend>Feedback</legend>
+              <table>
+                <tr>
+                  <td><label for="userName">First name</label></td>
+                  <td>
+                    <input type="text" id="userName" name="name" required />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="userEmail">Email</label></td>
+                  <td>
+                    <input
+                      type="email"
+                      id="userEmail"
+                      name="email"
+                      placeholder="user@user.com"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="pros">Pros</label></td>
+                  <td>
+                    <input
+                      type="text"
+                      id="pros"
+                      name="pros"
+                      placeholder="Main pros"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="cons">Cons</label></td>
+                  <td>
+                    <input
+                      type="text"
+                      id="cons"
+                      name="cons"
+                      placeholder="Main cons"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="overview">Overview</label></td>
+                  <td>
+                    <textarea
+                      name="overview"
+                      id="overview"
+                      cols="30"
+                      rows="10"
+                      required
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="rating">Rating</label></td>
+                  <td>
+                    <input
+                      type="number"
+                      id="rating"
+                      name="rating"
+                      value="5"
+                      step="1"
+                      min="1"
+                      max="5"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="subscribe"
+                      ><input
+                        type="checkbox"
+                        id="subscribe"
+                        required
+                      />Subscribe me to the newsletter</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2"><input type="submit" value="Send" /></td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+        </article>
       </main>
     </div>
   </body>

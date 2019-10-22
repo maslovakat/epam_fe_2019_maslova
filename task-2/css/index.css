@@ -32,6 +32,14 @@
   width: 200px;
 }
 
+.feedback-form table tr td:first-child {
+  width: 150px;
+}
+
+.feedback-form table tr td:last-child {
+  width: 250px;
+}
+
 .registration-form tr:last-child td:last-child {
   text-align: center;
 }
@@ -50,4 +58,38 @@
 
 .registration-form input[type="color"] {
   width: 500px;
+}
+
+.feedback-form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.feedback-form fieldset {
+  border-color: rgb(200, 255, 0);
+}
+
+.feedback-form tr {
+  height: 30px;
+}
+
+.feedback-form tr:last-child,
+.feedback-form tr:nth-child(7),
+.feedback-form header {
+  text-align: center;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 250px;
+}
+
+.feedback-form tr:nth-child(5) {
+  vertical-align: top;
+}
+
+.feedback-form input[type="submit"] {
+  width: 100px;
+  margin: 20px;
 }
