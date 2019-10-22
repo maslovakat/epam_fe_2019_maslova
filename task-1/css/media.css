@@ -1,0 +1,255 @@
+/* ==========  Desktop First Method  ========== */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1100px) {
+  body {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 32px;
+    padding: 0 50px;
+  }
+
+  .block {
+    padding: 60px 15px;
+  }
+
+  .up {
+    padding: 0 15px;
+  }
+
+  fieldset {
+    padding: 0 20px;
+  }
+
+  fieldset p {
+    font-size: 16px;
+  }
+
+  .block_main p {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  fieldset p:last-child {
+    padding-top: 0;
+  }
+
+  fieldset img {
+    margin-top: 50px;
+  }
+
+  fieldset button {
+    width: 100%;
+  }
+
+  .block_main {
+    padding-top: 150px;
+  }
+
+  .block_main h6 {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  #about_us span {
+    margin-top: 100px;
+  }
+
+  .gallery_block h2 {
+    left: 0;
+    top: 180px;
+  }
+
+  .down {
+    font-size: 10px;
+  }
+
+  .gallery_block {
+    overflow: hidden;
+    padding: 5px 10px;
+  }
+
+  .gallery_block:first-child {
+    padding-left: 0;
+  }
+}
+
+/* Custom, iPhone Retina */
+
+/* ==========  Mobile First Method  ========== */
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .title {
+    font-size: 21px;
+  }
+
+  .title-s {
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 0 30px;
+  }
+
+  .block {
+    padding: 30px 15px;
+  }
+
+  fieldset p {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+
+  .block_main p {
+    font-size: 10px;
+  }
+
+  fieldset p:last-child {
+    padding-top: 20px;
+  }
+
+  fieldset span {
+    font-size: 12px;
+  }
+
+  fieldset button {
+    width: 100%;
+  }
+
+  .block_main {
+    padding-top: 120px;
+  }
+
+  .block_main h6 {
+    font-size: 10px;
+  }
+
+  #about_us span {
+    margin-top: 80px;
+  }
+
+  .gallery_block {
+    padding-left: 0;
+  }
+
+  .gallery_block .title-s {
+    top: 190px;
+    left: -10px;
+  }
+
+  .down {
+    font-size: 8px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .title-s {
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding: 0 50px;
+  }
+
+  fieldset p {
+    font-size: 12px;
+  }
+
+  .block_main p {
+    font-size: 12px;
+  }
+
+  fieldset p:last-child {
+    padding-top: 20px;
+  }
+
+  fieldset button {
+    width: 90%;
+  }
+
+  .block_main {
+    padding-top: 120px;
+  }
+
+  .block_main h6 {
+    font-size: 12px;
+  }
+
+  .gallery_block {
+    overflow: hidden;
+    padding: 10px 5px 10px 0;
+  }
+
+  .gallery_block .title-s {
+    top: 170px;
+    left: -10px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 960px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .title-s {
+    font-size: 22px;
+    padding: 0 50px;
+  }
+
+  fieldset p {
+    font-size: 14px;
+  }
+
+  fieldset button {
+    width: 90%;
+  }
+
+  .block_main {
+    padding-top: 120px;
+  }
+
+  .block_main p {
+    font-size: 14px;
+  }
+
+  .block_main h6 {
+    font-size: 14px;
+  }
+
+  .gallery_block {
+    overflow: hidden;
+    padding: 5px 10px;
+  }
+
+  .gallery_block:first-child {
+    padding-left: 0;
+  }
+
+  .gallery_block .title-s {
+    top: 160px;
+    left: -10px;
+  }
+
+  .down {
+    font-size: 12px;
+  }
+}
+
+/* Medium Devices, Desktops */
+
+/* @media only screen and (min-width: 992px) {
+  } */
+
+/* Large Devices, Wide Screens */
+
+/* @media only screen and (min-width: 1200px) {
+  } */

@@ -1,0 +1,41 @@
+1. line 1 add <!DOCTYPE html>, because we have to use it for indicate the type of document for our browser
+
+2. line 2 add attribute lang="en" in the tag <html>, we have to use it to declare the language of a web page 
+
+3. line 4 add <meta charset="UTF-8" /> , use it for encoding the HTML document.
+
+4. line 10 add <title> tag, to display as a tooltip in browser
+
+5. add semantic tags where it needs, because elements have semantic meanings abd it's important for SEO...
+
+6. close all singled tags
+
+7. add closing tag </body> because it is paired tag
+
+8. replace <a><p></p></a> to <p><a></a></p> because <p> element (block) now allowed as child element of <a> (inline), after that, change <p> to <legend>, because element <p> is not allowed as child of element <legend>, and delete parent legend
+
+9. add alt attribute in each element <img>
+
+10. in each <section> add <h6> instead of <p> and changed some style in media.css and main.css files for it, because we have to use heading in the section
+
+11. delete attribute align="center" in all <legend> because this attribute is obsolete
+
+12. fix id value to camelCase, because we use camelCase in javascript
+
+13. remove width and height attribute, because thay are not required under any DOCTYPE
+
+14. in css files add whitespace where it need be
+
+15. replace fieldset * before .block-main *
+
+16. remove dublicate selector .gallery_block and make some change;
+
+17. replace button::-moz-focus-inner before button:active and button:focus in main.css file
+
+18. add single space in main.css file where it need be
+
+19. add empty line between selectors (before rule)
+
+20. refactor spaces in fonts.css, add empty lines, add newline after ":" for a multi-line declaration
+
+21. in media.css comment @media only screen and (min-width: 992px) and @media only screen and (min-width: 1200px), because it's emty blocks
