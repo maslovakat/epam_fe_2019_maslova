@@ -1,0 +1,53 @@
+.registration-form {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.registration-form fieldset {
+  border-color: rgb(200, 255, 0);
+}
+
+.registration-form tr {
+  height: 30px;
+}
+
+.horizontal-line td {
+  border-bottom: 1px solid;
+}
+
+.registration-form th {
+  height: 40px;
+  text-align-last: left;
+}
+
+.registration-formtable tr td:nth-child(2) {
+  width: 300px;
+}
+
+.registration-form table tr td:first-child {
+  width: 200px;
+}
+
+.registration-form table tr td:last-child {
+  width: 200px;
+}
+
+.registration-form tr:last-child td:last-child {
+  text-align: center;
+}
+
+.registration-form table tr:last-child td:first-child,
+.registration-form header {
+  text-align: center;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="date"],
+.registration-form input[type="password"],
+.registration-form input[type="email"] {
+  width: 300px;
+}
+
+.registration-form input[type="color"] {
+  width: 500px;
+}
