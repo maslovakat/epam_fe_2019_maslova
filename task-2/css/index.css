@@ -40,6 +40,14 @@
   width: 250px;
 }
 
+.login-form table tr td:first-child {
+  width: 100px;
+}
+
+.login-form table tr td:last-child {
+  width: 200px;
+}
+
 .registration-form tr:last-child td:last-child {
   text-align: center;
 }
@@ -73,6 +81,10 @@
   height: 30px;
 }
 
+.login-form tr {
+  height: 30px;
+}
+
 .feedback-form tr:last-child,
 .feedback-form tr:nth-child(7),
 .feedback-form header {
@@ -92,4 +104,27 @@
 .feedback-form input[type="submit"] {
   width: 100px;
   margin: 20px;
+}
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.login-form fieldset {
+  border-color: rgb(200, 255, 0);
+}
+
+.login-form tr:last-child,
+.login-form header {
+  text-align: center;
+}
+
+.login-form input[type="password"],
+.login-form input[type="email"] {
+  width: 200px;
+}
+
+.login-form input[type="submit"] {
+  width: 100px;
 }

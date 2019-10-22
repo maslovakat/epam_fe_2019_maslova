@@ -271,6 +271,43 @@
             </fieldset>
           </form>
         </article>
+        <article class="login-form">
+          <header><h1>Login</h1></header>
+          <form method="post" action="/">
+            <fieldset>
+              <legend>Authorization</legend>
+              <table>
+                <tr>
+                  <td><label for="userLogin">Login</label></td>
+                  <td>
+                    <input
+                      type="email"
+                      id="userLogin"
+                      name="user-login"
+                      placeholder="user@user.com"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="userPassword">Password</label></td>
+                  <td>
+                    <input
+                      type="password"
+                      id="userPassword"
+                      name="user-password"
+                      placeholder="password"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2"><input type="submit" value="Send" /></td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+        </article>
       </main>
     </div>
   </body>
