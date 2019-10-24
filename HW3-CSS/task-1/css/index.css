@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #595959;
+  padding-top: 200px;
+}
+
+.calendar-section {
+  width: 350px;
+  background-color: #83d1c9;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.calendar-section_header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.calendar-section__week__day {
+  float: left;
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #83d1c9;
+}
+
+.calendar-section__row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.calendar-section__radio {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+.calendar-section__radio + label {
+  position: relative;
+}
+
+.calendar-section__radio:hover + label {
+  background-color: #7f6de2;
+  color: white;
+  transition: 0.4s;
+}
+
+.calendar-section--disabled-day,
+.calendar-section--disabled-day:hover + label {
+  background-color: #ececec;
+  color: #c9c9c9;
+}
+
+.calendar-section__radio:checked + label,
+.calendar-section__radio:hover:checked + label {
+  background-color: #1510a0;
+  color: white;
+}
+
+.calendar-section--day {
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.calendar-section--this-month {
+  background-color: #fff;
+}
+
+.calendar-section--vacation-day {
+  background-color: #ff9c91;
+}
+
+#day2408:hover + label,
+#day2408:checked + label {
+  background-color: #6e0b4e;
+}
