@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Task 2</title>
+</head>
+<body>
+<div class="wrapper">
+    <main class="main-section">
+        <section class="registration-section">
+            <header class="registration-section__header"><h1>Registration</h1></header>
+            <form class="registration-form" method="post" action="/">
+                <fieldset class="form--fieldset">
+                    <legend class="registration-form__legend">Registration</legend>
+                    <section class="registration-form__section">
+                        <h2 class="registration-form__section__header">Common:</h2>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regName">Name</label>
+                            <input class="registration-form--input" type="text" id="regName" name="name" placeholder="John" required />
+                            <span  class="registration-form__right-side">*Field is required</span>
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regSurname">Surname</label>
+                            <input class="registration-form--input" type="text" id="regSurname" name="surname" placeholder="Doe" required />
+                            <span class="registration-form__right-side">*Field is required</span>
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regGender">Gender</label>
+                            <label class="registration-form--gender">
+                                <input class="registration-form--gender-input" type="radio" id="regGender" name="gender" required/>
+                                Male
+                            </label>
+                            <label class="registration-form--gender">
+                                <input class="registration-form--gender-input" type="radio" name="gender" required />
+                                Female
+                            </label>
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regDob">Date of birth</label>
+                            <input class="registration-form--input" type="date" id="regDob" name="date-of-birth" required />
+                            <span class="registration-form__right-side">*01/01/1990</span>
+                        </div>
+                        <hr />
+                    </section>
+                    <section class="registration-form__section">
+                        <h2 class="registration-form__section__header">Address:</h2>
+                        <div class="registration-form__row">
+                            <div class="registration-form__left-side">Country</div>
+                            <select class="registration-form__row--select" name="country">
+                                <option class="registration-form--option" disabled="disabled" value="Select">Select</option>
+                                <option class="registration-form--option" value="Select">Select</option>
+                                <option class="registration-form--option" value="Select">Select</option>
+                            </select>
+                        </div>
+                        <hr />
+                    </section>
+                    <section class="registration-form__section">
+                        <h2 class="registration-form__section__header">Other:</h2>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="favColor">Favourite color</label>
+                            <input class="registration-form--input-color" type="color" id="favColor" name="color" value="#000000" />
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="avatar">Upload avatar</label>
+                            <input class="registration-form--input" type="file" id="avatar" name="file" required />
+                        </div>
+                        <hr />
+                    </section>
+                    <section class="registration-form__section">
+                        <h2 class="registration-form__section__header">Security:</h2>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regPassword">Password</label>
+                            <input class="registration-form--input" type="password" id="regPassword" name="password" placeholder="Your password" required />
+                            <span class="registration-form__right-side">*Field is required</span>
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regPasswordRepeat">Repeat password</label>
+                            <input class="registration-form--input" type="password" id="regPasswordRepeat" name="password-repeat" required />
+                        </div>
+                        <div class="registration-form__row">
+                            <label class="registration-form__left-side" for="regEmail">Email</label>
+                            <input class="registration-form--input" type="email" id="regEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="john_doe@gmail.com" required />
+                            <span>*Field is required</span>
+                        </div>
+                        <hr />
+                        <div class="registration-form__row registration-form--submit-form">
+                            <label class="registration-form--agree" for="regAgree">
+                                <input class="registration-form--agree-input" type="checkbox" id="regAgree" required />
+                                I agree the Terms and conditions
+                            </label>
+                            <input class="registration-form--submit-input" type="submit" value="Register" />
+                        </div>
+                    </section>
+                </fieldset>
+            </form>
+        </section>
+        <section class="feedback-section">
+            <header class="feedback-section__header"><h1>Feedback</h1></header>
+            <form class="feedback-form" method="post" action="/">
+                <fieldset class="form--fieldset">
+                    <legend>Feedback</legend>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form__left-side" for="userName">First name</label>
+                        <input class="feedback-form--input" type="text" id="userName" name="name" required />
+                    </div>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form__left-side" for="userEmail">Email</label>
+                        <input class="feedback-form--input" type="email" id="userEmail" name="email" placeholder="user@user.com" required />
+                    </div>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form__left-side" for="pros">Pros</label>
+                        <input class="feedback-form--input" type="text" id="pros" name="pros" placeholder="Main pros" required />
+                    </div>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form__left-side" for="cons">Cons</label>
+                        <input class="feedback-form--input" type="text" id="cons" name="cons" placeholder="Main cons" required />
+                    </div>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form__left-side" for="overview">Overview</label>
+                        <textarea class="feedback-form--textarea" name="overview" id="overview" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="feedback-form__row">
+                        <label class="feedback-form--rating">Rating
+                            <input class="feedback-form--rating-input" type="number" name="rating" value="5" step="1" min="1" max="5" required />
+                        </label>
+                    </div>
+                    <div class="feedback-form--subscribe">
+                        <label>
+                            <input class="feedback-form--subscribe-input" type="checkbox" required />
+                            Subscribe me to the newsletter
+                        </label>
+                    </div>
+                    <div class="feedback-form__row">
+                        <input class="feedback-form--submit" type="submit" value="Send" />
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="login-section">
+            <header class="login-section__header"><h1>Login</h1></header>
+            <form class="login-form" method="post" action="/">
+                <fieldset class="form--fieldset">
+                    <legend>Authorization</legend>
+                    <div class="login-form__row">
+                        <label class="login-form__left-side" for="userLogin">Login</label>
+                        <input class="login-form--input" type="email" id="userLogin" name="user-login" placeholder="user@user.com" required />
+                    </div>
+                    <div class="login-form__row">
+                        <label class="login-form__left-side" for="userPassword">Password</label>
+                        <input class="login-form--input" type="password" id="userPassword" name="user-password" placeholder="password" required />
+                    </div>
+                    <div class="login-form__row">
+                        <input class="login-form--submit" type="submit" value="Submit" />
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</div>
+</body>
+</html>

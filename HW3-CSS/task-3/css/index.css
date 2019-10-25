@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: 20px 0 0 0;
+}
+
+.form--fieldset {
+  padding: 30px;
+  border-color: rgb(200, 255, 0);
+}
+
+.registration-section {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.registration-form--input {
+  width: 250px;
+}
+
+.registration-form--gender-input {
+  width: auto;
+  margin: 0 5px;
+}
+
+.registration-form--input-color {
+  width: 400px;
+}
+
+.registration-section__header {
+  text-align: center;
+}
+
+.registration-form__row {
+  display: flex;
+}
+
+.registration-form__row > * {
+  display: inline-flex;
+  margin: 5px 0;
+}
+
+.registration-form--submit-form > * {
+  margin-top: 40px;
+}
+
+.registration-form__left-side {
+  width: 150px;
+}
+
+.registration-form__right-side {
+  width: auto;
+}
+
+.registration-form--submit-input {
+  width: 70px;
+  justify-content: center;
+  margin: 40px auto 0;
+}
+
+.registration-form__row--select {
+  width: 250px;
+}
+
+.registration-form--agree {
+  width: 380px;
+  justify-content: flex-end;
+}
+
+.registration-form--agree-input {
+  width: 15px;
+}
+
+.feedback-section {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.feedback-section__header {
+  text-align: center;
+}
+
+.feedback-form__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-form__row > * {
+  display: inline-flex;
+  margin: 5px 0;
+}
+
+.feedback-form--subscribe {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.feedback-form--subscribe-input {
+  width: auto;
+}
+
+.feedback-form__left-side {
+  width: 100px;
+}
+
+.feedback-form--input,
+.feedback-form--textarea {
+  width: 300px;
+}
+
+.feedback-form--rating-input {
+  width: auto;
+  margin-left: 58px;
+}
+
+.feedback-form--submit {
+  width: 50px;
+  justify-content: center;
+  margin: 15px auto 0;
+}
+
+.login-section {
+  width: 300px;
+  margin: 100px auto;
+}
+
+.login-section__header {
+  text-align: center;
+}
+
+.login-form__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form__row > * {
+  display: inline-flex;
+  margin: 5px 0;
+}
+
+.login-form__left-side {
+  width: 100px;
+}
+
+.login-form--input {
+  width: 200px;
+}
+
+.login-form--submit {
+  width: 50px;
+  justify-content: center;
+  margin: 15px auto 0;
+}
