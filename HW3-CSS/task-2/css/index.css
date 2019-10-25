@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  list-style-type: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav__link--facebook {
+  background: url("../img/sprites.png") 0 80px;
+}
+
+.nav__link--youtube {
+  background: url("../img/sprites.png") 80px 80px;
+}
+
+.nav__link--vimeo {
+  background: url("../img/sprites.png") 165px 80px;
+}
+
+.nav__link--facebook:hover {
+  background: url("../img/sprites.png") 0 164px;
+}
+
+.nav__link--youtube:hover {
+  background: url("../img/sprites.png") 80px 164px;
+}
+
+.nav__link--vimeo:hover {
+  background: url("../img/sprites.png") 165px 164px;
+}
+
+.nav__link--facebook:active {
+  background: url("../img/sprites.png") 0 -4px;
+}
+
+.nav__link--youtube:active {
+  background: url("../img/sprites.png") 80px -4px;
+}
+
+.nav__link--vimeo:active {
+  background: url("../img/sprites.png") 165px -4px;
+}
+
+.nav__link--transition {
+  transition: 1s;
+}
