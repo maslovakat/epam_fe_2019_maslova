@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 .header {
   width: 1920px;
   height: 100px;
@@ -24,7 +28,6 @@ a {
 }
 
 .header__nav__item {
-  list-style-type: none;
   display: inline-block;
 }
 
