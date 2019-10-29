@@ -6,27 +6,237 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Document</title>
+    <title>PixelStudio</title>
   </head>
   <body>
     <header class="header">
       <div class="wrapper">
-          <nav class="header__nav">
-            <ul>
-                <li class="header__nav__item header__nav__logo"><a href="#"><img class="header__nav__logo--img" src="img/Logo.png" alt="logo-pixel-studio"></a><a href="#" class="header__nav__logo--text">PixelStudio</a></li>
-                <li class="header__nav__right-side">
-                  <ul>
-                    <li class="header__nav__item"><a href="#">Home</a></li>
-                    <li class="header__nav__item"><a href="#">Portfolio</a></li>
-                    <li class="header__nav__item"><a href="#">My work</a></li>
-                    <li class="header__nav__item"><a href="#">About me</a></li>
-                    <li class="header__nav__item"><a href="#">Element</a></li>
-                    <li class="header__nav__item"><a href="#">Contact</a></li>
-                  </ul>
-                </li>
-            </ul>
-          </nav>
+        <nav class="header__nav">
+          <ul>
+            <li class="header__logo"><a href="#"><img class="header__logo-img" src="img/Logo.png" alt="logo-pixel-studio"></a><a href="#" class="header__logo-text">PixelStudio</a></li>
+            <li class="header__right-side">
+              <ul>
+                <li class="header__nav-item header--active-link"><a class="header__link" href="#">Home</a></li>
+                <li class="header__nav-item"><a class="header__link" href="#">Portfolio</a></li>
+                <li class="header__nav-item"><a class="header__link" href="#">My work</a></li>
+                <li class="header__nav-item"><a class="header__link" href="#aboutMe">About me</a></li>
+                <li class="header__nav-item"><a class="header__link" href="#">Element</a></li>
+                <li class="header__nav-item"><a class="header__link" href="#contact">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
+    <div class="wrapper">
+      <main class="main-content">
+        <section class="welcome-section">
+          <h2 class="welcome-section__header">Welcome !</h2>
+          <section class="welcome-section__left-side">
+            <h3 class="welcome-section__left-header">Welcome to <span class="welcome-section--text-bold">PixelStudio</span></h3>
+            <p class="welcome-section__left-text">From a designer’s perspective, it’s all about downloads. Some fonts are tightly held intellectual property with very intentionally limited sharing. So, at a minimum, a Typography page must provide direct download or instructions on how to get approval to obtain them. Most teams provide a downloadable ZIP that includes all the files you need to install and use fonts locally. Headings are a critical contributor to page hierarchy. Most systems offer at least four, although some offer many more. Page titles usually (but not always) align with the largest heading level.</p>
+            <p class="welcome-section__left-text">Additionally, some systems offer specialized headers outside the typical heading scale, such as a picture’s caption or an eyebrow <span class="welcome-section--text-bold">Morningstar Design System</span>. Just because a header exists outside the traditional scale doesn’t mean it’s not a header viably reused across a catalog.</p>
+          </section>
+          <section class="welcome-section__right-slider">
+            <img src="img/alex-gruber-pz_hAv6ER7c-unsplash.png" alt="slider">
+            <h5 class="welcome-section__slider-magic">Magic grape</h5>
+            <p class="welcome-section__number-of-slider">1/3</p>
+          </section>
+          <div class="welcome-section__three-parts-block">
+            <section class="welcome-section__what-i-do welcome-section__three-parts">
+              <h4 class="welcome-section__three-parts-header welcome-section__what-header"><span class="welcome-section--what-i-do-sprite"></span> What I do?</h4>
+              <p class="welcome-section__three-parts-text">A misconception I debunk early and often: developing a typography system for UI components is equivalent to solving.</p>
+            </section>
+
+            <section class="welcome-section__who-i-do-it welcome-section__three-parts">
+              <h4 class="welcome-section__three-parts-header welcome-section__who-header"><span class="welcome-section--who-i-do-it-sprite"></span> Who I do it?</h4>
+              <p class="welcome-section__three-parts-text welcome-section__who-text">Article typography is made of headings, body text, and a few other components like an captioned image.</p>
+            </section>
+
+            <section class="welcome-section__about-me welcome-section__three-parts">
+              <h4 class="welcome-section__three-parts-header welcome-section__about-header"><span class="welcome-section--about-me-sprite"></span> About me</h4>
+              <p class="welcome-section__three-parts-text welcome-section__about-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
+            </section>
+          </div>
+        </section>
+        <section class="about-me-section" id="aboutMe">
+            <h2 class="about-me-section__header">About me</h2>
+            <section class="about-me-section__left-side">
+              <p class="about-me-section__left-side-text">Applying heading scales shouldn't require use of a specific HTML element. Instead, tease apart the two concerns. A system should weave <span class="about-me-section--red-text">heading</span> levels consistently throughout components and offers tools for adopters to do the same with their custom creations. In particular, line-height is challenging. In some libraries, we'll use conventions and tools to crop away negative space established by line-height from all text included in components, as described in <span class="about-me-section--red-text">Space in Design Systems</span>. Libraries cropping line height include Morningstar Design System, Discovery Education's Comet Design System.</p>
+              <p class="about-me-section__left-side-quote about-me-section__left-side--red-quote">Advantages for the customers: using the same design language for the complex interface, or even different.digital channels, resalts in product consistency and the reduction of cognitive load for the users</p>
+              <p class="about-me-section__left-side-quote about-me-section__left-side--blue-quote">This is our journey to the the simplest and most beautiful banking design in the world, as we see it. Light Bank was created by the UXDA team in order to inspire change</p>
+              <p class="about-me-section__left-side-quote about-me-section__left-side--green-quote">We encourage you to go one step further beyond average and create the best financial solutions thot vour customers are seeking We hope you can use this UX design case study as a guide to get there</p>
+              <h3 class="about-me-section__left-side-header">Heading Levels and Special Cases</h3>
+              <p class="about-me-section__text-system"><span class="about-me-section--s-letter">S</span>ystems can offer centrally-tuned responsive type sizes across a predictable set of breakpoints. For body text, size increases slowly <br /> As a system gets started with type, dig into details and start some conventions, such as how you'll cope with line-height. However, avoid finalizing all rules before making the first thing. Instead, be comfortable with chaos early and smooth details as a library takes shape. As you near a major release, lock in conventions and ensure tools are consistently applied</p>
+              <section  class="about-me-section__text-color">
+                <h3 class="about-me-section__left-side-header">Text color</h3>
+                <ul class="about-me-section__text-color-list">
+                  <li class="about-me-section__text-color-item"><span class="about-me-section--bold-text">Primary</span>, for most interface text whether body or heading</li>
+                  <li class="about-me-section__text-color-item"><span class="about-me-section--bold-text">Secondary</span>, for diminished contrast (often, the "gray text") for supplemental information.</li>
+                  <li class="about-me-section__text-color-item"><span class="about-me-section--bold-text">Interactive</span>, not just for links but also flat buttons, tab labels, and more.</li>
+                  <li class="about-me-section__text-color-item"><span class="about-me-section--bold-text">Disabled</span>, often resulting is especially lower contrast treatments.</li>
+                  <li class="about-me-section__text-color-item"><span class="about-me-section--bold-text">An invitation</span> to contact a technical architect, since a license for the font is required. Organizations requires this to control therecurring and often non-trivial cost of hosting and serving the font.</li>
+                </ul>
+              </section>
+            </section>
+            <aside class="about-me-section__right-side">
+              <section class="about-me-section__flickr-block">
+                <h3 class="about-me-section__flickr-header">From Flickr</h3>
+                <div class="about-me-section__flickr">
+                  <div class="about-me-section__flickr-image"><img src="img/Group2.png" alt="headphones"></div>
+                  <div class="about-me-section__flickr-image"><img src="img/Group5.png" alt="pineapple"></div>
+                  <div class="about-me-section__flickr-image"><img src="img/Group6.png" alt="cake"></div>
+                </div>
+                <div class="about-me-section__flickr">
+                  <div class="about-me-section__flickr-image"><img src="img/Group7.png" alt="seaside"></div>
+                  <div class="about-me-section__flickr-image"><img src="img/Group8.png" alt="mountain"></div>
+                  <div class="about-me-section__flickr-image"><img src="img/Group9.png" alt="sea"></div>
+                </div>
+              </section>
+              <section class="about-me-section__right-side__links">
+                <h3 class="about-me-section__right-links-header">Links</h3>
+                <ul>
+                  <li>
+                      <a class="about-me-section__links-item" href="">Themeforest</a>
+                  </li>
+                  <li>
+                    <a class="about-me-section__links-item" href="">GraphicRiver</a>
+                  </li>
+                  <li>
+                      <a class="about-me-section__links-item" href="">CodeCanyon</a>
+                  </li>
+                  <li>
+                      <a class="about-me-section__links-item" href="">ActiveDen</a>
+                  </li>
+                  <li>
+                      <a class="about-me-section__links-item" href="">3DOcean</a>
+                  </li>
+                  <li>
+                      <a class="about-me-section__links-item" href="">VideoHive</a>
+                  </li>
+                  <li>
+                      <a class="about-me-section__links-item" href="">Audiojungle</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+        </section>
+        <section class="contact-section" id="contact">
+          <h2 class="contact-section__header">Contact</h2>
+          <section class="contact-section__left-side">
+            <h3 class="contact-section__left-side-header">Just say hello!</h3>
+            <form class="contact-section__left-side__form" action="#">
+              <div>
+                <div class="contact-section__form-item">
+                  <label class="contact-section__form-label" for="userName">First name *</label>
+                  <input class="contact-section__form-input" id="userName" name="user-name" type="text" placeholder="John" required />
+                </div>
+                <div class="contact-section__form-item">
+                  <label class="contact-section__form-label" for="userLastname">Last name</label>
+                  <input class="contact-section__form-input" id="userLastname" name="user-lastname" type="text" placeholder="Johnson" />
+                </div>
+                <div class="contact-section__form-item">
+                  <label class="contact-section__form-label" for="userEmail">Email *</label>
+                  <input class="contact-section__form-input" id="userEmail" name="user-email" type="email" placeholder="example@email.com" required />
+                </div>
+                <div class="contact-section__form-item">
+                  <label class="contact-section__form-label" for="userPhone">Phone *</label>
+                  <input class="contact-section__form-input" id="userPhone" name="user-phone" type="number" placeholder="+ 000 123 456 789" required />
+                </div>
+              </div>
+              <p class="contact-section__choose-option">Choose option:</p>
+              <label class="contact-section__radio-choice">
+                <input class="contact-section__radio-input" name="sex" type="radio" required />
+                <span class="contact-section--radio-checkmark"></span>
+                Male
+              </label>
+              <label class="contact-section__radio-choice">
+                <input class="contact-section__radio-input" name="sex" type="radio" required />
+                <span class="contact-section--radio-checkmark"></span>
+                Female
+              </label>
+              <label class="contact-section__radio-choice">
+                <input class="contact-section__radio-input" name="sex" type="radio" required />
+                <span class="contact-section--radio-checkmark"></span>
+                Other
+              </label>
+              <textarea class="contact-section__message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+              <label class="contact-section__conditions">
+                <input class="contact-section__conditions-input" name="conditions" type="checkbox" required />
+                <span class="contact-section--checkbox-checkmark"></span>
+                Terms &amp; Conditions
+              </label>
+              <input class="contact-section__submit" type="submit" value="Submit" />
+            </form>
+          </section>
+          <section class="contact-section__right-side">
+            <h4 class="contact-section__right-header">Contact information</h4>
+            <p class="contact-section__right-text">Feel free to contact us for any of your questions, we’ll get back to you as soon as possible</p>
+            <div>
+              <div class="contact-section__company-name">Company name</div>
+              <div class="contact-section__street-name">798 Street name</div>
+              <div class="contact-section__city-name">999 00 City name</div>
+            </div>
+            <div class="contact-section__phone">Phone: <span class="contact-section--red-phone">+000 987 654 321</span></div>
+            <div class="contact-section__email">Email: <span class="contact-section--red-email">sales@yourcompany.com</span></div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="wrapper">
+        <section class="footer__pixel-studio">
+          <h2 class="footer__pixel-header">PixelStudio</h2>
+          <p class="footer__pixel-text">A true business companion a true business companion a true business companion A true business companion a true business companion a true business companion</p>
+          <h3 class="footer__pixel-soc">Social</h3>
+          <div class="footer__soc-links">
+            <ul>
+              <li class="footer__soc-link"><a class="footer--youtube" href="#"></a></li>
+              <li class="footer__soc-link"><a class="footer--linkedin" href="#"></a></li>
+              <li class="footer__soc-link"><a class="footer--twitter" href="#"></a></li>
+              <li class="footer__soc-link"><a class="footer--facebook" href="#"></a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__features">
+          <h2 class="footer__features-header">FEATURES</h2>
+          <ul class="footer__features-links">
+            <li><a class="footer__features-link" href="">Engagement</a></li>
+            <li><a class="footer__features-link" href="">Retention</a></li>
+            <li><a class="footer__features-link" href="">Funnels</a></li>
+          </ul>
+        </section>
+        <section class="footer__resources">
+          <h2 class="footer__resources-header">RESOURCES</h2>
+          <ul class="footer__resources-links">
+            <li><a class="footer__resources-link" href="">Enterprice</a></li>
+            <li><a class="footer__resources-link" href="">SaaS</a></li>
+            <li><a class="footer__resources-link" href="">Financial services</a></li>
+            <li><a class="footer__resources-link" href="">Consumer Tech</a></li>
+          </ul>
+        </section>
+        <section class="footer__menu">
+          <h2 class="footer__menu-header">MENU</h2>
+          <ul class="footer__menu-links">
+            <li><a class="footer__menu-link" href="">Home</a></li>
+            <li><a class="footer__menu-link" href="">Portfolio</a></li>
+            <li><a class="footer__menu-link" href="">My work</a></li>
+            <li><a class="footer__menu-link" href="">About me</a></li>
+            <li><a class="footer__menu-link" href="">Element</a></li>
+            <li><a class="footer__menu-link" href="">Contact</a></li>
+          </ul>
+        </section>
+        <section class="footer__information">
+          <h2 class="footer__information-header">INFORMATION</h2>
+          <ul class="footer__information-links">
+            <li><a class="footer__information-link" href="">About us</a></li>
+            <li><a class="footer__information-link" href="">Terms &amp; Conditions</a></li>
+            <li><a class="footer__information-link" href="">User’s guide</a></li>
+            <li><a class="footer__information-link" href="">Support center</a></li>
+            <li><a class="footer__information-link" href="">Press info</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>

@@ -31,12 +31,10 @@
 }
 
 @font-face {
-  font-family: "Lato-SemiBold";
+  font-family: "Lato-Italic";
   font-style: normal;
   font-weight: 600;
   src:
-    url("../fonts/LatoSemiBold/LatoSemiBold.eot?#iefix")
-    format("embedded-opentype"),
-    url("../fonts/LatoSemiBold/LatoSemiBold.woff") format("woff"),
-    url("../fonts/LatoSemiBold/LatoSemiBold.ttf") format("truetype");
+    url("../fonts/LatoItalic/lato-lightitalic.eot") format("embedded-opentype"),
+    url("../fonts/LatoItalic/lato-lightitalic.woff") format("woff");
 }
