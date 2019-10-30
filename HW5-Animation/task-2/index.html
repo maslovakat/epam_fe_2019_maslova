@@ -11,7 +11,7 @@
     <header class="header">
       <nav class="header__nav">
         <input class="header__input" id="burger" type="checkbox" />
-        <label class="header_burger" for="burger">
+        <label class="header__burger" for="burger">
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
@@ -20,6 +20,17 @@
           <li class="header__nav-item">
             <input class="header__input" type="radio" id="checkbox" name="nav" />
             <label for="checkbox" class="header__nav-link">Checkbox</label>
+                <section class="main__checkbox">
+                    <h2 class="main__checkbox-header">Custom checkbox</h2>
+                    <input class="main__checkbox-input main--hidden" id="customCheckbox" type="checkbox" name="checkbox-section" />
+                    <label class="main__checkbox-label" for="customCheckbox"></label>
+                    <h2 class="main__checkbox-header">Custom checkbox (disabled)</h2>
+                    <input class="main__checkbox-input main--hidden" id="customCheckboxDisabled" type="checkbox" name="checkbox-section" disabled />
+                    <label class="main__checkbox-label" for="customCheckboxDisabled"></label>
+                    <h2 class="main__checkbox-header">Custom checkbox (disabled and checked)</h2>
+                    <input class="main__checkbox-input main--hidden" id="customCheckAndDisabled" type="checkbox" name="checkbox-section" disabled checked />
+                    <label class="main__checkbox-label" for="customCheckAndDisabled"></label>
+                </section>
           </li>
           <li class="header__nav-item">
             <input class="header__input" type="radio" id="accordion" name="nav" />
