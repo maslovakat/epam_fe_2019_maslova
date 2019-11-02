@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <nav class="header__nav">
-        <input class="header__input" id="burger" type="checkbox" />
+        <input class="header__hidden-burger main--hidden" id="burger" type="checkbox" />
         <label class="header__burger" for="burger">
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
@@ -18,53 +18,53 @@
         </label>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <input class="header__input" type="radio" id="checkbox" name="nav" />
+            <input class="main--hidden" type="radio" id="checkbox" name="nav" />
             <label for="checkbox" class="header__nav-link">Checkbox</label>
                 <section class="main__checkbox">
                     <h2 class="main__checkbox-header">Custom checkbox</h2>
-                    <input class="main__checkbox-input main--hidden" id="customCheckbox" type="checkbox" name="checkbox-section" />
-                    <label class="main__checkbox-label" for="customCheckbox"></label>
+                    <input class="checkbox__hidden-check main--hidden" id="customCheckbox" type="checkbox" name="checkbox-section" />
+                    <label class="checkbox__custom-check" for="customCheckbox"></label>
                     <h2 class="main__checkbox-header">Custom checkbox (disabled)</h2>
-                    <input class="main__checkbox-input main--hidden" id="customCheckboxDisabled" type="checkbox" name="checkbox-section" disabled />
-                    <label class="main__checkbox-label" for="customCheckboxDisabled"></label>
+                    <input class="checkbox__hidden-check main--hidden" id="customCheckboxDisabled" type="checkbox" name="checkbox-section" disabled />
+                    <label class="checkbox__custom-check" for="customCheckboxDisabled"></label>
                     <h2 class="main__checkbox-header">Custom checkbox (disabled and checked)</h2>
-                    <input class="main__checkbox-input main--hidden" id="customCheckAndDisabled" type="checkbox" name="checkbox-section" disabled checked />
-                    <label class="main__checkbox-label" for="customCheckAndDisabled"></label>
+                    <input class="checkbox__hidden-check main--hidden" id="customCheckAndDisabled" type="checkbox" name="checkbox-section" disabled checked />
+                    <label class="checkbox__custom-check" for="customCheckAndDisabled"></label>
                 </section>
           </li>
           <li class="header__nav-item">
-            <input class="header__input" type="radio" id="accordion" name="nav" />
+            <input class="main--hidden" type="radio" id="accordion" name="nav" />
             <label for="accordion" class="header__nav-link">Accordion</label>
             <section class="main__accordion">
                 <h2 class="main__accordion-header">Accordion</h2>
-                <input class="main__accordion-input" type="checkbox" id="acc1" />
-                <label class="main__accordion-label" for="acc1">Acc1</label>
+                <input class="accordion__hidden-check main--hidden" type="checkbox" id="acc1" />
+                <label class="accordion__custom-check" for="acc1">Acc1</label>
                 <div class="main__acc1">Acc 1 content</div>
-                <input class="main__accordion-input" type="checkbox" id="acc2" />
-                <label class="main__accordion-label" for="acc2">Acc2</label>
+                <input class="accordion__hidden-check main--hidden" type="checkbox" id="acc2" />
+                <label class="accordion__custom-check" for="acc2">Acc2</label>
                 <div class="main__acc2">Acc 2 content</div>
-                <input class="main__accordion-input" type="checkbox" id="acc3" />
-                <label class="main__accordion-label" for="acc3">Acc3</label>
+                <input class="accordion__hidden-check main--hidden" type="checkbox" id="acc3" />
+                <label class="accordion__custom-check" for="acc3">Acc3</label>
                 <div class="main__acc3">Acc 3 content</div>
                 <h2 class="main__accordion-header">Accordion (collapsible)</h2>
-                <input class="main__accordion-input" type="radio" name="accordion" id="acc4" checked />
-                <label class="main__accordion-label" for="acc4">Acc4</label>
+                <input class="accordion__hidden-check main--hidden" type="radio" name="accordion" id="acc4" checked />
+                <label class="accordion__custom-check" for="acc4">Acc4</label>
                 <div class="main__acc4">Acc 4 content</div>
-                <input class="main__accordion-input" type="radio" name="accordion" id="acc5" />
-                <label class="main__accordion-label" for="acc5">Acc5</label>
+                <input class="accordion__hidden-check main--hidden" type="radio" name="accordion" id="acc5" />
+                <label class="accordion__custom-check" for="acc5">Acc5</label>
                 <div class="main__acc5">Acc 5 content</div>
-                <input class="main__accordion-input" type="radio" name="accordion" id="acc6" />
-                <label class="main__accordion-label" for="acc6">Acc6</label>
+                <input class="accordion__hidden-check main--hidden" type="radio" name="accordion" id="acc6" />
+                <label class="accordion__custom-check" for="acc6">Acc6</label>
                 <div class="main__acc6">Acc 6 content</div>
             </section>
           </li>
           <li class="header__nav-item">
-            <input class="header__input" type="radio" id="dropDown" name="nav" />
+            <input class="main--hidden" type="radio" id="dropDown" name="nav" />
             <label for="dropDown" class="header__nav-link">+ Drop-Down</label>
             <ul class="main__dropdown">
-                <li><a class="main__dropdown-checkbox main__dropdown-item" href="#">Checkbox</a></li>
-                <li><a class="main__dropdown-accordion main__dropdown-item" href="#">Accordion</a></li>
-                <li><a class="main__dropdown-menu main__dropdown-item" href="#">Menu</a></li>
+                <li><a class="main__dropdown-item" href="#">Checkbox</a></li>
+                <li><a class="main__dropdown-item" href="#">Accordion</a></li>
+                <li><a class="main__dropdown-item" href="#">Menu</a></li>
             </ul>
         </li>
         </ul>
