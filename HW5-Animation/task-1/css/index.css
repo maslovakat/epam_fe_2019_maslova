@@ -328,20 +328,20 @@ img {
 }
 
 .small-background__hex-to-top {
-  height: 15px;
-  width: 15px;
+  height: 23px;
+  width: 9px;
   transform: rotate(180deg);
   position: relative;
-  top: 15px;
-  left: 15px;
+  top: 12px;
+  left: 18px;
 }
 
 .small-background__hex-to-bottom {
-  height: 15px;
-  width: 15px;
+  height: 23px;
+  width: 9px;
   position: relative;
-  top: 15px;
-  left: 15px;
+  top: 12px;
+  left: 18px;
 }
 
 .small-background__hex:hover {
