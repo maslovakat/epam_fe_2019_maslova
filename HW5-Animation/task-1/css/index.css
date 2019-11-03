@@ -80,6 +80,9 @@ img {
 .summertime__pause-item {
   width: 45px;
   height: 45px;
+  float: left;
+  cursor: pointer;
+  background-image: url('../img/Pause.svg');
 }
 
 .summertime__pause-item:hover {
@@ -93,8 +96,6 @@ img {
 }
 
 .summertime__pause {
-  position: relative;
-  bottom: -1px;
   clear: both;
 }
 
@@ -328,20 +329,20 @@ img {
 }
 
 .small-background__hex-to-top {
-  height: 23px;
-  width: 9px;
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/Path.svg');
+  background-repeat: no-repeat;
+  background-position: 18px 10px;
   transform: rotate(180deg);
-  position: relative;
-  top: 12px;
-  left: 18px;
 }
 
 .small-background__hex-to-bottom {
-  height: 23px;
-  width: 9px;
-  position: relative;
-  top: 12px;
-  left: 18px;
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/Path.svg');
+  background-repeat: no-repeat;
+  background-position: 18px 10px;
 }
 
 .small-background__hex:hover {
@@ -414,9 +415,14 @@ img {
   margin-bottom: 7px;
 }
 
+.bongarang--following {
+  text-decoration: none;
+}
+
 .bongarang--following-check {
   width: 11px;
   height: 14px;
+  background-image: url('../img/✓.svg');
   position: relative;
   top: 3px;
   right: 1px;
@@ -532,6 +538,8 @@ img {
 .recording-play__svg {
   width: 45px;
   height: 45px;
+  background-image: url('../img/Play.svg');
+  display: inline-block;
 }
 
 .recording-play__svg:hover {
@@ -604,13 +612,11 @@ img {
 
 .why-do-design__arrow-right {
   float: right;
-  line-height: 22px;
-  height: 22px;
+  width: 15px;
+  height: 18px;
+  background-image: url('../img/→.svg');
+  background-repeat: no-repeat;
+  background-position: 0 8px;
   cursor: pointer;
   border: 0;
-}
-
-.why-do-design__arrow-right-item {
-  width: 15px;
-  height: 8px;
 }
