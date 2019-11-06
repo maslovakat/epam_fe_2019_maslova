@@ -1,0 +1,17 @@
+* {
+  @extend %reset;
+}
+
+li {
+  list-style-type: none;
+}
+
+@for $i from 1 through 5 {
+  #{nth($header-tags, $i)} {
+    font-size: #{nth($font-sizes, $i)};
+  }
+}
+
+a {
+  text-decoration: none;
+}

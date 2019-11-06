@@ -1,0 +1,78 @@
+//color
+$white: #fff;
+//primary bitton
+$blue-4E92FF: #4e92ff;
+$blue-447FDE: #447fde;
+$blue-3B6FC2: #3b6fc2;
+//secondary button
+$orange-F89052: #f89052;
+$orange-DC7F47: #dc7f47;
+$orange-BD6937: #bd6937;
+//success button
+$green-60CF57: #60cf57;
+$green-4ABA42: #4aba42;
+$green-3DA235: #3da235;
+//danger button
+$red-F05B5B: #f05b5b;
+$red-BF4141: #bf4141;
+$red-AC2D2D: #ac2d2d;
+//warning button
+$yellow-FFCF31: #ffcf31;
+$yellow-EEBD1C: #eebd1c;
+$yellow-D6A917: #d6a917;
+//tabs
+$green-52BE80: #52be80;
+//checkboxes
+$green-52BE80: #52be80;
+$orange-F89052: #f89052;
+$blue-4E92FF: #4e92ff;
+$red-F05B5B: #f05b5b;
+$black-3C3B3B: #3c3b3b;
+$grey-F2F2F2: #f2f2f2;
+$grey-AEAEAE: #aeaeae;
+$grey-F9F9F9: #f9f9f9;
+$grey-E6E6E6: #e6e6e6;
+$green-82-190-128-059: rgba(82, 190, 128, 0.59);
+$orange-246-167-120-059: rgba(246, 167, 120, 0.59);
+$blue-78-146-255-059: rgba(78, 146, 255, 0.59);
+$red-240-91-91-059: rgba(240, 91, 91, 0.59);
+$black-60-59-59-059: rgba(60, 59, 59, 0.59);
+//pagination
+$grey-F6F6F6: #f6f6f6;
+$grey-E0E0E0: #e0e0e0;
+$grey-5D5D5D: #5d5d5d;
+$grey-DADADA: #dadada;
+$green-52BE80: #52be80;
+$orange-F89052: #f89052;
+$blue-4E92FF: #4e92ff;
+$red-F05B5B: #f05b5b;
+$black-3C3B3B: #3c3b3b;
+//navigation under header
+$grey-ACA8A8: #aca8a8;
+$grey-D8D8D8: #d8d8d8;
+$grey-5D5D5D: #5d5d5d;
+$grey-FBFBFB: #fbfbfb;
+$green-52BE80: #52be80;
+//available items
+$grey-206-206-206-05: rgba(206, 206, 206, 0.5);
+$grey-155-155-155-05: rgba(155, 155, 155, 0.5);
+
+// fonts
+$font-sizes: 46px, 36px, 30px, 20px, 18px;
+$header-tags: h1, h2, h3, h4, h5;
+
+//grid
+$row-size: 12;
+$col-width: 100;
+$gap-width: 20;
+$container-size: ($col-width * $row-size) + ($gap-width * $row-size);
+$template-size: 1920;
+
+$list-of-rates-id: "#brilliantRate", "#excellentRate", "#veryGoodRate",
+  "#goodRate", "#badRate";
+$list-of-rates-class: __brilliant-rate, __excellent-rate, __very-good-rate,
+  __good-rate, __bad-rate;
+$list-of-rates-name: Brilliant, Excellent, Very good, Good, Bad;
+$list-of-color-rates: #52be80, #f89052, #4e92ff, #f05b5b, #3c3b3b;
+//for footer blocks
+$footer-blocks: __help, __discover, __hosting, __community;

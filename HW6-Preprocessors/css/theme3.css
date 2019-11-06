@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  vertical-align: baseline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.view {
+  width: 1920px;
+}
+
+.container {
+  width: 1440px;
+  margin-left: 260px;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+[class^=col-] {
+  float: left;
+  margin: 0 10px;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.header {
+  height: 600px;
+  width: 1920px;
+}
+.header .navigation {
+  margin-left: -10px;
+  box-sizing: border-box;
+  padding-top: 31px;
+}
+.header .navigation__right {
+  position: relative;
+  top: -22px;
+  right: 35px;
+  float: right;
+}
+.header .navigation__logo {
+  display: inline-block;
+  height: 35px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 35px;
+}
+.header .navigation__item {
+  display: inline-block;
+}
+.header .navigation__link {
+  height: 21px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  margin-left: 25px;
+  padding: 0 5px 5px;
+}
+.header .navigation__link:hover {
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+}
+.header .navigation__active-link {
+  border-bottom: 1px solid #fff;
+}
+.header__grand-hostel {
+  height: 54px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 54px;
+  position: relative;
+  top: 410px;
+  left: -10px;
+}
+.header__address {
+  height: 21px;
+  color: #fff;
+  line-height: 21px;
+  position: relative;
+  top: 428px;
+  left: -7px;
+}
+.header__under-header {
+  height: 100px;
+  background-color: #fbfbfb;
+  padding-left: 250px;
+  position: relative;
+  top: 458px;
+}
+.header__nav-under-header {
+  height: 35px;
+  width: 450px;
+  position: relative;
+  top: 35px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.header__nav-under-header-item {
+  display: inline-block;
+  margin-right: 35px;
+  height: 35px;
+}
+.header__nav-under-header-link {
+  height: 21px;
+  color: #aca8a8;
+  font-size: 20px;
+  line-height: 21px;
+  padding: 0 5px 5px;
+}
+.header__nav-under-header-item:last-child {
+  margin-right: 0;
+}
+
+.reviews__rate-name::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  position: relative;
+  left: -15px;
+  top: 8px;
+}
+#brilliantRate:checked + .reviews__rate-name::before {
+  background-color: #52be80;
+  background-image: url("../img/Path-1.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 7px;
+  border: 0;
+}
+#excellentRate:checked + .reviews__rate-name::before {
+  background-color: #f89052;
+  background-image: url("../img/Path-1.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 7px;
+  border: 0;
+}
+#veryGoodRate:checked + .reviews__rate-name::before {
+  background-color: #4e92ff;
+  background-image: url("../img/Path-1.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 7px;
+  border: 0;
+}
+#goodRate:checked + .reviews__rate-name::before {
+  background-color: #f05b5b;
+  background-image: url("../img/Path-1.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 7px;
+  border: 0;
+}
+#badRate:checked + .reviews__rate-name::before {
+  background-color: #3c3b3b;
+  background-image: url("../img/Path-1.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 7px;
+  border: 0;
+}
+#brilliantRate:checked ~ .reviews__item::before {
+  content: "Brilliant";
+  color: #52be80;
+}
+#excellentRate:checked ~ .reviews__item::before {
+  content: "Excellent";
+  color: #f89052;
+}
+#veryGoodRate:checked ~ .reviews__item::before {
+  content: "Very good";
+  color: #4e92ff;
+}
+#goodRate:checked ~ .reviews__item::before {
+  content: "Good";
+  color: #f05b5b;
+}
+#badRate:checked ~ .reviews__item::before {
+  content: "Bad";
+  color: #3c3b3b;
+}
+
+.pagination__page-to-the-left {
+  background: #f6f6f6 url(../img/Arrow-left-1.svg) 14px 15px no-repeat;
+  position: relative;
+  top: 18px;
+}
+.pagination__button-hidden:disabled ~ .pagination__page-to-the-left:hover {
+  background-color: #f6f6f6;
+}
+
+.main {
+  position: relative;
+  top: 150px;
+  margin-bottom: 150px;
+}
+.main__hostelworld-header {
+  height: 55px;
+  color: #5d5d5d;
+  font-weight: normal;
+  line-height: 42px;
+}
+.main__hostelworld-text {
+  height: 190px;
+  letter-spacing: 0.1px;
+  color: #5d5d5d;
+  font-weight: 300;
+  line-height: 30px;
+}
+.main__property-header {
+  height: 55px;
+  color: #5d5d5d;
+  font-weight: normal;
+  line-height: 42px;
+}
+.main__property-text {
+  height: 253px;
+  color: #5d5d5d;
+  font-weight: 300;
+  line-height: 30px;
+}
+.main__available-header {
+  height: 72px;
+  color: #5d5d5d;
+  font-weight: normal;
+  line-height: 42px;
+}
+.main .available__item {
+  display: inline-block;
+  height: 400px;
+  width: 460px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px 0 rgba(206, 206, 206, 0.5);
+  margin-right: 17px;
+  margin-bottom: 50px;
+}
+.main .available__item:last-child {
+  margin-right: 0;
+}
+.main .available__room-name {
+  height: 24px;
+  width: 420px;
+  color: #5d5d5d;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0 auto;
+  position: relative;
+  top: 18px;
+}
+.main .available__price {
+  height: 35px;
+  width: 69px;
+  color: #5d5d5d;
+  font-weight: bold;
+  line-height: 35px;
+  float: left;
+  position: relative;
+  top: 63px;
+  left: 20px;
+}
+.main .reviews {
+  position: relative;
+  left: -10px;
+  color: #5d5d5d;
+}
+.main .reviews__header {
+  height: 83px;
+  width: 264px;
+  font-weight: normal;
+  line-height: 42px;
+  position: relative;
+  top: 10px;
+}
+.main .reviews__show {
+  height: 28px;
+  width: 219px;
+  font-weight: normal;
+  line-height: 28px;
+}
+.main .reviews__rate-list {
+  height: 90px;
+  line-height: 80px;
+  margin-left: 15px;
+}
+.main .reviews__hidden-rate {
+  display: none;
+}
+.main .reviews__brilliant-rate {
+  height: 24px;
+  width: 35px;
+  color: #52be80;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  margin-right: 62px;
+  position: relative;
+  top: 17px;
+  left: 15px;
+}
+.main .reviews__excellent-rate {
+  height: 24px;
+  width: 35px;
+  color: #f89052;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  margin-right: 62px;
+  position: relative;
+  top: 17px;
+  left: 15px;
+}
+.main .reviews__very-good-rate {
+  height: 24px;
+  width: 35px;
+  color: #4e92ff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  margin-right: 62px;
+  position: relative;
+  top: 17px;
+  left: 15px;
+}
+.main .reviews__good-rate {
+  height: 24px;
+  width: 35px;
+  color: #f05b5b;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  margin-right: 62px;
+  position: relative;
+  top: 17px;
+  left: 15px;
+}
+.main .reviews__bad-rate {
+  height: 24px;
+  width: 35px;
+  color: #3c3b3b;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  margin-right: 62px;
+  position: relative;
+  top: 17px;
+  left: 15px;
+}
+.main .reviews__item {
+  width: 940px;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  padding: 26px 30px;
+  box-sizing: border-box;
+  margin-bottom: 13px;
+}
+.main .reviews__item::before {
+  content: "Very good";
+  display: inline-block;
+  height: 24px;
+  color: #4e92ff;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  left: 0;
+  line-height: 24px;
+  text-align: center;
+}
+.main .reviews__first-item {
+  padding: 35px 30px;
+  margin: 55px 0 30px;
+}
+.main .reviews__third-item {
+  padding: 32px 23px 32px 30px;
+}
+.main .reviews__name {
+  height: 54px;
+  width: auto;
+  margin-right: 30px;
+  line-height: 24px;
+  float: left;
+}
+.main .reviews__info-about {
+  height: 22px;
+  width: 212px;
+  margin-right: 30px;
+  font-weight: 300;
+  line-height: 28px;
+  float: left;
+  border-right: 1px solid #d8d8d8;
+}
+.main .reviews__date {
+  height: 28px;
+  width: 113px;
+  font-weight: 300;
+  line-height: 28px;
+  float: right;
+}
+.main .reviews__feedback {
+  clear: both;
+  width: 880px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+.main .pagination {
+  position: relative;
+  top: 25px;
+  left: 235px;
+  height: 250px;
+}
+.main .pagination__button-hidden {
+  display: none;
+}
+.main .pagination__button {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  color: #5d5d5d;
+  font-size: 25px;
+  margin-right: 16px;
+  text-align: center;
+  line-height: 50px;
+}
+.main .pagination__button:hover {
+  background-color: #e0e0e0;
+}
+.main .pagination__page-to-the-right {
+  background-color: #f6f6f6;
+  background-image: url(../img/Arrow-right-1.svg) 14px 15px no-repeat;
+  position: relative;
+  top: 18px;
+}
+
+.footer {
+  position: relative;
+  left: -10px;
+  color: #5d5d5d;
+}
+.footer__help {
+  width: 356px;
+  padding: 15px 0;
+  display: inline-block;
+}
+.footer__discover {
+  width: 356px;
+  padding: 15px 0;
+  display: inline-block;
+}
+.footer__hosting {
+  width: 356px;
+  padding: 15px 0;
+  display: inline-block;
+}
+.footer__community {
+  width: 356px;
+  padding: 15px 0;
+  display: inline-block;
+}
+.footer__header {
+  height: 55px;
+}
+.footer__list-item {
+  height: 31px;
+  letter-spacing: 0.1px;
+  font-size: 18px;
+}
+.footer__link {
+  color: #5d5d5d;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.header {
+  background-image: url("../img/Banner-img3.png");
+}
+.header__nav-under-header-item {
+  display: inline-block;
+  margin-right: 35px;
+  height: 35px;
+}
+.header__nav-under-header-item:hover {
+  height: 34px;
+  color: #5d5d5d;
+  border-bottom: 3px solid #52be80;
+}
+
+.main .available__book-now {
+  width: 180px;
+  height: 49px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0fbdb4;
+  box-shadow: 0 2px 2px 0 rgba(155, 155, 155, 0.5);
+  cursor: pointer;
+  font-size: bold;
+  font-size: 18px;
+  text-align: center;
+  float: right;
+  position: relative;
+  right: 20px;
+  top: 55px;
+}
+.main .available__book-now:focus {
+  outline: none;
+}
+.main .available__book-now:hover {
+  background-color: #0ca099;
+}
+.main .available__book-now:active {
+  background-color: #0a8a83;
+}
+.main .reviews__rate {
+  color: #52be80;
+}
+
+.pagination__button-page:checked + .pagination__button {
+  background-color: #52be80;
+  color: #fff;
+}
+
+/*# sourceMappingURL=theme3.css.map */

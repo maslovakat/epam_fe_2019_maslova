@@ -1,0 +1,359 @@
+@import "typography";
+@import "vars";
+@import "color-matrix";
+@import "mixins";
+@import "extends";
+@import "reset";
+
+@include create-grid();
+
+.header {
+  height: 600px;
+  width: #{$template-size}px;
+
+  .navigation {
+    margin-left: -10px;
+    box-sizing: border-box;
+    padding-top: 31px;
+
+    &__right {
+      position: relative;
+      top: -22px;
+      right: 35px;
+      float: right;
+    }
+
+    &__logo {
+      display: inline-block;
+      height: 35px;
+      color: $white;
+      font-size: nth($font-sizes, 3);
+      font-weight: $roboto-bold;
+      line-height: 35px;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+
+    &__link {
+      @include header-nav-links();
+    }
+
+    &__active-link {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  &__grand-hostel {
+    height: 54px;
+    color: $white;
+    font-weight: $roboto-bold;
+    line-height: 54px;
+    position: relative;
+    top: 410px;
+    left: -10px;
+  }
+
+  &__address {
+    height: 21px;
+    color: $white;
+    line-height: 21px;
+    position: relative;
+    top: 428px;
+    left: -7px;
+  }
+
+  &__under-header {
+    height: 100px;
+    background-color: $light-background;
+    padding-left: 250px;
+    position: relative;
+    top: 458px;
+  }
+
+  &__nav-under-header {
+    height: 35px;
+    width: 450px;
+    position: relative;
+    top: 35px;
+    border-bottom: 1px solid $nav-grey-border;
+  }
+
+  &__nav-under-header-item {
+    display: inline-block;
+    margin-right: 35px;
+    height: 35px;
+  }
+
+  &__nav-under-header-link {
+    height: 21px;
+    color: $nav-text-under-header;
+    font-size: nth($font-sizes, 4);
+    line-height: 21px;
+    padding: 0 5px 5px;
+  }
+
+  &__nav-under-header-item:last-child {
+    margin-right: 0;
+  }
+}
+
+.reviews {
+  &__rate-name::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #aeaeae;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    position: relative;
+    left: -15px;
+    top: 8px;
+  }
+
+  @include show-rate();
+  @include rates-list();
+}
+
+.pagination {
+  &__page-to-the-left {
+    background: $pagination-bg url(../img/Arrow-left-1.svg) 14px 15px no-repeat;
+    position: relative;
+    top: 18px;
+  }
+
+  &__button-hidden:disabled ~ &__page-to-the-left:hover {
+    background-color: $pagination-bg;
+  }
+}
+
+.main {
+  position: relative;
+  top: 150px;
+  margin-bottom: 150px;
+
+  &__hostelworld-header {
+    height: 55px;
+    color: $main-grey-text;
+    font-weight: normal;
+    line-height: 42px;
+  }
+
+  &__hostelworld-text {
+    height: 190px;
+    letter-spacing: 0.1px;
+    color: $main-grey-text;
+    font-weight: $roboto-light;
+    line-height: 30px;
+  }
+
+  &__property-header {
+    height: 55px;
+    color: $main-grey-text;
+    font-weight: normal;
+    line-height: 42px;
+  }
+
+  &__property-text {
+    height: 253px;
+    color: $main-grey-text;
+    font-weight: $roboto-light;
+    line-height: 30px;
+  }
+
+  &__available-header {
+    height: 72px;
+    color: $main-grey-text;
+    font-weight: normal;
+    line-height: 42px;
+  }
+
+  .available {
+    &__item {
+      display: inline-block;
+      height: 400px;
+      width: 460px;
+      border-radius: 8px;
+      background-color: $white;
+      box-shadow: 0 1px 8px 0 $grey-border-shadow;
+      margin-right: 17px;
+      margin-bottom: 50px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+
+    &__room-name {
+      height: 24px;
+      width: 420px;
+      color: $pagination-text-color;
+      line-height: 24px;
+      font-weight: normal;
+      margin: 0 auto;
+      position: relative;
+      top: 18px;
+    }
+
+    &__price {
+      height: 35px;
+      width: 69px;
+      color: $pagination-text-color;
+      font-weight: $roboto-bold;
+      line-height: 35px;
+      float: left;
+      position: relative;
+      top: 63px;
+      left: 20px;
+    }
+  }
+
+  .reviews {
+    position: relative;
+    left: -10px;
+    color: $pagination-text-color;
+
+    &__header {
+      height: 83px;
+      width: 264px;
+      font-weight: normal;
+      line-height: 42px;
+      position: relative;
+      top: 10px;
+    }
+
+    &__show {
+      height: 28px;
+      width: 219px;
+      font-weight: normal;
+      line-height: 28px;
+    }
+
+    &__rate-list {
+      height: 90px;
+      line-height: 80px;
+      margin-left: 15px;
+    }
+
+    &__hidden-rate {
+      display: none;
+    }
+
+    @include rate-name();
+
+    &__item {
+      width: 940px;
+      border-radius: 8px;
+      background-color: $light-background;
+      padding: 26px 30px;
+      box-sizing: border-box;
+      margin-bottom: 13px;
+    }
+
+    &__item::before {
+      content: "Very good";
+      display: inline-block;
+      height: 24px;
+      color: $checkbox-blue;
+      position: relative;
+      font-size: nth($font-sizes, 4);
+      font-weight: $roboto-bold;
+      left: 0;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    &__first-item {
+      padding: 35px 30px;
+      margin: 55px 0 30px;
+    }
+
+    &__third-item {
+      padding: 32px 23px 32px 30px;
+    }
+
+    &__name {
+      height: 54px;
+      width: auto;
+      margin-right: 30px;
+      line-height: 24px;
+      float: left;
+    }
+
+    &__info-about {
+      height: 22px;
+      width: 212px;
+      margin-right: 30px;
+      font-weight: $roboto-light;
+      line-height: 28px;
+      float: left;
+      border-right: 1px solid $nav-grey-border;
+    }
+
+    &__date {
+      height: 28px;
+      width: 113px;
+      font-weight: $roboto-light;
+      line-height: 28px;
+      float: right;
+    }
+
+    &__feedback {
+      clear: both;
+      width: 880px;
+      line-height: 30px;
+      font-weight: $roboto-light;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .pagination {
+    position: relative;
+    top: 25px;
+    left: 235px;
+    height: 250px;
+
+    &__button-hidden {
+      display: none;
+    }
+
+    &__button {
+      @include pagination-button();
+    }
+
+    &__page-to-the-right {
+      background-color: $pagination-bg;
+      background-image: url(../img/Arrow-right-1.svg);
+      background-position: 14px 15px;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 18px;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  left: -10px;
+  color: $main-grey-text;
+
+  @include footer-blocks();
+
+  &__header {
+    height: 55px;
+  }
+
+  &__list-item {
+    height: 31px;
+    letter-spacing: 0.1px;
+    font-size: nth($font-sizes, 5);
+  }
+
+  &__link {
+    @include footer-links();
+  }
+}

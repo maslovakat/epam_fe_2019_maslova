@@ -1,0 +1,173 @@
+// for clearing scope
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//custom grid
+@mixin create-grid() {
+  .view {
+    width: #{$template-size}px;
+  }
+
+  .container {
+    @include clearfix();
+
+    width: #{$container-size}px;
+    margin-left: 260px;
+    // margin: 0 auto;
+  }
+
+  .row {
+    @include clearfix();
+
+    margin-left: #{-$gap-width / 2}px;
+    margin-right: #{-$gap-width / 2}px;
+  }
+
+  [class^="col-"] {
+    float: left;
+    margin: #{0 $gap-width / 2}px;
+  }
+
+  @for $i from 1 through $row-size {
+    .col-#{$i} {
+      width: percentage($i / $row-size);
+    }
+  }
+}
+
+// for changing rate name in feedback (color and name)
+@mixin rates-list() {
+  @for $i from 1 through 5 {
+    #{nth($list-of-rates-id, $i)}:checked ~ &__item::before {
+      content: quote(#{nth($list-of-rates-name, $i)});
+      color: #{nth($list-of-color-rates, $i)};
+    }
+  }
+}
+
+//navigation menu in header, and hover effect
+@mixin header-nav-links() {
+  height: 21px;
+  color: $white;
+  font-size: nth($font-sizes, 5);
+  font-weight: $roboto-bold;
+  line-height: 21px;
+  margin-left: 25px;
+  padding: 0 5px 5px;
+
+  &:hover {
+    border-bottom: 1px solid $white;
+    box-sizing: border-box;
+  }
+}
+
+//for navigation under header
+@mixin navigation-under-header($border-color) {
+  display: inline-block;
+  margin-right: 35px;
+  height: 35px;
+
+  &:hover {
+    height: 34px;
+    color: $main-grey-text;
+    border-bottom: 3px solid $border-color;
+  }
+}
+
+// for button in available section
+@mixin button-available($background-color) {
+  width: 180px;
+  height: 49px;
+  border-radius: 5px;
+  color: $white;
+  background-color: $background-color;
+  box-shadow: 0 2px 2px 0 $grey-button-shadow;
+  cursor: pointer;
+  font-size: bold;
+  font-size: nth($font-sizes, 5);
+  text-align: center;
+  float: right;
+  position: relative;
+  right: 20px;
+  top: 55px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// for rate name in label
+@mixin rate-name() {
+  @for $i from 1 through 5 {
+    &#{nth($list-of-rates-class, $i)} {
+      height: 24px;
+      width: 35px;
+      color: #{nth($list-of-color-rates, $i)};
+      font-size: nth($font-sizes, 4);
+      font-weight: $roboto-bold;
+      cursor: pointer;
+      line-height: 24px;
+      margin-right: 62px;
+      position: relative;
+      top: 17px;
+      left: 15px;
+    }
+  }
+}
+
+//for footer blocks
+@mixin footer-blocks() {
+  @for $i from 1 through 4 {
+    &#{nth($footer-blocks, $i)} {
+      width: 356px;
+      padding: 15px 0;
+      display: inline-block;
+    }
+  }
+}
+
+//for rate name (visual text)
+@mixin show-rate() {
+  @for $i from 1 through 5 {
+    #{nth($list-of-rates-id, $i)}:checked + &__rate-name::before {
+      background-color: #{nth($list-of-color-rates, $i)};
+      background-image: url("../img/Path-1.svg");
+      background-repeat: no-repeat;
+      background-position: 6px 7px;
+      border: 0;
+    }
+  }
+}
+
+//create button with page style, and hover effect
+@mixin pagination-button() {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $pagination-bg;
+  color: $main-grey-text;
+  font-size: 25px;
+  margin-right: 16px;
+  text-align: center;
+  line-height: 50px;
+
+  &:hover {
+    background-color: $pagination-bg-hover;
+  }
+}
+
+//for footer links, and hover effect
+@mixin footer-links() {
+  color: $main-grey-text;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

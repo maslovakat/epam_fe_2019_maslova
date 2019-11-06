@@ -1,0 +1,40 @@
+@import "variables2";
+@import "color-matrix2";
+@import "main";
+
+.header {
+  background-image: url("../img/banner-img2.png");
+
+  &__nav-under-header-item {
+    @include navigation-under-header($nav-red-border);
+  }
+}
+
+.main {
+  .available {
+    &__book-now {
+      @include button-available($secondary-button);
+    }
+
+    &__book-now:hover {
+      background-color: $secondary-button-hover;
+    }
+
+    &__book-now:active {
+      background-color: $secondary-button-active;
+    }
+  }
+
+  .reviews {
+    &__rate {
+      color: $secondary-button;
+    }
+  }
+}
+
+.pagination {
+  &__button-page:checked + &__button {
+    background-color: $secondary-button;
+    color: $white;
+  }
+}
