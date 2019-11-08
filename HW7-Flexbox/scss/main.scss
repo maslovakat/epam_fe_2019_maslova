@@ -1,0 +1,393 @@
+@import "typography";
+@import "vars";
+@import "color-matrix";
+@import "mixins";
+@import "reset";
+
+.close-menu {
+  position: absolute;
+  left: 1432px;
+  top: 32px;
+  z-index: 10;
+  visibility: hidden;
+  cursor: pointer;
+
+  &__hidden {
+    display: none;
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+  }
+}
+
+.close-menu__hidden:checked ~ .header__warehouse {
+  left: 1500px;
+  transition: left 0.5s;
+}
+
+.header__hidden-check:checked ~ .close-menu {
+  visibility: visible;
+}
+
+.pepper {
+  position: relative;
+  height: 665px;
+  width: 1500px;
+  background-color: $light-grey-bg;
+  display: flex;
+
+  &__tab {
+    border-left: 137px solid transparent;
+    border-right: 137px solid transparent;
+    border-top: 237px solid $bowl-background;
+    position: absolute;
+    left: 466px;
+    transition: left 0.5s;
+
+    &-link {
+      position: absolute;
+      top: -180px;
+      left: -11px;
+
+      &-pepper {
+        height: 50px;
+        width: 22px;
+      }
+    }
+  }
+
+  &__price-block {
+    position: relative;
+    top: 209px;
+    left: 227px;
+    transition: left 0.5s;
+  }
+
+  &__name-product {
+    height: 41px;
+    font-size: nth($font-sizes, 2);
+    font-weight: $font-light;
+  }
+
+  &__price {
+    margin: 8px 0 0 0;
+  }
+
+  &__images {
+    position: relative;
+    left: 265px;
+    top: 195px;
+    transition: left 0.5s;
+  }
+
+  &__product {
+    display: block;
+    width: 430px;
+    height: 434px;
+    background:
+      url("../img/http___pluspng.com_img-png_png-pepper-shaker-gc-pepper-mill-grand-cru-1200.png")
+      no-repeat;
+  }
+
+  @include person-block(
+    332px,
+    159px,
+    left 0.5s,
+    url("../img/User-img-1.png"),
+    60px,
+    0
+  );
+}
+
+.header__hidden-check:checked ~ .pepper__tab {
+  left: 246px;
+  transition: left 0.5s;
+}
+
+@include pepper-blocks-checked(price-block, 40px);
+@include pepper-blocks-checked(images, 35px);
+@include pepper-blocks-checked(person-block, 53px);
+
+.header {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    transition: left 0.5s;
+  }
+
+  @include header-icon(plate, 50px, 50px, 0);
+  @include header-icon(pepper, 51px, 117px, 13px);
+  @include header-icon(bottles, 47px, 50px, 0);
+  @include header-icon(butcher, 47px, 50px, 0);
+  @include header-icon(cup, 43px, 50px, 0);
+  @include header-icon(geinder, 42px, 50px, 0);
+  @include header-icon(pot, 56px, 50px, 0);
+  @include tab-left-position(home, 55px);
+  @include tab-left-position(ruby, 130px);
+  @include tab-left-position(search, 205px);
+
+  &__hidden-check {
+    display: none;
+  }
+
+  &__hidden-check:checked ~ &__link {
+    left: 1045px;
+    transition: left 0.5s;
+  }
+
+  // loop for add bg color when tab checked
+  @for $i from 1 through 3 {
+    &--#{nth($menu-tabs, $i)}-tab:checked ~ &--#{nth($menu-tabs, $i)} {
+      background: $pots-background;
+    }
+  }
+
+  //loop for slide menu blocks when tab checked
+  @for $i from 1 through 3 {
+    &--#{nth($menu-tabs, $i)}-tab:checked ~ &__#{nth($menu-blocks, $i)} {
+      left: 1120px;
+      transition: left 0.5s;
+    }
+  }
+
+  @include menu-block-hidden(warehouse);
+  @include menu-block-hidden(rooms);
+
+  &__search {
+    @include common-styles-for-hidden-blocks();
+
+    &-field {
+      display: inline-block;
+      outline: none;
+      color: $search-value;
+      padding: 0 0 0 10px;
+      height: 44px;
+      width: 283px;
+      margin: 13px 0 0 0;
+
+      &-item {
+        width: 40px;
+        height: 40px;
+        background: $pots-collection-text;
+        position: absolute;
+        left: 290px;
+        top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      &-icon {
+        height: 28px;
+        width: 26px;
+      }
+    }
+  }
+
+  &__icon {
+    height: 29px;
+    width: 33px;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.main {
+  .pot {
+    height: 375px;
+    display: inline-flex;
+    width: 100%;
+    background: $milk-bg;
+
+    @include collection(
+      $pots-background,
+      128px,
+      135deg,
+      45deg,
+      40px,
+      $pots-collection-text,
+      117px,
+      88px
+    );
+
+    .kittle {
+      height: 375px;
+      background: $milk-bg;
+      box-sizing: border-box;
+      display: inline-flex;
+
+      @include price-block();
+      @include product-block(
+        0 210px 0 50px,
+        267px,
+        311px,
+        url(../img/chajn73.png)
+      );
+      @include person-block(0, 100px, 0, url("../img/User-img.png"), 52px, 0);
+    }
+  }
+
+  .rooms {
+    height: 375px;
+    background: url(../img/bg-kitchen.jpg);
+    display: flex;
+    align-items: center;
+
+    &__diamond-block {
+      height: 140px;
+      width: 140px;
+      background: $rooms-circle;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 460px;
+    }
+
+    &__diamond {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .shaker {
+    height: 375px;
+    box-sizing: border-box;
+    background: $milk-bg;
+    display: inline-flex;
+
+    @include price-block();
+    @include product-block(0 215px 0 140px, 270px, 230px, url(../img/1.png));
+    @include person-block(0, 95px, 0, url("../img/User-img-3.png"), 52px, 55px);
+    @include collection(
+      $shakers-bg,
+      -252px,
+      -135deg,
+      -45deg,
+      -20px,
+      $shakers-collection-text,
+      117px,
+      60px
+    );
+  }
+
+  .bowl {
+    height: 375px;
+    display: inline-flex;
+    box-sizing: border-box;
+    background: $white;
+
+    @include collection(
+      $bowl-background,
+      128px,
+      135deg,
+      45deg,
+      40px,
+      $bowl-collection-text,
+      117px,
+      117px
+    );
+    @include price-block();
+    @include product-block(
+      0 165px 0 85px,
+      217px,
+      340px,
+      url(../img/miski063.png)
+    );
+    @include person-block(70px, 98px, 0, url("../img/User-img-2.png"), 52px, 0);
+  }
+}
+
+.footer {
+  height: 375px;
+  background: url(../img/bg-footer.jpg);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+
+  &__list {
+    margin: 0 0 20px 70px;
+  }
+
+  &__list-item {
+    display: inline-flex;
+    height: 90px;
+    margin: 0 62px 0 0;
+  }
+
+  @include footer-icon(pepper, 31px, 71px, 0);
+  @include footer-icon(teapot, 54px, 71px, 0);
+  @include footer-icon(shaker, 36px, 71px, 0);
+  @include footer-icon(plate, 71px, 71px, -5px);
+
+  &__owner {
+    width: 1275px;
+    color: $footer-text;
+    font-weight: $font-light;
+    margin: 0 0 30px 40px;
+  }
+
+  &__warehouse {
+    margin: 0 0 67px 0;
+
+    &-main-square {
+      height: 70px;
+      width: 70px;
+    }
+
+    @include warehouse-square(transparent-square, transparent);
+    @include warehouse-square(orange-square, $bowl-background);
+    @include warehouse-square(green-square, $shakers-bg);
+    @include warehouse-square(mint-square, $pots-background);
+
+    &-text {
+      position: relative;
+      left: -22px;
+      top: 10px;
+      color: $footer-text;
+    }
+  }
+}

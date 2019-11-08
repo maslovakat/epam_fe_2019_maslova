@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: $font-family;
+  vertical-align: baseline;
+  color: $main-text;
+}
+
+.body--hidden {
+  display: none;
+}
+
+.container {
+  width: 1500px;
+}
+
+li {
+  list-style-type: none;
+}
+
+@for $i from 1 through 5 {
+  #{nth($header-tags, $i)} {
+    font-size: #{nth($font-sizes, $i)};
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $main-text;
+}
+
+img {
+  width: 100%;
+}

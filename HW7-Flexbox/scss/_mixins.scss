@@ -1,0 +1,236 @@
+@mixin common-styles-for-hidden-blocks() {
+  position: absolute;
+  left: 1500px;
+  transition: left 0.5s;
+  height: 665px;
+  width: 380px;
+  background: url(../img/bg-menu.jpg);
+  padding: 32px 0 0 50px;
+  box-sizing: border-box;
+
+  &-text {
+    height: 73px;
+    width: 242px;
+    color: $white;
+    line-height: 23px;
+    text-align: center;
+  }
+}
+
+@mixin footer-icon($class, $width, $height, $left) {
+  &--#{$class} {
+    height: $height;
+    width: $width;
+    position: relative;
+    left: $left;
+  }
+}
+
+@mixin header-icon($class, $width, $height, $left) {
+  &--#{$class} {
+    height: $height;
+    width: $width;
+    position: relative;
+    left: $left;
+  }
+}
+
+@mixin menu-block-hidden($class) {
+  &__#{$class} {
+    @include common-styles-for-hidden-blocks();
+
+    &-link {
+      width: 118px;
+      height: 133px;
+      display: inline-flex;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      color: $white;
+      font-size: nth($font-sizes, 4);
+    }
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+@mixin pepper-blocks-checked($block, $left) {
+  .header__hidden-check:checked ~ .pepper__#{$block} {
+    left: $left;
+    transition: left 0.5s;
+  }
+}
+
+@mixin tab-left-position($tab, $top) {
+  &--#{$tab} {
+    top: $top;
+    left: 1405px;
+  }
+}
+
+@mixin pulse-animate() {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@mixin collection(
+  $bg,
+  $left,
+  $deg1,
+  $deg2,
+  $left-block,
+  $text,
+  $height,
+  $width
+) {
+  &__collection {
+    width: 362px;
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-flex;
+      height: 375px;
+      width: 20px;
+      position: relative;
+      left: $left;
+      background:
+        linear-gradient($deg1, $bg 12px, transparent 0),
+        linear-gradient($deg2, $bg 12px, transparent 0);
+      background-repeat: repeat-y;
+      background-size: 22px 11px;
+    }
+
+    &-block {
+      position: relative;
+      left: $left-block;
+      width: 125px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link {
+      margin: 0 0 12px 0;
+    }
+
+    &-item {
+      height: $height;
+      width: $width;
+    }
+
+    &-item:hover {
+      @include pulse-animate();
+    }
+
+    &-header {
+      font-weight: $font-light;
+      font-size: nth($font-sizes, 3);
+      color: $text;
+    }
+
+    &-text {
+      font-weight: $font-bold;
+      color: $text;
+    }
+  }
+}
+
+@mixin price-block() {
+  &__price-block {
+    padding: 37px 0 0 39px;
+    font-size: nth($font-sizes, 2);
+  }
+
+  &__name-product {
+    display: flex;
+    height: 40px;
+    font-weight: $font-light;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+}
+
+@mixin product-block($margin, $height, $width, $bg) {
+  &__product-block {
+    display: flex;
+    align-items: flex-end;
+    margin: $margin;
+  }
+
+  &__product {
+    height: $height;
+    width: $width;
+    background: $bg;
+  }
+}
+
+@mixin person-block(
+  $block-left,
+  $block-top,
+  $block-transition,
+  $url,
+  $name-height,
+  $margin
+) {
+  &__person {
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: $block-top;
+      left: $block-left;
+      transition: $block-transition;
+      margin: 0 $margin 0 0;
+    }
+
+    &-photo {
+      display: flex;
+      width: 68px;
+      height: 68px;
+      position: relative;
+      left: -5px;
+      background: $url;
+    }
+
+    &-name {
+      color: $pots-collection-text;
+      font-size: nth($font-sizes, 4);
+      font-weight: $font-bold;
+      position: relative;
+      top: 9px;
+      left: -7px;
+      height: $name-height;
+    }
+
+    &-phrase {
+      font-size: nth($font-sizes, 1);
+      font-weight: $font-light;
+      text-align: center;
+      line-height: 53px;
+    }
+  }
+}
+
+@mixin warehouse-square($class, $bg) {
+  &-#{$class} {
+    width: 35px;
+    height: 35px;
+    background: $bg;
+    float: left;
+  }
+}

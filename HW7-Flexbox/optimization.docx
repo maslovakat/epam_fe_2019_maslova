@@ -1,0 +1,15 @@
+#1 used srite of svg
+
+#2 used jpg instead og png for backround images
+
+#3 grouped styles like background, margin, padding... (but background for linear gradient I left separate)
+
+#4 didn't use inheritance in selectors
+
+#5 short value of color #fff instead #ffffff
+
+#6 remove attributes in svg, which I don't need to use
+
+#7 also made minify css file
+
+#8 separate scss code to different files
