@@ -181,25 +181,39 @@ a {
 }
 .header__nav-under-header {
   height: 35px;
-  width: 450px;
+  line-height: 35px;
+  width: 441px;
   position: relative;
   top: 35px;
   border-bottom: 1px solid #d8d8d8;
 }
 .header__nav-under-header-item {
   display: inline-block;
-  margin-right: 35px;
-  height: 35px;
+  padding: 0 17px;
 }
 .header__nav-under-header-link {
-  height: 21px;
   color: #aca8a8;
   font-size: 20px;
   line-height: 21px;
-  padding: 0 5px 5px;
 }
-.header__nav-under-header-item:last-child {
-  margin-right: 0;
+.header__nav-under-header-border {
+  height: 44px;
+  width: 441px;
+  position: relative;
+  top: 35px;
+  line-height: 44px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #d8d8d8;
+  overflow: hidden;
+}
+.header__nav-under-header-border-item {
+  display: inline-block;
+  padding: 0 17px;
+}
+.header__nav-under-header-border-link {
+  color: #aca8a8;
+  font-size: 20px;
+  line-height: 21px;
 }
 
 .reviews__rate-name::before {
@@ -326,6 +340,9 @@ a {
   box-shadow: 0 1px 8px 0 rgba(206, 206, 206, 0.5);
   margin-right: 17px;
   margin-bottom: 50px;
+}
+.main .available__item:hover {
+  box-shadow: 0 1px 20px 0 rgba(78, 78, 78, 0.5);
 }
 .main .available__item:last-child {
   margin-right: 0;
@@ -527,7 +544,9 @@ a {
 }
 .main .pagination__page-to-the-right {
   background-color: #f6f6f6;
-  background-image: url(../img/Arrow-right-1.svg) 14px 15px no-repeat;
+  background-image: url(../img/Arrow-right-1.svg);
+  background-position: 14px 15px;
+  background-repeat: no-repeat;
   position: relative;
   top: 18px;
 }
@@ -575,15 +594,11 @@ a {
 .header {
   background-image: url("../img/banner-img2.png");
 }
-.header__nav-under-header-item {
-  display: inline-block;
-  margin-right: 35px;
-  height: 35px;
-}
-.header__nav-under-header-item:hover {
-  height: 34px;
-  color: #5d5d5d;
+.header__nav-under-header-item-item:hover {
   border-bottom: 3px solid #e74c3c;
+}
+.header__nav-under-header-item-link:hover {
+  color: #5d5d5d;
 }
 
 .main .available__book-now {

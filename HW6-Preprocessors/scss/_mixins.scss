@@ -68,14 +68,22 @@
 
 //for navigation under header
 @mixin navigation-under-header($border-color) {
-  display: inline-block;
-  margin-right: 35px;
-  height: 35px;
-
-  &:hover {
-    height: 34px;
-    color: $main-grey-text;
+  &-item:hover {
     border-bottom: 3px solid $border-color;
+  }
+
+  &-link:hover {
+    color: $main-grey-text;
+  }
+}
+
+@mixin navigation-under-header-border($bg) {
+  &-item:hover {
+    background-color: $bg;
+  }
+
+  &-link:hover {
+    color: $white;
   }
 }
 

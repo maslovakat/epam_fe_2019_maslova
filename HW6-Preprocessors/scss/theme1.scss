@@ -5,8 +5,12 @@
 .header {
   background-image: url("../img/Banner-img.png");
 
-  &__nav-under-header-item {
+  &__nav-under-header {
     @include navigation-under-header($main-nav-hover-link);
+  }
+
+  &__nav-under-header-border {
+    @include navigation-under-header-border($main-nav-hover-link);
   }
 }
 
