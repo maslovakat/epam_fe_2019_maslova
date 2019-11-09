@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Libre Franklin", sans-serif;
+  src:
+    url("../fonts/LibreFranklin-Bold.ttf") format("truetype"),
+    url("../fonts/LibreFranklin-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lucida Grande", sans-serif;
+  src: url("../fonts/Lucida-Grande.ttf") format("truetype");
+}
+
+$libre-franklin: "Libre Franklin", sans-serif;
+$lucida-grande: "Lucida Grande", sans-serif;
+$font-bold: bold;
+$font-medium: 500;
+$font-light: 300;

@@ -1,0 +1,229 @@
+@import "typography";
+@import "vars";
+@import "color-matrix";
+@import "mixins";
+@import "reset";
+
+.header {
+  height: 890px;
+  background: rgba(76, 76, 76, 0.35) url(../img/Header.jpg) no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+
+  .main-block {
+    width: 650px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 53px 0 0;
+
+    &__convert {
+      height: 133px;
+      font-family: $lucida-grande;
+      font-size: 60px;
+      color: $white;
+      font-weight: $font-bold;
+      line-height: 71px;
+    }
+
+    &__offer {
+      height: 63px;
+      color: $white;
+      font-size: nth($font-sizes, 1);
+      line-height: 43px;
+      letter-spacing: 0.9px;
+    }
+
+    &__text {
+      width: 520px;
+      height: 113px;
+      color: $white;
+      font-size: nth($font-sizes, 4);
+      line-height: 27px;
+      padding: 0 0 0 61px;
+      letter-spacing: 0.4px;
+    }
+
+    .form-block {
+      height: 454px;
+      width: 360px;
+      border-radius: 3px;
+      background-color: $white;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 30px 37px 0 42px;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        height: 51px;
+        font-size: nth($font-sizes, 4);
+        font-weight: $font-bold;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__field-name {
+          height: 26px;
+          font-size: nth($font-sizes, 5);
+          font-weight: $font-medium;
+          line-height: 19px;
+        }
+
+        &__field {
+          box-sizing: border-box;
+          height: 44px;
+          width: 280px;
+          border: 1px solid $field-border;
+          border-radius: 3px;
+          padding: 0 0 0 10px;
+          margin: 0 0 30px 0;
+
+          &::placeholder {
+            color: $field-placeholder;
+          }
+
+          &:focus::placeholder {
+            color: $main-text;
+          }
+
+          &:focus {
+            border: 1px solid $button;
+          }
+        }
+
+        @include submit-button();
+      }
+    }
+  }
+}
+
+.main {
+  .amazing-feature {
+    display: flex;
+    justify-content: space-between;
+    padding: 101px 0 75px;
+
+    &__awesome {
+      width: 460px;
+
+      &-header {
+        font-family: $lucida-grande;
+        font-size: nth($font-sizes, 1);
+        line-height: 46px;
+        margin: 0 0 35px 0;
+      }
+
+      &-text {
+        font-size: nth($font-sizes, 5);
+        line-height: 27px;
+        margin: 0 0 25px 0;
+        letter-spacing: 0.3px;
+      }
+    }
+
+    &__benefits {
+      width: 560px;
+      display: inline-flex;
+      justify-content: space-between;
+      padding: 10px 0 0 0;
+
+      @include benefit-block(first);
+      @include benefit-block(second);
+    }
+  }
+
+  .feature {
+    background-color: $feature-bg;
+    box-sizing: border-box;
+    padding: 101px 0 0 0;
+
+    @include block-header-and-text();
+
+    .features {
+      padding: 60px 13px 65px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__img {
+        height: 430px;
+        max-width: 560px;
+        border-radius: 3px;
+        margin: 0 5px 0 0;
+      }
+
+      &__block {
+        &-item1 {
+          @include feature-item(url(../img/insurance.svg));
+        }
+
+        &-item2 {
+          @include feature-item(url(../img/dollar.svg));
+        }
+
+        &-item3 {
+          @include feature-item(url(../img/cvv.svg));
+        }
+      }
+    }
+  }
+
+  .album {
+    min-height: 350px;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    &__item {
+      float: left;
+      width: 25%;
+    }
+  }
+
+  .question {
+    width: 100%;
+    padding: 101px 0 97px 0;
+
+    @include block-header-and-text();
+
+    &__list {
+      padding: 8px 0 0 0;
+
+      &-item {
+        vertical-align: top;
+        display: inline-block;
+        margin: 51px 0 0 0;
+
+        &:nth-child(2n + 1) {
+          margin: 51px 35px 0 0;
+        }
+      }
+
+      &-header {
+        height: 35px;
+        font-size: nth($font-sizes, 5);
+        font-weight: $font-medium;
+        text-transform: uppercase;
+      }
+
+      &-text {
+        max-width: 560px;
+        font-size: nth($font-sizes, 5);
+        line-height: 27px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 70px;
+  background-color: $feature-bg;
+  font-size: nth($font-sizes, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

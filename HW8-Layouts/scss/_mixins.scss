@@ -1,0 +1,99 @@
+@mixin submit-button() {
+  &--submit {
+    height: 43px;
+    width: 280px;
+    border-radius: 3px;
+    background-color: $button;
+    box-shadow: 0 3px 4px 0 $button-shadow;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+
+    &:disabled {
+      box-shadow: none;
+      background-color: $button-hover;
+      opacity: 0.4;
+    }
+  }
+}
+
+@mixin benefit-block($class) {
+  &-#{$class} {
+    width: 260px;
+
+    &-picture {
+      height: 160px;
+      border-radius: 3px;
+      background-color: $bg-for-picture;
+      margin: 0 0 20px 0;
+    }
+
+    &-header {
+      height: 31px;
+      font-size: nth($font-sizes, 5);
+      font-weight: $font-medium;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      height: 46px;
+      font-size: nth($font-sizes, 5);
+      line-height: 23px;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+@mixin feature-item($img) {
+  margin: 0 0 0 65px;
+  position: relative;
+
+  &-header {
+    padding: 15px 0 0 0;
+    height: 35px;
+    font-size: nth($font-sizes, 5);
+    font-weight: $font-medium;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    max-width: 485px;
+    font-size: nth($font-sizes, 5);
+    line-height: 27px;
+    letter-spacing: 0.2px;
+    margin: 0 0 33px 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -65px;
+    top: 10px;
+    background: $img;
+  }
+}
+
+@mixin block-header-and-text() {
+  &__header {
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $lucida-grande;
+    font-size: nth($font-sizes, 1);
+  }
+
+  &__text {
+    width: 485px;
+    margin: 0 auto;
+    font-size: nth($font-sizes, 5);
+    line-height: 27px;
+    letter-spacing: 0.15px;
+    text-align: center;
+  }
+}

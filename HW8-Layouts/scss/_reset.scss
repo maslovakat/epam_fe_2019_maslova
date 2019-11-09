@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: $libre-franklin;
+  color: $main-text;
+  font-weight: $font-light;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+}

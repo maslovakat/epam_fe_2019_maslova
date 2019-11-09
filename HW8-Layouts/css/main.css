@@ -1,0 +1,377 @@
+@font-face {
+  font-family: "Libre Franklin", sans-serif;
+  src: url("../fonts/LibreFranklin-Bold.ttf") format("truetype"), url("../fonts/LibreFranklin-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lucida Grande", sans-serif;
+  src: url("../fonts/Lucida-Grande.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Libre Franklin", sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  height: 890px;
+  background: rgba(76, 76, 76, 0.35) url(../img/Header.jpg) no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.header .main-block {
+  width: 650px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 53px 0 0;
+}
+.header .main-block__convert {
+  height: 133px;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 71px;
+}
+.header .main-block__offer {
+  height: 63px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 43px;
+  letter-spacing: 0.9px;
+}
+.header .main-block__text {
+  width: 520px;
+  height: 113px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 0 0 0 61px;
+  letter-spacing: 0.4px;
+}
+.header .main-block .form-block {
+  height: 454px;
+  width: 360px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 30px 37px 0 42px;
+  display: flex;
+  flex-direction: column;
+}
+.header .main-block .form-block__header {
+  height: 51px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .main-block .form-block .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header .main-block .form-block .form__field-name {
+  height: 26px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.header .main-block .form-block .form__field {
+  box-sizing: border-box;
+  height: 44px;
+  width: 280px;
+  border: 1px solid #827d7d;
+  border-radius: 3px;
+  padding: 0 0 0 10px;
+  margin: 0 0 30px 0;
+}
+.header .main-block .form-block .form__field::placeholder {
+  color: #cacaca;
+}
+.header .main-block .form-block .form__field:focus::placeholder {
+  color: #333;
+}
+.header .main-block .form-block .form__field:focus {
+  border: 1px solid #3358de;
+}
+.header .main-block .form-block .form--submit {
+  height: 43px;
+  width: 280px;
+  border-radius: 3px;
+  background-color: #3358de;
+  box-shadow: 0 3px 4px 0 rgba(72, 72, 72, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+.header .main-block .form-block .form--submit:hover {
+  background-color: #3750ae;
+}
+.header .main-block .form-block .form--submit:disabled {
+  box-shadow: none;
+  background-color: #3750ae;
+  opacity: 0.4;
+}
+
+.main .amazing-feature {
+  display: flex;
+  justify-content: space-between;
+  padding: 101px 0 75px;
+}
+.main .amazing-feature__awesome {
+  width: 460px;
+}
+.main .amazing-feature__awesome-header {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 35px;
+  line-height: 46px;
+  margin: 0 0 35px 0;
+}
+.main .amazing-feature__awesome-text {
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0 0 25px 0;
+  letter-spacing: 0.3px;
+}
+.main .amazing-feature__benefits {
+  width: 560px;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+}
+.main .amazing-feature__benefits-first {
+  width: 260px;
+}
+.main .amazing-feature__benefits-first-picture {
+  height: 160px;
+  border-radius: 3px;
+  background-color: #d8d8d8;
+  margin: 0 0 20px 0;
+}
+.main .amazing-feature__benefits-first-header {
+  height: 31px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .amazing-feature__benefits-first-text {
+  height: 46px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.3px;
+}
+.main .amazing-feature__benefits-second {
+  width: 260px;
+}
+.main .amazing-feature__benefits-second-picture {
+  height: 160px;
+  border-radius: 3px;
+  background-color: #d8d8d8;
+  margin: 0 0 20px 0;
+}
+.main .amazing-feature__benefits-second-header {
+  height: 31px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .amazing-feature__benefits-second-text {
+  height: 46px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.3px;
+}
+.main .feature {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 101px 0 0 0;
+}
+.main .feature__header {
+  height: 65px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 35px;
+}
+.main .feature__text {
+  width: 485px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.15px;
+  text-align: center;
+}
+.main .feature .features {
+  padding: 60px 13px 65px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main .feature .features__img {
+  height: 430px;
+  max-width: 560px;
+  border-radius: 3px;
+  margin: 0 5px 0 0;
+}
+.main .feature .features__block-item1 {
+  margin: 0 0 0 65px;
+  position: relative;
+}
+.main .feature .features__block-item1-header {
+  padding: 15px 0 0 0;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .feature .features__block-item1-text {
+  max-width: 485px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  margin: 0 0 33px 0;
+}
+.main .feature .features__block-item1::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -65px;
+  top: 10px;
+  background: url(../img/insurance.svg);
+}
+.main .feature .features__block-item2 {
+  margin: 0 0 0 65px;
+  position: relative;
+}
+.main .feature .features__block-item2-header {
+  padding: 15px 0 0 0;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .feature .features__block-item2-text {
+  max-width: 485px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  margin: 0 0 33px 0;
+}
+.main .feature .features__block-item2::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -65px;
+  top: 10px;
+  background: url(../img/dollar.svg);
+}
+.main .feature .features__block-item3 {
+  margin: 0 0 0 65px;
+  position: relative;
+}
+.main .feature .features__block-item3-header {
+  padding: 15px 0 0 0;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .feature .features__block-item3-text {
+  max-width: 485px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  margin: 0 0 33px 0;
+}
+.main .feature .features__block-item3::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -65px;
+  top: 10px;
+  background: url(../img/cvv.svg);
+}
+.main .album {
+  min-height: 350px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.main .album__item {
+  float: left;
+  width: 25%;
+}
+.main .question {
+  width: 100%;
+  padding: 101px 0 97px 0;
+}
+.main .question__header {
+  height: 65px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 35px;
+}
+.main .question__text {
+  width: 485px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.15px;
+  text-align: center;
+}
+.main .question__list {
+  padding: 8px 0 0 0;
+}
+.main .question__list-item {
+  vertical-align: top;
+  display: inline-block;
+  margin: 51px 0 0 0;
+}
+.main .question__list-item:nth-child(2n+1) {
+  margin: 51px 35px 0 0;
+}
+.main .question__list-header {
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .question__list-text {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.3px;
+}
+
+.footer {
+  height: 70px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
