@@ -594,11 +594,17 @@ a {
 .header {
   background-image: url("../img/banner-img2.png");
 }
-.header__nav-under-header-item-item:hover {
+.header__nav-under-header-item:hover {
   border-bottom: 3px solid #e74c3c;
 }
-.header__nav-under-header-item-link:hover {
+.header__nav-under-header-link:hover {
   color: #5d5d5d;
+}
+.header__nav-under-header-border-item:hover {
+  background-color: #e74c3c;
+}
+.header__nav-under-header-border-link:hover {
+  color: #fff;
 }
 
 .main .available__book-now {

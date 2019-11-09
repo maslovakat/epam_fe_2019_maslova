@@ -5,8 +5,12 @@
 .header {
   background-image: url("../img/banner-img2.png");
 
-  &__nav-under-header-item {
+  &__nav-under-header {
     @include navigation-under-header($nav-red-border);
+  }
+
+  &__nav-under-header-border {
+    @include navigation-under-header-border($nav-red-border);
   }
 }
 
