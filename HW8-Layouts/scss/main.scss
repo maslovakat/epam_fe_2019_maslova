@@ -4,47 +4,59 @@
 @import "mixins";
 @import "reset";
 
+// .form--submit:target ~ .form__field:invalid {
+//   border: 1px solid $error-field;
+// }
+// .form__field {
+//   border: 1px solid $field-border;
+// }
+// .form__field:focus {
+//   border: 1px solid $button;
+// }
 .header {
-  height: 890px;
+  min-height: 890px;
   background: rgba(76, 76, 76, 0.35) url(../img/Header.jpg) no-repeat;
   background-size: cover;
   box-sizing: border-box;
 
   .main-block {
-    width: 650px;
-    text-align: center;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 53px 0 0;
+    text-align: center;
 
     &__convert {
-      height: 133px;
+      margin: 0 0 64px 0;
       font-family: $lucida-grande;
-      font-size: 60px;
+      font-size: 1.7142857142857142em;
       color: $white;
       font-weight: $font-bold;
       line-height: 71px;
     }
 
     &__offer {
-      height: 63px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 20px;
       color: $white;
-      font-size: nth($font-sizes, 1);
+      font-size: 1em;
       line-height: 43px;
       letter-spacing: 0.9px;
     }
 
     &__text {
-      width: 520px;
-      height: 113px;
+      max-width: 533px;
       color: $white;
       font-size: nth($font-sizes, 4);
       line-height: 27px;
-      padding: 0 0 0 61px;
+      margin: 0 auto 60px;
       letter-spacing: 0.4px;
     }
 
     .form-block {
-      height: 454px;
+      height: 452px;
       width: 360px;
       border-radius: 3px;
       background-color: $white;
@@ -58,6 +70,7 @@
         height: 51px;
         font-size: nth($font-sizes, 4);
         font-weight: $font-bold;
+        text-align: center;
       }
 
       .form {
@@ -70,27 +83,33 @@
           font-size: nth($font-sizes, 5);
           font-weight: $font-medium;
           line-height: 19px;
+          padding: 0 0 0 2px;
         }
 
         &__field {
           box-sizing: border-box;
           height: 44px;
-          width: 280px;
+          width: 100%;
           border: 1px solid $field-border;
           border-radius: 3px;
           padding: 0 0 0 10px;
-          margin: 0 0 30px 0;
+          margin: 0 0 29px 0;
+          font-size: nth($font-sizes, 5);
 
           &::placeholder {
             color: $field-placeholder;
           }
 
-          &:focus::placeholder {
-            color: $main-text;
+          &:invalid {
+            border: 1px solid $error-field;
           }
 
           &:focus {
             border: 1px solid $button;
+          }
+
+          &:focus::placeholder {
+            color: $main-text;
           }
         }
 
@@ -104,16 +123,16 @@
   .amazing-feature {
     display: flex;
     justify-content: space-between;
-    padding: 101px 0 75px;
+    padding: 101px 47px 75px;
 
     &__awesome {
-      width: 460px;
+      width: 40%;
 
       &-header {
         font-family: $lucida-grande;
         font-size: nth($font-sizes, 1);
         line-height: 46px;
-        margin: 0 0 35px 0;
+        margin: 5px 0 30px 0;
       }
 
       &-text {
@@ -125,7 +144,7 @@
     }
 
     &__benefits {
-      width: 560px;
+      width: 48.3%;
       display: inline-flex;
       justify-content: space-between;
       padding: 10px 0 0 0;
@@ -138,24 +157,26 @@
   .feature {
     background-color: $feature-bg;
     box-sizing: border-box;
-    padding: 101px 0 0 0;
+    padding: 111px 0 0 0;
 
     @include block-header-and-text();
 
     .features {
-      padding: 60px 13px 65px 0;
+      padding: 60px 62px 68px 47px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
 
       &__img {
-        height: 430px;
-        max-width: 560px;
+        height: auto;
+        width: 49%;
         border-radius: 3px;
-        margin: 0 5px 0 0;
+        margin: 0 1% 0 0;
       }
 
       &__block {
+        width: 42.6%;
+
         &-item1 {
           @include feature-item(url(../img/insurance.svg));
         }
@@ -172,11 +193,6 @@
   }
 
   .album {
-    min-height: 350px;
-    height: auto;
-    display: flex;
-    align-items: center;
-
     &__item {
       float: left;
       width: 25%;
@@ -184,39 +200,60 @@
   }
 
   .question {
-    width: 100%;
-    padding: 101px 0 97px 0;
+    clear: both;
+    padding: 101px 47px 100px;
 
     @include block-header-and-text();
 
     &__list {
-      padding: 8px 0 0 0;
+      padding: 11px 0 0 0;
 
       &-item {
+        width: 48.1%;
         vertical-align: top;
         display: inline-block;
         margin: 51px 0 0 0;
 
         &:nth-child(2n + 1) {
-          margin: 51px 35px 0 0;
+          margin: 51px 2.7% 0 0;
         }
       }
 
       &-header {
-        height: 35px;
+        height: 33px;
         font-size: nth($font-sizes, 5);
         font-weight: $font-medium;
         text-transform: uppercase;
       }
 
       &-text {
-        max-width: 560px;
         font-size: nth($font-sizes, 5);
         line-height: 27px;
         letter-spacing: 0.3px;
       }
     }
+
+    &__hidden-plus,
+    &__open {
+      display: none;
+    }
   }
+}
+
+.question__hidden-plus:checked + .question__open {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.question__hidden-plus:checked ~ .question__list-text {
+  height: auto;
+  overflow: visible;
+  transition: height 1s, overflow 1s;
+  margin: 4px 0 0;
+}
+
+.question__hidden-plus:checked ~ .question__list-header {
+  height: 35px;
 }
 
 .footer {
@@ -226,4 +263,498 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    min-height: 825px;
+    background: rgba(76, 76, 76, 0.35) url(../img/Header-1024.jpg) no-repeat;
+
+    .main-block {
+      padding: 54px 0 0;
+
+      &__convert {
+        margin: 0 0 37px 0;
+      }
+
+      &__text {
+        margin: 0 0 51px 0;
+      }
+
+      .form-block {
+        padding: 30px 37px 0 42px;
+
+        .form {
+          &__field {
+            margin: 0 0 30px 0;
+          }
+
+          &--submit {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    .amazing-feature {
+      padding: 70px 47px 52px;
+
+      &__awesome {
+        width: 48%;
+
+        &-header {
+          font-size: nth($font-sizes, 3);
+          line-height: 40px;
+          margin: 3px 0 19px 0;
+        }
+
+        &-text {
+          margin: 0 0 15px 0;
+        }
+      }
+
+      &__benefits {
+        padding: 12px 0 0 0;
+
+        &-first,
+        &-second {
+          &-picture {
+            margin: 0 0 14px 0;
+          }
+
+          &-header {
+            margin: 0 0 14px -3px;
+          }
+
+          &-text {
+            margin: 0 0 28px -3px;
+          }
+        }
+      }
+    }
+
+    .feature {
+      padding: 85px 0 0 0;
+
+      &__header {
+        height: 55px;
+        margin: 0 0 0 -5px;
+        font-size: nth($font-sizes, 3);
+      }
+
+      .features {
+        padding: 60px 47px 65px 47px;
+
+        &__img {
+          width: 57%;
+          margin: 0 5px 0 0;
+        }
+
+        &__block {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          &-item1,
+          &-item2,
+          &-item3 {
+            max-width: 320px;
+            margin: 0 0 0 50px;
+
+            &-header {
+              padding: 7px 0 0 0;
+            }
+
+            &-text {
+              margin: 0 0 12px 0;
+            }
+
+            &::before {
+              left: -50px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .question {
+      padding: 74px 4.5% 70px 4.5%;
+      box-sizing: border-box;
+
+      &__header {
+        height: 55px;
+      }
+
+      &__list {
+        padding: 10px 0 0 0;
+
+        &-item {
+          width: 48.1%;
+          margin: 51px 0 0 0;
+
+          &:nth-child(2n + 1) {
+            margin: 51px 2% 9px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: 852px;
+    background: rgba(76, 76, 76, 0.35) url(../img/Header-780.jpg) no-repeat;
+
+    .main-block {
+      &__offer {
+        width: 90%;
+        padding: 0 2%;
+        font-size: nth($font-sizes, 2);
+        letter-spacing: 0.7px;
+      }
+
+      &__text {
+        width: 98%;
+        font-size: nth($font-sizes, 5);
+        letter-spacing: 0.3px;
+        margin: 0 auto 49px;
+      }
+
+      .form-block {
+        height: 454px;
+        padding: 30px 37px 0 42px;
+
+        &__header {
+          height: 52px;
+        }
+
+        .form {
+          &__field-name {
+            padding: 0;
+            letter-spacing: 0.4px;
+          }
+
+          &--submit {
+            margin: -1px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    .amazing-feature {
+      padding: 63px 40px 33px 40px;
+      flex-direction: column;
+
+      &__awesome {
+        width: 100%;
+
+        &-header {
+          width: 60%;
+          margin: 0 0 28px 0;
+        }
+
+        &-text {
+          width: 84%;
+          letter-spacing: 0.2px;
+          margin: 0 0 25px 0;
+        }
+      }
+
+      &__benefits {
+        width: 100%;
+        padding: 4px 0 0 0;
+
+        &-first,
+        &-second {
+          width: 47.8%;
+
+          &-picture {
+            margin: 0 0 14px 0;
+          }
+
+          &-header {
+            margin: 0 0 13px 0;
+          }
+
+          &-text {
+            margin: 0 0 27px 0;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+
+    .feature {
+      padding: 70px 0 10px;
+
+      &__header {
+        height: 56px;
+      }
+
+      &__text {
+        padding: 0 0 0 3px;
+      }
+
+      .features {
+        flex-direction: column;
+        padding: 39px 39px 65px 39px;
+
+        &__img {
+          width: 100%;
+        }
+
+        &__block {
+          width: 95%;
+          align-items: flex-start;
+          margin: 33px 0 0 3px;
+
+          &-item1,
+          &-item2,
+          &-item3 {
+            max-width: 95%;
+            margin: 0 0 0 52px;
+
+            &-text {
+              margin: 0 0 40px 0;
+              letter-spacing: 0.25px;
+            }
+
+            &::before {
+              left: -55px;
+              top: -1px;
+            }
+          }
+        }
+      }
+    }
+
+    .album {
+      &__item {
+        margin: 0 0 -9px 0;
+        width: 50%;
+      }
+    }
+
+    .question {
+      position: relative;
+      padding: 74px 4.5% 66px 4.5%;
+
+      &__header {
+        height: 50px;
+        font-size: nth($font-sizes, 3);
+      }
+
+      &__text {
+        letter-spacing: 0.3px;
+      }
+
+      &__list {
+        padding: 0 0 0 6px;
+        margin: 15px 0 0 0;
+
+        &-item {
+          padding: 17px 0 15px 9px;
+          width: 98%;
+          margin: 30px 0 0 0;
+          background-color: $feature-bg;
+
+          &:nth-child(2n + 1) {
+            margin: 30px 0 0 0;
+          }
+        }
+
+        &-header {
+          height: auto;
+        }
+
+        &-text {
+          width: 90%;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+
+      &__open {
+        display: block;
+        position: absolute;
+        left: 90.3%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background: url(../img/plus-symbol.svg);
+        transform: rotate(0);
+        transition: transform 0.5s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    min-height: 1011px;
+    background: rgba(76, 76, 76, 0.35) url(../img/Header-480.jpg) no-repeat;
+
+    .main-block {
+      padding: 25px 0 0;
+
+      &__convert {
+        margin: 0 0 82px 0;
+      }
+
+      &__offer {
+        width: 73%;
+        line-height: 38px;
+        letter-spacing: 0.7px;
+        margin: 0 auto 47px;
+        font-size: nth($font-sizes, 3);
+      }
+
+      &__text {
+        width: 78%;
+        margin: 0 0 97px 0;
+      }
+    }
+  }
+
+  .main {
+    .amazing-feature {
+      padding: 67px 15px 14px;
+
+      &__awesome {
+        &-header {
+          width: 100%;
+          margin: 0 0 29px 0;
+        }
+
+        &-text {
+          width: 100%;
+        }
+      }
+
+      &__benefits {
+        width: 100%;
+        flex-direction: column;
+        padding: 14px 0 0 0;
+
+        &-first,
+        &-second {
+          width: 100%;
+
+          &-picture {
+            margin: 0 0 3px 0;
+          }
+
+          &-header {
+            margin: 0 0 6px 0;
+          }
+
+          &-text {
+            margin: 0 0 49px 0;
+          }
+        }
+      }
+    }
+
+    .feature {
+      padding: 77px 0 6px;
+
+      &__header {
+        height: 56px;
+        margin: 0;
+      }
+
+      &__text {
+        width: 90%;
+        line-height: 25px;
+      }
+
+      .features {
+        padding: 48px 15px 17px;
+
+        &__block {
+          width: 100%;
+          margin: 25px 0 0 -2px;
+
+          &-item1,
+          &-item2,
+          &-item3 {
+            &-header {
+              height: 39px;
+            }
+
+            &-text {
+              margin: 0 0 41px 0;
+            }
+
+            &::before {
+              left: -50px;
+              top: -2px;
+            }
+          }
+        }
+      }
+    }
+
+    .question {
+      padding: 78px 15px 65px;
+
+      &__header {
+        height: 52px;
+      }
+
+      &__text {
+        width: 80%;
+      }
+
+      &__list {
+        padding: 0;
+        margin: 26px 0 0 0;
+
+        &-item {
+          position: relative;
+          padding: 16px 0 16px 10px;
+          margin: 20px 0 0 0;
+          width: 98%;
+
+          &:nth-child(2n + 1) {
+            margin: 20px 0 0 0;
+          }
+        }
+
+        &-header {
+          height: auto;
+        }
+
+        &-text {
+          width: 90%;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+
+      &__open {
+        display: block;
+        position: absolute;
+        left: 93%;
+        top: 14px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background: url(../img/plus-symbol.svg);
+        transform: rotate(0);
+        transition: transform 0.5s;
+      }
+    }
+  }
+
+  .footer {
+    padding: 0 0 0 6px;
+  }
 }

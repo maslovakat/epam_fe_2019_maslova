@@ -1,5 +1,7 @@
 // fonts
-$font-sizes: 35px, 32px, 30px, 18px, 16px;
+$font-sizes-px: 35px, 32px, 30px, 18px, 16px;
+$font-sizes: 1em, 0.9142857142857143em, 0.8571428571428571em,
+  0.5142857142857142em, 0.45714285714285713em;
 
 // colors
 $black-333: #333;
@@ -11,3 +13,4 @@ $grey-F8F8F8: #f8f8f8;
 $grey-CACACA: #cacaca;
 $blue-3358DE: #3358de;
 $blue-3750AE: #3750ae;
+$red-B22746: #b22746;
