@@ -1,0 +1,195 @@
+@mixin make-all-media($lg, $md, $sm, $xs) {
+  @include make-xs-column($xs);
+  @include make-sm-column($sm);
+  @include make-md-column($md);
+  @include make-lg-column($lg);
+}
+
+@mixin make-all-media-offset($lg, $md, $sm, $xs) {
+  @include make-xs-column-offset($xs);
+  @include make-sm-column-offset($sm);
+  @include make-md-column-offset($md);
+  @include make-lg-column-offset($lg);
+}
+
+@mixin secondary-button($width) {
+  width: $width;
+  color: $secondary-button;
+  border: 1px solid $secondary-button;
+  border-radius: 5px;
+  background-color: $white;
+  outline: none;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+  font-size: nth($font-sizes, 5);
+  line-height: 25px;
+
+  &:hover {
+    background-color: $hover-button;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+@mixin primary-button($width) {
+  width: $width;
+  color: $white;
+  border-radius: 5px;
+  border: 1px solid $primary-button;
+  background-color: $primary-button;
+  outline: none;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+  font-size: nth($font-sizes, 5);
+  line-height: 25px;
+
+  &:hover {
+    background-color: $hover-button;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+@mixin make-section-header($border-width, $letter-spacing) {
+  &__header {
+    @include make-lg-column(11.55);
+
+    padding: 80px 20px 0;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: -0.4px;
+    text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      height: 8px;
+      width: $border-width;
+      border: 1px solid $secondary-button;
+      border-top: 0;
+      margin: 3px auto 0;
+    }
+  }
+
+  &__text {
+    @include make-all-media(5, 6, 8, 9);
+    @include make-all-media-offset(3.29, 2.6, 1.8, 1.5);
+
+    font-size: nth($font-sizes, 4);
+    line-height: 26px;
+    text-align: center;
+    padding: 14.5px 20px 0;
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin make-folder(
+  $folder-gradient-bg,
+  $folder-gradient-light,
+  $folder-gradient,
+  $margin,
+  $side,
+  $border-radius
+) {
+  background:
+    $folder-gradient-bg,
+    linear-gradient(236.42deg, $folder-gradient-light 0%, $folder-gradient 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-icon {
+    @include make-lg-column(3);
+
+    width: 65px;
+    height: 64px;
+    margin: $margin;
+  }
+
+  &-header {
+    @include make-lg-column(12);
+    @include make-row();
+
+    font-family: $lucida-grande;
+    font-size: nth($font-sizes, 4);
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    #{$side}: 0;
+    top: 0;
+    #{$border-radius}: 5px;
+    background-color: $white;
+  }
+}
+
+@mixin make-dot-in-info() {
+  &::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -10px;
+    top: -3px;
+    width: 3px;
+    height: 3px;
+    background-color: $info-color;
+    border-radius: 50%;
+  }
+}
+
+@mixin arrow-button-size() {
+  &-size {
+    box-sizing: border-box;
+    height: 45px;
+    width: 45px;
+    border: 1px solid $secondary-button;
+    border-radius: 5px;
+    background-color: $white;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 3px 10px 0 $arrow-button-shadow;
+    }
+  }
+
+  &-left-arrow {
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    top: 14px;
+    left: 11px;
+    transform: rotate(90deg);
+  }
+
+  &-right-arrow {
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    top: 14px;
+    left: 13px;
+    transform: rotate(-90deg);
+    float: right;
+  }
+}
+
+@mixin make-social-icons($width) {
+  display: inline-block;
+  height: 23px;
+  width: $width;
+}

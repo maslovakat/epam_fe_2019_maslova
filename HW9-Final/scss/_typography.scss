@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Lucida Grande", sans-serif;
+  src: url("../fonts/Lucida-Grande/Lucida-Grande.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hind Siliguri", sans-serif;
+  src:
+    url("../fonts/Hind_Siliguri/HindSiliguri-Regular.ttf") format("truetype"),
+    url("../fonts/Hind_Siliguri/HindSiliguri-Bold") format("truetype"),
+    url("../fonts/Hind_Siliguri/HindSiliguri-Light.ttf") format("truetype"),
+    url("../fonts/Hind_Siliguri/HindSiliguri-Medium.ttf") format("truetype"),
+    url("../fonts/Hind_Siliguri/HindSiliguri-SemiBold.ttf") format("truetype");
+}
+
+$lucida-grande: "Lucida Grande", sans-serif;
+$hind-siliguri: "Hind Siliguri", sans-serif;
