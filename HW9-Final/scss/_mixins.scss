@@ -92,17 +92,8 @@
   }
 }
 
-@mixin make-folder(
-  $folder-gradient-bg,
-  $folder-gradient-light,
-  $folder-gradient,
-  $margin,
-  $side,
-  $border-radius
-) {
-  background:
-    $folder-gradient-bg,
-    linear-gradient(236.42deg, $folder-gradient-light 0%, $folder-gradient 100%);
+@mixin make-folder($linear, $bg-color, $margin, $side, $border-radius) {
+  background: $linear, $bg-color;
   position: relative;
   display: flex;
   flex-direction: column;

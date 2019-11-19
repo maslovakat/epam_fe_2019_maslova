@@ -32,7 +32,6 @@
 }
 
 .buttons {
-  @include make-row();
   @include make-all-media(6, 6, 6, 6);
 
   clear: both;
@@ -144,11 +143,21 @@
     }
   }
 
+  // linear-gradient(
+  //     236.42deg,
+  //     $folder-gradient-light 0%,
+  //     $folder-green-gradient-bg 100%
+  //   ),
+  //   $folder-gradient-bg
+  // linear-gradient(108.56deg, rgba(230,246,65,0.5) 0%, rgba(41,252,154,0.5) 100%)
   &__typography {
     @include make-folder(
+      linear-gradient(
+        108.56deg,
+        $folder-green-gradient-light 0%,
+        $folder-green-gradient 100%
+      ),
       $folder-green-gradient-bg,
-      $folder-green-gradient-light,
-      $folder-green-gradient,
       44px 0 21px 0,
       right,
       border-bottom-left-radius
@@ -157,9 +166,12 @@
 
   &__icon-set {
     @include make-folder(
+      linear-gradient(
+        236.77deg,
+        $folder-blue-gradient 0%,
+        $folder-blue-gradient-light 100%
+      ),
       $folder-blue-gradient-bg,
-      $folder-blue-gradient-light,
-      $folder-blue-gradient,
       50px 0 20px 0,
       left,
       border-bottom-right-radius
@@ -173,9 +185,12 @@
 
   &__accurate {
     @include make-folder(
+      linear-gradient(
+        236.42deg,
+        $folder-red-gradient-light 0%,
+        $folder-red-gradient 100%
+      ),
       $folder-red-gradient-bg,
-      $folder-red-gradient-light,
-      $folder-red-gradient,
       44px 0 27px 0,
       right,
       border-bottom-left-radius
@@ -663,6 +678,7 @@
     font-weight: bold;
     color: $secondary-text;
     font-family: $hind-siliguri;
+    font-size: 17px;
     cursor: pointer;
   }
 }
