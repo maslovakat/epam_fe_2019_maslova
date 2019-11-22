@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Final</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home-page.css" />
   </head>
   <body>
     <div class="sprite-block">
@@ -64,11 +64,10 @@
         <symbol id="aIconFacebook">
           <path
             d="M8.648 23h-3.95c-.66 0-1.197-.5-1.197-1.116v-8.307H1.196C.536 13.577 0 13.076 0 12.46V8.9c0-.615.537-1.116 1.196-1.116h2.305V6.003c0-1.768.595-3.272 1.721-4.349C6.353.572 7.934 0 9.793 0l3.013.005C13.464.005 14 .506 14 1.12v3.306c0 .615-.537 1.115-1.196 1.115h-2.028c-.619 0-.776.117-.81.152-.056.059-.122.225-.122.684v1.408h2.807c.212 0 .417.049.592.14.38.198.616.572.616.976l-.001 3.56c0 .615-.537 1.115-1.197 1.115H9.844v8.308C9.844 22.5 9.307 23 8.648 23zm-3.7-1.348h3.45v-8.68c0-.41.359-.744.799-.744h3.215V9.134H9.198c-.44 0-.799-.334-.799-.745V6.377c0-.527.057-1.126.484-1.576.515-.545 1.327-.607 1.893-.607l1.779-.001v-2.84l-2.762-.005c-2.988 0-4.845 1.784-4.845 4.655v2.386c0 .41-.358.745-.799.745H1.446v3.094h2.702c.44 0 .8.334.8.745v8.679z"
-            fill="#4D4949"
           ></path>
         </symbol>
         <symbol id="aIconInstagram">
-          <g fill="#4D4949">
+          <g>
             <path
               d="M16.774 0H6.226A6.233 6.233 0 0 0 0 6.226v10.548A6.233 6.233 0 0 0 6.226 23h10.548A6.233 6.233 0 0 0 23 16.774V6.226A6.233 6.233 0 0 0 16.774 0zm4.878 16.774a4.883 4.883 0 0 1-4.878 4.878H6.226a4.883 4.883 0 0 1-4.878-4.878V6.226a4.883 4.883 0 0 1 4.878-4.878h10.548a4.883 4.883 0 0 1 4.878 4.878v10.548z"
             ></path>
@@ -80,7 +79,6 @@
         <symbol id="aIconLikeActive">
           <path
             d="M11.5 0C5.168 0 0 5.168 0 11.5S5.168 23 11.5 23 23 17.832 23 11.5 17.832 0 11.5 0zm7.8 5.01a10.105 10.105 0 0 1 2.35 6.328c-1.8-.42-3.798-.449-5.833-.078-.53.097-1.06.22-1.586.367A32.205 32.205 0 0 0 13.035 8.8c2.425-.927 5.053-2.306 6.265-3.79zm-7.8-3.662c2.642 0 5.051 1.014 6.86 2.674-.706.962-2.716 2.362-5.94 3.57a29.29 29.29 0 0 0-4.035-5.755c.982-.317 2.029-.49 3.115-.49zM7.05 2.376a28.047 28.047 0 0 1 4.087 5.663C7.782 9.125 4.385 9.567 1.592 9.28A10.19 10.19 0 0 1 7.05 2.376zM1.348 11.5c0-.298.014-.593.039-.885.616.065 1.259.098 1.923.098 2.62 0 5.564-.504 8.455-1.461.441.903.838 1.832 1.188 2.783a18.84 18.84 0 0 0-3.254 1.534c-2.526 1.504-4.374 3.438-5.14 5.333A10.126 10.126 0 0 1 1.348 11.5zM11.5 21.652c-2.17 0-4.182-.684-5.834-1.848.513-1.73 2.245-3.602 4.722-5.077a17.45 17.45 0 0 1 3.005-1.409 31.574 31.574 0 0 1 1.423 7.778c-1.04.36-2.155.556-3.316.556zm4.63-1.118a32.615 32.615 0 0 0-1.458-7.62c2.184-.6 4.608-.802 6.908-.206a10.177 10.177 0 0 1-5.45 7.826z"
-            fill="#4D4949"
           ></path>
         </symbol>
         <symbol id="aIconMail">
@@ -122,10 +120,7 @@
             <li class="navigation__right">
               <ul class="navigation__right-list">
                 <li class="navigation__right-list-item">
-                  <a
-                    id="homePage"
-                    class="navigation__right-list-link navigation--active-link"
-                    href="#"
+                  <a id="homePage" class="navigation__right-list-link" href="#"
                     >Home</a
                   >
                 </li>
@@ -135,16 +130,20 @@
                   >
                 </li>
                 <li class="navigation__right-list-item">
-                  <a class="navigation__right-list-link" href="#">Blog</a>
+                  <a class="navigation__right-list-link" href="blog.html"
+                    >Blog</a
+                  >
                 </li>
                 <li class="navigation__right-list-item">
                   <a class="navigation__right-list-link" href="#">Pages</a>
                 </li>
+
                 <li class="navigation__right-list-item">
                   <a class="navigation__right-list-link" href="#aboutUs"
                     >About</a
                   >
                 </li>
+
                 <li class="navigation__right-list-item">
                   <a class="navigation__right-list-link" href="#contactUs"
                     >Contact</a
@@ -164,8 +163,12 @@
           thinking and unique perspectives.
         </p>
         <div class="buttons">
-          <button class="buttons__item buttons--explore">Explore</button>
-          <button class="buttons__item buttons--learn-more">Learn more</button>
+          <button class="buttons__item buttons--explore">
+            Explore
+          </button>
+          <button class="buttons__item buttons--learn-more">
+            Learn more
+          </button>
         </div>
       </div>
     </header>
@@ -173,6 +176,7 @@
       <div class="container">
         <section class="about-us" id="aboutUs">
           <h2 class="about-us__header">About us</h2>
+          <div class="about-us__header-underline"></div>
           <p class="about-us__text">
             This is who we are - or at least who we strive to be…
           </p>
@@ -210,6 +214,7 @@
         </section>
         <section class="latest-posts">
           <h2 class="latest-posts__header">Latest posts</h2>
+          <div class="latest-posts__header-underline"></div>
           <p class="latest-posts__text">
             Information is a source of learning. But unless it is organized,
             processed and available to the right people
@@ -299,6 +304,7 @@
         </section>
         <section class="latest-portfolio" id="latestPortfolio">
           <h2 class="latest-portfolio__header">Latest portfolio</h2>
+          <div class="latest-portfolio__header-underline"></div>
           <p class="latest-portfolio__text">
             Put there articles successfully special warrant submit agree what
             along then
@@ -339,6 +345,7 @@
       <section class="testimonials">
         <div class="container">
           <h2 class="testimonials__header">Testimonials</h2>
+          <div class="testimonials__header-underline"></div>
           <div>
             <div class="testimonials__slider">
               <div class="testimonials__slider-size">
@@ -352,10 +359,10 @@
                     We move at a fast pace. I’m always working on something. I
                     am excited about it!
                   </h3>
-                  <p class="testimonials__slider-slide-quote-text">
+                  <p class="testimonials__slider-slide-quote-author">
                     Martin Oda
                   </p>
-                  <p class="testimonials__slider-slide-quote-text">
+                  <p class="testimonials__slider-slide-quote-product">
                     Product desgner
                   </p>
                 </div>
@@ -379,6 +386,7 @@
       <div class="container">
         <section class="contact-us" id="contactUs">
           <h2 class="contact-us__header">Contact us</h2>
+          <div class="contact-us__header-underline"></div>
           <p class="contact-us__text">
             Put there articles successfully special warrant submit agree what
             along then
@@ -443,7 +451,7 @@
               </h4>
             </section>
             <div class="form">
-              <form action="post">
+              <form method="POST">
                 <label class="form__header" for="userName">Your name</label>
                 <input
                   class="form__field"
@@ -479,11 +487,17 @@
                     >show</label
                   >
                 </div>
-                <button class="form__button">Send message</button>
+                <input
+                  type="submit"
+                  class="form__button"
+                  value="Send message"
+                />
               </form>
               <p class="form__text">
                 If you need to have a DNA first, just contact us at
-                <a href="#" class="form--contact-email">email&#64;gmail.com</a>
+                <a href="mailto:email@gmail.com" class="form--contact-email"
+                  >email&#64;gmail.com</a
+                >
               </p>
             </div>
 
@@ -497,15 +511,21 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__socials">
-          <svg class="footer--facebook">
-            <use href="#aIconFacebook"></use>
-          </svg>
-          <svg class="footer--instagram">
-            <use href="#aIconInstagram"></use>
-          </svg>
-          <svg class="footer--activity">
-            <use href="#aIconLikeActive"></use>
-          </svg>
+          <a class="footer__facebook" href="#">
+            <svg class="footer--facebook">
+              <use href="#aIconFacebook"></use>
+            </svg>
+          </a>
+          <a class="footer__instagram" href="#">
+            <svg class="footer--instagram">
+              <use href="#aIconInstagram"></use>
+            </svg>
+          </a>
+          <a class="footer__activity" href="#">
+            <svg class="footer--activity">
+              <use href="#aIconLikeActive"></use>
+            </svg>
+          </a>
         </div>
         <h2 class="footer__logo">BlogWorld</h2>
         <div class="footer__copyright">&copy;2019 All Rights Reserved.</div>

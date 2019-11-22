@@ -9,9 +9,8 @@
 @import "vars";
 @import "typography";
 @import "color-matrix";
-@import "global";
 @import "mixins";
-@import "home-page";
+@import "global";
 
 .container {
   @media (min-width: $screen-sm-min) {
