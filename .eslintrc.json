@@ -12,18 +12,9 @@
     "jest": true
   },
   "rules": {
-    "no-console":
-    [
-      "error",
-      {
-        "allow": ["warn", "error"]
-      }
-    ],
+    "no-console": "off",
     "dot-notation": "error",
-    "dot-location": [
-      "error",
-      "property"
-    ],
+    "dot-location": ["error", "property"],
     "eqeqeq": "error",
     "curly": "error",
     "consistent-return": "warn", // TODO: Switch it to error
@@ -40,14 +31,8 @@
     "camelcase": "warn", // TODO: should be error. Conflicts with BEM notation using underscore for modifiers
     "linebreak-style": 0,
     "import/no-named-as-default": 0,
-    "func-names": [
-      "error",
-      "never"
-    ],
-    "comma-dangle": [
-      "error",
-      "always-multiline"
-    ],
+    "func-names": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
     "func-style": "off",
     "key-spacing": "error",
     "keyword-spacing": "error",
@@ -58,10 +43,7 @@
         "SwitchCase": 1
       }
     ],
-    "max-depth": [
-      "error",
-      2
-    ],
+    "max-depth": ["error", 2],
     "max-len": [
       "off", // TODO: Discuss this
       120
@@ -70,28 +52,19 @@
       "warn", // TODO: Switch it to error
       300
     ],
-    "max-nested-callbacks": [
-      "error",
-      3
-    ],
+    "max-nested-callbacks": ["error", 3],
     "max-params": [
-      "warn",  // TODO: Switch to error
+      "warn", // TODO: Switch to error
       3
     ],
-    "max-statements": [
-      "error",
-      15
-    ],
+    "max-statements": ["error", 15],
     "max-statements-per-line": [
       "error",
       {
         "max": 1
       }
     ],
-    "multiline-ternary": [
-      "error",
-      "always-multiline"
-    ],
+    "multiline-ternary": ["error", "always-multiline"],
     "new-parens": "error",
     "no-multi-assign": "error",
     "no-multiple-empty-lines": [
@@ -102,7 +75,6 @@
       }
     ],
     "no-negated-condition": "error",
-    "no-nested-ternary": "error",
     "no-tabs": "error",
     "no-trailing-spaces": "error",
     "no-unneeded-ternary": "error",
@@ -112,27 +84,12 @@
         "consistent": true
       }
     ],
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
-    "one-var": [
-      "error",
-      "never"
-    ],
+    "object-curly-spacing": ["error", "never"],
+    "one-var": ["error", "never"],
     "operator-linebreak": "error",
-    "padded-blocks": [
-      "error",
-      "never"
-    ],
-    "quote-props": [
-      "error",
-      "as-needed"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "padded-blocks": ["error", "never"],
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single"],
     "semi": "error",
     "semi-spacing": "error",
     "semi-style": "error",
@@ -169,9 +126,6 @@
     "prefer-const": "error",
     "prefer-template": "error",
     "rest-spread-spacing": "error",
-    "template-curly-spacing": [
-      "error",
-      "never"
-    ]
+    "template-curly-spacing": ["error", "never"]
   }
 }
