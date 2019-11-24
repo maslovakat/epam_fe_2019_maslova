@@ -403,3 +403,26 @@
     z-index: -1;
   }
 }
+
+@mixin make-post-aside-header() {
+  &__header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    font-family: $hind-siliguri-semiBold;
+    font-size: nth($font-sizes, 2);
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: -0.1px;
+    border-bottom: 1px solid $post-header-underline;
+  }
+}
+
+@mixin common-styles-for-aside-block($padding) {
+  padding: $padding;
+  clear: both;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $blog-feedback-bg;
+  margin-top: 70px;
+}

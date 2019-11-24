@@ -33,18 +33,21 @@
     @include make-all-media-offset(8.69, 7, 6, 0.8);
 
     clear: both;
-    height: 45px;
+    min-height: 45px;
     padding: 0;
     margin-top: 54px;
     margin-bottom: 30px;
     display: block;
     box-sizing: border-box;
     position: relative;
+    border: 1px solid $secondary-button;
+    border-radius: 5px;
+    overflow: hidden;
 
     &-field {
       width: 100%;
-      border: 1px solid $secondary-button;
-      border-radius: 5px;
+      // border: 1px solid $secondary-button;
+      // border-radius: 5px;
       color: $secondary-text;
       font-family: $hind-siliguri-regular;
       font-size: nth($font-sizes, 5);
@@ -52,6 +55,8 @@
       padding: 8px 0 10px 10px;
       letter-spacing: -0.6px;
       outline: none;
+      // margin-bottom: 30px;
+      border: 0;
     }
 
     &-item {
@@ -65,6 +70,49 @@
     &-icon {
       width: 20px;
       height: 20px;
+    }
+
+    &-dropdown {
+      clear: both;
+      height: 0;
+      overflow: hidden;
+      // background: red;
+
+      &-item {
+        clear: both;
+        height: 47px;
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f8f8f8;
+          border-radius: 5px;
+        }
+
+        &-text {
+          display: inline-block;
+          font-family: $lucida-grande-bold;
+          font-size: nth($font-sizes, 5);
+          position: relative;
+          top: -10px;
+        }
+
+        &-picture {
+          border-radius: 50%;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+
+    &-field:focus ~ &-dropdown {
+      height: auto;
+    }
+
+    &-field:focus {
+      width: 90%;
+      margin-left: 5%;
+      border-bottom: 1px solid $post-header-underline;
     }
   }
 }
