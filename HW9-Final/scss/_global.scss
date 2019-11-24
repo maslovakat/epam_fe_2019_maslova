@@ -59,9 +59,11 @@
   position: sticky;
   z-index: 999;
   bottom: 0;
+  padding: 0;
 
   &__socials {
     @include make-all-media(4.13, 4.13, 4.13, 3.7);
+    @include make-all-media-offset(0, 0, 0.2, 0.2);
 
     clear: both;
     padding: 0;
@@ -93,6 +95,7 @@
 
   &__logo {
     @include make-all-media(3.74, 3.74, 3.74, 3.74);
+    @include make-all-media-offset(0, 0, 0, -0.2);
 
     display: inline-block;
     margin-top: 21px;
@@ -108,6 +111,7 @@
 
   &__copyright {
     @include make-all-media(4.13, 3.74, 3.74, 4.5);
+    @include make-all-media-offset(0, 0, 0, -0.2);
 
     display: inline-block;
     margin-top: 22px;

@@ -481,6 +481,7 @@ body {
   position: sticky;
   z-index: 999;
   bottom: 0;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .footer {
@@ -519,6 +520,7 @@ body {
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
+  margin-left: 1.6666666667%;
   clear: both;
   padding: 0;
   margin-top: 22px;
@@ -539,6 +541,21 @@ body {
   .footer__socials {
     float: left;
     width: 34.4166666667%;
+  }
+}
+@media (min-width: 768px) {
+  .footer__socials {
+    margin-left: 1.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .footer__socials {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 1440px) {
+  .footer__socials {
+    margin-left: 0%;
   }
 }
 .footer__facebook, .footer__instagram, .footer__activity {
@@ -593,6 +610,7 @@ body {
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
+  margin-left: -1.6666666667%;
   display: inline-block;
   margin-top: 21px;
   color: #4d4c49;
@@ -622,6 +640,21 @@ body {
     width: 31.1666666667%;
   }
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 992px) {
+  .footer__logo {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 1440px) {
+  .footer__logo {
+    margin-left: 0%;
+  }
+}
 .footer__copyright {
   position: relative;
   float: left;
@@ -641,6 +674,7 @@ body {
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
+  margin-left: -1.6666666667%;
   display: inline-block;
   margin-top: 22px;
   padding: 0;
@@ -666,6 +700,21 @@ body {
   .footer__copyright {
     float: left;
     width: 34.4166666667%;
+  }
+}
+@media (min-width: 768px) {
+  .footer__copyright {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 992px) {
+  .footer__copyright {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 1440px) {
+  .footer__copyright {
+    margin-left: 0%;
   }
 }
 
@@ -2899,6 +2948,10 @@ body {
     float: left;
     width: 34.4166666667%;
   }
+}
+.communicate__facebook, .communicate__instagram, .communicate__activity {
+  text-decoration: none;
+  cursor: pointer;
 }
 .communicate--facebook {
   display: inline-block;

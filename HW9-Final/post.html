@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Post</title>
+    <link rel="stylesheet" href="css/post-page.css" />
+  </head>
+  <body>
+    <div class="sprite-block">
+      <svg>
+        <symbol id="aIconComment">
+          <path
+            d="M12.617.017L4.65 0c-.763 0-1.383.628-1.383 1.4v1.21l-1.883.003C.62 2.613 0 3.241 0 4.013v4.99c0 .773.62 1.4 1.384 1.4H2.8v2.36a.236.236 0 0 0 .233.237.233.233 0 0 0 .173-.077l2.264-2.52 3.88-.016c.763 0 1.383-.628 1.383-1.4v-.026l1.228 1.365a.233.233 0 0 0 .406-.158V7.807h.25c.762 0 1.383-.628 1.383-1.4v-4.99c0-.772-.62-1.4-1.383-1.4zm-2.35 8.97a.923.923 0 0 1-.918.927l-3.983.017a.232.232 0 0 0-.172.077l-1.927 2.145v-1.986a.235.235 0 0 0-.234-.236h-1.65a.923.923 0 0 1-.916-.927V4.013c0-.512.411-.928.917-.928L3.5 3.081l5.85-.012c.505 0 .917.416.917.927v4.991zm3.266-2.58a.923.923 0 0 1-.917.927h-.483a.235.235 0 0 0-.233.236v1.987l-1.167-1.299V3.996c0-.771-.62-1.4-1.384-1.4l-5.616.012V1.4c0-.512.412-.928.917-.928l7.966.016c.506 0 .918.417.918.928v4.99z"
+            fill="#818181"
+          ></path>
+        </symbol>
+        <symbol id="star2">
+          <title>552F7849-DA89-4711-A494-8766B434B0DC</title>
+          <path
+            d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+            fill="#D8D8D8"
+            fill-rule="evenodd"
+          ></path>
+        </symbol>
+        <symbol id="group">
+          <title>3B7AC287-DF1C-4781-970E-38C95336D631</title>
+          <g fill="none" fill-rule="evenodd">
+            <path
+              fill="#DEEE23"
+              d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+            ></path>
+            <path
+              fill="#D8D8D8"
+              d="M7 10.5V0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+            ></path>
+          </g>
+        </symbol>
+        <symbol id="star1">
+          <title>9CCCFD7E-BA79-49C0-AA00-5AA32E1C3146</title>
+          <path
+            d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+            fill="#DEEE23"
+            fill-rule="evenodd"
+          ></path>
+        </symbol>
+        <symbol id="aIconFacebook">
+          <path
+            d="M8.648 23h-3.95c-.66 0-1.197-.5-1.197-1.116v-8.307H1.196C.536 13.577 0 13.076 0 12.46V8.9c0-.615.537-1.116 1.196-1.116h2.305V6.003c0-1.768.595-3.272 1.721-4.349C6.353.572 7.934 0 9.793 0l3.013.005C13.464.005 14 .506 14 1.12v3.306c0 .615-.537 1.115-1.196 1.115h-2.028c-.619 0-.776.117-.81.152-.056.059-.122.225-.122.684v1.408h2.807c.212 0 .417.049.592.14.38.198.616.572.616.976l-.001 3.56c0 .615-.537 1.115-1.197 1.115H9.844v8.308C9.844 22.5 9.307 23 8.648 23zm-3.7-1.348h3.45v-8.68c0-.41.359-.744.799-.744h3.215V9.134H9.198c-.44 0-.799-.334-.799-.745V6.377c0-.527.057-1.126.484-1.576.515-.545 1.327-.607 1.893-.607l1.779-.001v-2.84l-2.762-.005c-2.988 0-4.845 1.784-4.845 4.655v2.386c0 .41-.358.745-.799.745H1.446v3.094h2.702c.44 0 .8.334.8.745v8.679z"
+          ></path>
+        </symbol>
+        <symbol id="aIconInstagram">
+          <g>
+            <path
+              d="M16.774 0H6.226A6.233 6.233 0 0 0 0 6.226v10.548A6.233 6.233 0 0 0 6.226 23h10.548A6.233 6.233 0 0 0 23 16.774V6.226A6.233 6.233 0 0 0 16.774 0zm4.878 16.774a4.883 4.883 0 0 1-4.878 4.878H6.226a4.883 4.883 0 0 1-4.878-4.878V6.226a4.883 4.883 0 0 1 4.878-4.878h10.548a4.883 4.883 0 0 1 4.878 4.878v10.548z"
+            ></path>
+            <path
+              d="M11 6c-3.308 0-6 2.692-6 6s2.692 6 6 6 6-2.692 6-6-2.692-6-6-6zm0 10.714A4.719 4.719 0 0 1 6.286 12 4.72 4.72 0 0 1 11 7.286 4.72 4.72 0 0 1 15.714 12 4.72 4.72 0 0 1 11 16.714zM17 3c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zm0 2.549a.55.55 0 1 1 .001-1.1.55.55 0 0 1-.001 1.1z"
+            ></path>
+          </g>
+        </symbol>
+        <symbol id="aIconLikeActive">
+          <path
+            d="M11.5 0C5.168 0 0 5.168 0 11.5S5.168 23 11.5 23 23 17.832 23 11.5 17.832 0 11.5 0zm7.8 5.01a10.105 10.105 0 0 1 2.35 6.328c-1.8-.42-3.798-.449-5.833-.078-.53.097-1.06.22-1.586.367A32.205 32.205 0 0 0 13.035 8.8c2.425-.927 5.053-2.306 6.265-3.79zm-7.8-3.662c2.642 0 5.051 1.014 6.86 2.674-.706.962-2.716 2.362-5.94 3.57a29.29 29.29 0 0 0-4.035-5.755c.982-.317 2.029-.49 3.115-.49zM7.05 2.376a28.047 28.047 0 0 1 4.087 5.663C7.782 9.125 4.385 9.567 1.592 9.28A10.19 10.19 0 0 1 7.05 2.376zM1.348 11.5c0-.298.014-.593.039-.885.616.065 1.259.098 1.923.098 2.62 0 5.564-.504 8.455-1.461.441.903.838 1.832 1.188 2.783a18.84 18.84 0 0 0-3.254 1.534c-2.526 1.504-4.374 3.438-5.14 5.333A10.126 10.126 0 0 1 1.348 11.5zM11.5 21.652c-2.17 0-4.182-.684-5.834-1.848.513-1.73 2.245-3.602 4.722-5.077a17.45 17.45 0 0 1 3.005-1.409 31.574 31.574 0 0 1 1.423 7.778c-1.04.36-2.155.556-3.316.556zm4.63-1.118a32.615 32.615 0 0 0-1.458-7.62c2.184-.6 4.608-.802 6.908-.206a10.177 10.177 0 0 1-5.45 7.826z"
+          ></path>
+        </symbol>
+        <symbol id="aIconArrow">
+          <path
+            d="M9 9.204L1.322.658a.446.446 0 0 0-.68 0 .577.577 0 0 0 0 .757l8.02 8.927c.188.21.49.21.68 0l8.015-8.927a.571.571 0 0 0 0-.753.446.446 0 0 0-.68 0L9 9.204z"
+            fill="#4D4949"
+          ></path>
+        </symbol>
+        <symbol id="aIconTime">
+          <g fill="#818181">
+            <path
+              d="M7 0C3.14 0 0 3.14 0 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 13.533A6.54 6.54 0 0 1 .467 7 6.54 6.54 0 0 1 7 .467 6.54 6.54 0 0 1 13.533 7 6.54 6.54 0 0 1 7 13.533z"
+            ></path>
+            <path
+              d="M7 1.4a.233.233 0 0 0-.233.233V7h-3.5a.233.233 0 1 0 0 .467H7a.233.233 0 0 0 .233-.234v-5.6A.233.233 0 0 0 7 1.4z"
+            ></path>
+          </g>
+        </symbol>
+      </svg>
+    </div>
+    <div class="container">
+      <header class="header">
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__logo">
+              <a class="navigation__logo-link" href="#">BlogWorld</a>
+            </li>
+            <li class="navigation__right">
+              <ul class="navigation__right-list">
+                <li class="navigation__right-list-item">
+                  <a
+                    id="homePage"
+                    class="navigation__right-list-link"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="navigation__right-list-item">
+                  <a
+                    class="navigation__right-list-link"
+                    href="index.html#latestPortfolio"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="navigation__right-list-item">
+                  <a class="navigation__right-list-link" href="blog.html"
+                    >Blog</a
+                  >
+                </li>
+                <li class="navigation__right-list-item">
+                  <a class="navigation__right-list-link" href="#">Pages</a>
+                </li>
+                <li class="navigation__right-list-item">
+                  <a
+                    class="navigation__right-list-link"
+                    href="index.html#aboutUs"
+                    >About</a
+                  >
+                </li>
+                <li class="navigation__right-list-item">
+                  <a
+                    class="navigation__right-list-link"
+                    href="index.html#contactUs"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="main__left">
+          <h2 class="main__left-header">
+            Fog up the river, where it flows among green aits and meadows
+          </h2>
+          <section class="feedback">
+            <img
+              class="feedback__user-photo"
+              src="img/Sarah.jpg"
+              alt="Sarah user"
+            />
+            <div class="feedback__block">
+              <h4 class="feedback__block-header">Sarah Healy</h4>
+              <div class="feedback__block-info">
+                <p class="feedback__block-info-date">02 oct, 2019</p>
+                <p class="feedback__block-info-read">12 min read</p>
+                <svg class="feedback__block-info-comments-icon">
+                  <use href="#aIconComment"></use>
+                </svg>
+                <p class="feedback__block-info-comments">4</p>
+                <svg class="feedback__block-info-star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="feedback__block-info-star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="feedback__block-info-star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="feedback__block-info-star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="feedback__block-info-star">
+                  <use href="#star2"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="feedback__picture">
+              <img
+                class="feedback__picture-item"
+                src="img/Post-main-img.jpg"
+                alt="table with flower"
+              />
+            </div>
+            <audio class="feedback__audio" src="/" controls></audio>
+            <p class="feedback__text">
+              The thing you’re doing now, reading prose on a screen, is going
+              out of fashion. The defining narrative of our online moment
+              concerns the decline of text, and the exploding reach and power of
+              audio and video.
+              <span class="feedback__text-marked"
+                >Which come particular teens wasn't.</span
+              >
+              Own day designed suspension conflict unlawful. I'll stayed liable
+              i've. Interact minutes see night translate.
+            </p>
+            <p class="feedback__text">
+              Number interact already promotion someone thought run same why one
+              it very. Fifteen problem friend editing away proprietary words
+              shivering shivered. Shivers special worried in waive this we.
+              Spider 13 house same avoid. Coffee including products violation
+              legs my defamatory predominantly important again strictly.
+              Including budgie we materials 17 hand harassing calling offensive
+              relating. Faints comes everyone this developed specialises parties
+              scream. Aren't stopped mean little me but what lower problem. Can
+              usually. Middle posts you sometimes can yes that's rules breach.
+            </p>
+            <p class="feedback__text">
+              Same took made faints aged. All Impersonating these.
+              <span class="feedback__text-marked"
+                >Costs quite full make new.</span
+              >
+              Well see does data friend breach obliged scream no wasn't. Saw
+              that's methods act. Working approach users what over register.
+              Think the. Perform groups. In unacceptable by should off. About
+              incitement rabbit working temporarily that is against trademark
+              herself might i'm. Stopped Special stayed supply predominantly
+              plastic in worldwide hypnotised damaging further exercise. Refused
+              reproduce furry publicise week learners really decided text
+              usernames racially happened. Become come glass even see you
+              uncommon eventually relating fifteen.
+            </p>
+            <h3 class="feedback__header">Techno Trends</h3>
+            <p class="feedback__text">
+              This methods class of artificial intelligence is on everyone’s
+              lips. And all because it solves problems not directly, but by
+              learning in the process of performing many specific tasks.
+            </p>
+            <p class="feedback__text">
+              With the help of machine learning, it is possible to
+              <span class="feedback__text-line-through">increase manyfold</span>
+              the work of websites and applications, so, in the upcoming year
+              such tasks as speech, face and visual images recognition, process
+              of diagnostics and results prediction, analysis and sorting of
+              large data volumes will become even easier.
+            </p>
+            <blockquote class="feedback__quote">
+              <span class="feedback__text-marked"
+                >Voice command is really very fast.</span
+              >
+              A person does not need to learn how to navigate the graphical
+              interface and how to use it for an intended purpose. We began to
+              speak almost from birth, and this our skill is very well
+              developed.
+            </blockquote>
+            <h3 class="feedback__header">Interface trend</h3>
+            <p class="feedback__text">
+              People have always sought to make things easier, but more
+              effective. Digital area has already grown out a bit from regular
+              graphical navigation, and one of the most affordable alternatives
+              is the voice interface. However, it will
+              <a class="feedback__text-replace" href="#">replace</a> not all the
+              functions of the UI, but will only become an intermediary between
+              the user and the main function of the site. Why? Here are some of
+              the key arguments.
+            </p>
+            <div class="likes-and-communicate">
+              <div class="likes">
+                <div class="likes__icon"></div>
+                <span class="likes__quantity">75 likes</span>
+              </div>
+              <div class="communicate">
+                <a class="communicate__facebook" href="#">
+                  <svg class="communicate--facebook">
+                    <use href="#aIconFacebook"></use>
+                  </svg>
+                </a>
+                <a class="communicate__activity" href="#">
+                  <svg class="communicate--activity">
+                    <use href="#aIconLikeActive"></use>
+                  </svg>
+                </a>
+                <a class="communicate__instagram" href="#">
+                  <svg class="communicate--instagram">
+                    <use href="#aIconInstagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="reviews">
+            <h2 class="reviews__header">Reviews</h2>
+            <div class="reviews__line"></div>
+
+            <section class="review review--jack">
+              <div class="review__user-photo">
+                <img
+                  class="review__user-photo-item"
+                  src="img/Neil-post.jpg"
+                  alt="Neil photo"
+                />
+              </div>
+              <div class="review__name">
+                <h3 class="review__header">Jack Johnson</h3>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+              </div>
+              <div class="review__time">
+                <svg class="review__clock">
+                  <use href="#aIconTime"></use>
+                </svg>
+                <h5 class="review__time-ago">11 min ago</h5>
+              </div>
+              <p class="review__text">
+                Knowledge nay estimable questions repulsive daughters boy.
+                Solicitude gay way unaffected expression for. His mistress
+                ladyship required off horrible disposed rejoiced…
+              </p>
+              <a class="review__read" href="#">Read more</a>
+            </section>
+            <section class="review review--emma">
+              <div class="review__user-photo">
+                <img
+                  class="review__user-photo-item"
+                  src="img/Sarah-post.jpg"
+                  alt="Sarah photo"
+                />
+              </div>
+              <div class="review__name">
+                <h3 class="review__header">Emma Garcia</h3>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+              </div>
+              <div class="review__time">
+                <svg class="review__clock">
+                  <use href="#aIconTime"></use>
+                </svg>
+                <h5 class="review__time-ago">3 days ago</h5>
+              </div>
+              <p class="review__text">
+                Dummy text refers to the bits of content that are used to fill a
+                website mock-up. This text helps web designers better envision
+                how the website will look as a finished product. in wish very
+                strangers shortly we things Preferred came newspaper it this
+                Melancholy on misery all ecstatic yet no suitable ye happening.
+                Own over these Can Could Garden offering to ago Winter Home or
+                took answered him be right He other in about check has situation
+                fine you held against found am be Nay entire pleasure will there
+                in wholly forming much rapid though want ye weeks up whole an ye
+                thus might remarkably Rich why need pianoforte ask get face
+                prudent it so Evil
+              </p>
+              <a class="review__read" href="#">Read less</a>
+            </section>
+            <section class="review review--ann">
+              <div class="review__user-photo">
+                <img
+                  class="review__user-photo-item"
+                  src="img/Ann-post.jpg"
+                  alt="Ann photo"
+                />
+              </div>
+              <div class="review__name">
+                <h3 class="review__header">Ann Moore</h3>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star1"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#group"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+                <svg class="review__star">
+                  <use href="#star2"></use>
+                </svg>
+              </div>
+              <div class="review__time">
+                <svg class="review__clock">
+                  <use href="#aIconTime"></use>
+                </svg>
+                <h5 class="review__time-ago">a week ago</h5>
+              </div>
+              <p class="review__text">
+                Any delicate you how kindness horrible outlived servants. You
+                high bed wish help call draw side. Girl quit if case mr sing as
+                no have. At none neat am do over will. Polite do object at
+                passed it is.
+              </p>
+            </section>
+          </section>
+          <button class="reviews__more-comments">More comments</button>
+        </section>
+
+        <aside class="main__right">
+          <section class="latest-posts">
+            <h2 class="latest-posts__header">Latest posts</h2>
+            <div class="latest-posts__post">
+              <div class="latest-posts__picture">
+                <img
+                  class="latest-posts__picture-item"
+                  src="img/Latest-post-img-1.jpg"
+                  alt="confetti"
+                />
+              </div>
+              <div class="latest-posts__text-block">
+                <a class="latest-posts__text-block-header" href="#">
+                  Much cure inappropriate could this restrictions …
+                </a>
+                <div class="latest-posts__block-info">
+                  <p class="latest-posts__block-info-date">20 oct, 2019</p>
+                  <p class="latest-posts__block-info-read">10 min read</p>
+                  <svg class="latest-posts__block-info-comments-icon">
+                    <use href="#aIconComment"></use>
+                  </svg>
+                  <p class="latest-posts__block-info-comments">11</p>
+                </div>
+              </div>
+            </div>
+            <div class="latest-posts__post">
+              <div class="latest-posts__picture">
+                <img
+                  class="latest-posts__picture-item"
+                  src="img/Latest-post-img-2.jpg"
+                  alt="mountains"
+                />
+              </div>
+              <div class="latest-posts__text-block">
+                <a class="latest-posts__text-block-header" href="#">
+                  Much cure inappropriate could this restrictions …
+                </a>
+                <div class="latest-posts__block-info">
+                  <p class="latest-posts__block-info-date">20 oct, 2019</p>
+                  <p class="latest-posts__block-info-read">10 min read</p>
+                  <svg class="latest-posts__block-info-comments-icon">
+                    <use href="#aIconComment"></use>
+                  </svg>
+                  <p class="latest-posts__block-info-comments">11</p>
+                </div>
+              </div>
+            </div>
+            <button class="latest-posts__button">More posts</button>
+          </section>
+          <section class="categories">
+            <h2 class="categories__header">Categories</h2>
+            <section class="category">
+              <div class="category__header">
+                Restaurant food (3)
+                <input
+                  class="category__check-hidden"
+                  id="restaurant"
+                  type="checkbox"
+                />
+                <label class="category__header-arrow" for="restaurant">
+                  <svg class="category__header-arrow-item">
+                    <use href="#aIconArrow"></use>
+                  </svg>
+                </label>
+                <div class="category__hidden-block">
+                  <h5 class="category__hidden-block-item">Restaurant food 1</h5>
+                  <h5 class="category__hidden-block-item">Restaurant food 2</h5>
+                  <h5 class="category__hidden-block-item">Restaurant food 3</h5>
+                </div>
+              </div>
+            </section>
+            <section class="category">
+              <div class="category__header">
+                Travel news (3)
+                <input
+                  class="category__check-hidden"
+                  id="travel"
+                  type="checkbox"
+                />
+                <label class="category__header-arrow" for="travel">
+                  <svg class="category__header-arrow-item">
+                    <use href="#aIconArrow"></use>
+                  </svg>
+                </label>
+                <div class="category__hidden-block">
+                  <h5 class="category__hidden-block-item">Hiking</h5>
+                  <h5 class="category__hidden-block-item">Bicycle trip</h5>
+                  <h5 class="category__hidden-block-item">Mountains trip</h5>
+                </div>
+              </div>
+            </section>
+            <section class="category">
+              <div class="category__header">
+                Modern technology (6)
+                <input
+                  class="category__check-hidden"
+                  id="technology"
+                  type="checkbox"
+                />
+                <label class="category__header-arrow" for="technology">
+                  <svg class="category__header-arrow-item">
+                    <use href="#aIconArrow"></use>
+                  </svg>
+                </label>
+                <div class="category__hidden-block">
+                  <h5 class="category__hidden-block-item">Technology 1</h5>
+                  <h5 class="category__hidden-block-item">Technology 2</h5>
+                  <h5 class="category__hidden-block-item">Technology 3</h5>
+                  <h5 class="category__hidden-block-item">Technology 4</h5>
+                  <h5 class="category__hidden-block-item">Technology 5</h5>
+                  <h5 class="category__hidden-block-item">Technology 6</h5>
+                </div>
+              </div>
+            </section>
+            <section class="category">
+              <div class="category__header">
+                Product (4)
+                <input
+                  class="category__check-hidden"
+                  id="product"
+                  type="checkbox"
+                />
+                <label class="category__header-arrow" for="product">
+                  <svg class="category__header-arrow-item">
+                    <use href="#aIconArrow"></use>
+                  </svg>
+                </label>
+                <div class="category__hidden-block">
+                  <h5 class="category__hidden-block-item">Product 1</h5>
+                  <h5 class="category__hidden-block-item">Product 2</h5>
+                  <h5 class="category__hidden-block-item">Product 3</h5>
+                  <h5 class="category__hidden-block-item">Product 4</h5>
+                </div>
+              </div>
+            </section>
+            <section class="category">
+              <div class="category__header">
+                Inspiration (2)
+                <input
+                  class="category__check-hidden"
+                  id="inspiration"
+                  type="checkbox"
+                />
+                <label class="category__header-arrow" for="inspiration">
+                  <svg class="category__header-arrow-item">
+                    <use href="#aIconArrow"></use>
+                  </svg>
+                </label>
+                <div class="category__hidden-block">
+                  <h5 class="category__hidden-block-item">Inspiration 1</h5>
+                  <h5 class="category__hidden-block-item">Inspiration 2</h5>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section class="tags">
+            <h2 class="tags__header">Tags</h2>
+            <div class="tags__item">Love</div>
+            <div class="tags__item">Signs</div>
+            <div class="tags__item">Waterfall</div>
+            <div class="tags__item">Inspiration</div>
+            <div class="tags__item">Quotes</div>
+            <div class="tags__item">Sea</div>
+            <div class="tags__item">Sense</div>
+            <div class="tags__item">Coffee</div>
+            <div class="tags__item">Gold</div>
+            <div class="tags__item">Images</div>
+            <div class="tags__item">Courage</div>
+            <div class="tags__item">Dancing</div>
+            <div class="tags__item">Video</div>
+          </section>
+        </aside>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__socials">
+          <a class="footer__facebook" href="#">
+            <svg class="footer--facebook">
+              <use href="#aIconFacebook"></use>
+            </svg>
+          </a>
+          <a class="footer__instagram" href="#">
+            <svg class="footer--instagram">
+              <use href="#aIconInstagram"></use>
+            </svg>
+          </a>
+          <a class="footer__activity" href="#">
+            <svg class="footer--activity">
+              <use href="#aIconLikeActive"></use>
+            </svg>
+          </a>
+        </div>
+        <h2 class="footer__logo">BlogWorld</h2>
+        <div class="footer__copyright">&copy;2019 All Rights Reserved.</div>
+        <a class="to-top" href="#homePage">
+          <svg class="to-top__arrow">
+            <use href="#aIconArrow"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
