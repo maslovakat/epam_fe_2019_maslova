@@ -3,7 +3,7 @@ function sum(num1, num2) {
 
   numbers.forEach((el) => {
     if (Number.isInteger(el)) {
-      el % 3 === 0 || el % 5 === 0 || el % 15 === 0
+      el % 3 === 0 && el % 5 === 0 && el % 15 === 0
         ? numbers.push(-el)
         : numbers.push(el);
     } else {
