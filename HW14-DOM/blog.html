@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Blog</title>
+  <link rel="stylesheet" href="css/blog-page.css" />
+</head>
+
+<body>
+  <div class="sprite-block">
+    <svg>
+      <symbol id="aIconSearch2">
+        <path
+          d="M19.827 18.98l-4.861-4.86a8.492 8.492 0 0 0 2.093-5.592C17.06 3.823 13.231 0 8.53 0 3.824 0 0 3.827 0 8.528c0 4.7 3.828 8.527 8.53 8.527a8.494 8.494 0 0 0 5.593-2.093l4.861 4.86a.6.6 0 0 0 .422.178.6.6 0 0 0 .421-1.02zM1 8.498C1 4.36 4.367 1 8.5 1 12.638 1 16 4.366 16 8.498S12.638 16 8.5 16C4.367 16 1 12.634 1 8.498z"
+          fill="#4D4949"></path>
+      </symbol>
+      <symbol id="aIconComment">
+        <path
+          d="M12.617.017L4.65 0c-.763 0-1.383.628-1.383 1.4v1.21l-1.883.003C.62 2.613 0 3.241 0 4.013v4.99c0 .773.62 1.4 1.384 1.4H2.8v2.36a.236.236 0 0 0 .233.237.233.233 0 0 0 .173-.077l2.264-2.52 3.88-.016c.763 0 1.383-.628 1.383-1.4v-.026l1.228 1.365a.233.233 0 0 0 .406-.158V7.807h.25c.762 0 1.383-.628 1.383-1.4v-4.99c0-.772-.62-1.4-1.383-1.4zm-2.35 8.97a.923.923 0 0 1-.918.927l-3.983.017a.232.232 0 0 0-.172.077l-1.927 2.145v-1.986a.235.235 0 0 0-.234-.236h-1.65a.923.923 0 0 1-.916-.927V4.013c0-.512.411-.928.917-.928L3.5 3.081l5.85-.012c.505 0 .917.416.917.927v4.991zm3.266-2.58a.923.923 0 0 1-.917.927h-.483a.235.235 0 0 0-.233.236v1.987l-1.167-1.299V3.996c0-.771-.62-1.4-1.384-1.4l-5.616.012V1.4c0-.512.412-.928.917-.928l7.966.016c.506 0 .918.417.918.928v4.99z"
+          fill="#818181"></path>
+      </symbol>
+      <symbol id="star2">
+        <path d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+          fill="#D8D8D8" fill-rule="evenodd"></path>
+      </symbol>
+      <symbol id="group">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#DEEE23"
+            d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z">
+          </path>
+          <path fill="#D8D8D8" d="M7 10.5V0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"></path>
+        </g>
+      </symbol>
+      <symbol id="star1">
+        <path d="M7 10.5l-4.114 2.163.785-4.581L.343 4.837l4.6-.669L7 0l2.057 4.168 4.6.669-3.328 3.245.785 4.581z"
+          fill="#DEEE23" fill-rule="evenodd"></path>
+      </symbol>
+      <symbol id="aIconFacebook">
+        <path
+          d="M8.648 23h-3.95c-.66 0-1.197-.5-1.197-1.116v-8.307H1.196C.536 13.577 0 13.076 0 12.46V8.9c0-.615.537-1.116 1.196-1.116h2.305V6.003c0-1.768.595-3.272 1.721-4.349C6.353.572 7.934 0 9.793 0l3.013.005C13.464.005 14 .506 14 1.12v3.306c0 .615-.537 1.115-1.196 1.115h-2.028c-.619 0-.776.117-.81.152-.056.059-.122.225-.122.684v1.408h2.807c.212 0 .417.049.592.14.38.198.616.572.616.976l-.001 3.56c0 .615-.537 1.115-1.197 1.115H9.844v8.308C9.844 22.5 9.307 23 8.648 23zm-3.7-1.348h3.45v-8.68c0-.41.359-.744.799-.744h3.215V9.134H9.198c-.44 0-.799-.334-.799-.745V6.377c0-.527.057-1.126.484-1.576.515-.545 1.327-.607 1.893-.607l1.779-.001v-2.84l-2.762-.005c-2.988 0-4.845 1.784-4.845 4.655v2.386c0 .41-.358.745-.799.745H1.446v3.094h2.702c.44 0 .8.334.8.745v8.679z">
+        </path>
+      </symbol>
+      <symbol id="aIconInstagram">
+        <g>
+          <path
+            d="M16.774 0H6.226A6.233 6.233 0 0 0 0 6.226v10.548A6.233 6.233 0 0 0 6.226 23h10.548A6.233 6.233 0 0 0 23 16.774V6.226A6.233 6.233 0 0 0 16.774 0zm4.878 16.774a4.883 4.883 0 0 1-4.878 4.878H6.226a4.883 4.883 0 0 1-4.878-4.878V6.226a4.883 4.883 0 0 1 4.878-4.878h10.548a4.883 4.883 0 0 1 4.878 4.878v10.548z">
+          </path>
+          <path
+            d="M11 6c-3.308 0-6 2.692-6 6s2.692 6 6 6 6-2.692 6-6-2.692-6-6-6zm0 10.714A4.719 4.719 0 0 1 6.286 12 4.72 4.72 0 0 1 11 7.286 4.72 4.72 0 0 1 15.714 12 4.72 4.72 0 0 1 11 16.714zM17 3c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zm0 2.549a.55.55 0 1 1 .001-1.1.55.55 0 0 1-.001 1.1z">
+          </path>
+        </g>
+      </symbol>
+      <symbol id="aIconLikeActive">
+        <path
+          d="M11.5 0C5.168 0 0 5.168 0 11.5S5.168 23 11.5 23 23 17.832 23 11.5 17.832 0 11.5 0zm7.8 5.01a10.105 10.105 0 0 1 2.35 6.328c-1.8-.42-3.798-.449-5.833-.078-.53.097-1.06.22-1.586.367A32.205 32.205 0 0 0 13.035 8.8c2.425-.927 5.053-2.306 6.265-3.79zm-7.8-3.662c2.642 0 5.051 1.014 6.86 2.674-.706.962-2.716 2.362-5.94 3.57a29.29 29.29 0 0 0-4.035-5.755c.982-.317 2.029-.49 3.115-.49zM7.05 2.376a28.047 28.047 0 0 1 4.087 5.663C7.782 9.125 4.385 9.567 1.592 9.28A10.19 10.19 0 0 1 7.05 2.376zM1.348 11.5c0-.298.014-.593.039-.885.616.065 1.259.098 1.923.098 2.62 0 5.564-.504 8.455-1.461.441.903.838 1.832 1.188 2.783a18.84 18.84 0 0 0-3.254 1.534c-2.526 1.504-4.374 3.438-5.14 5.333A10.126 10.126 0 0 1 1.348 11.5zM11.5 21.652c-2.17 0-4.182-.684-5.834-1.848.513-1.73 2.245-3.602 4.722-5.077a17.45 17.45 0 0 1 3.005-1.409 31.574 31.574 0 0 1 1.423 7.778c-1.04.36-2.155.556-3.316.556zm4.63-1.118a32.615 32.615 0 0 0-1.458-7.62c2.184-.6 4.608-.802 6.908-.206a10.177 10.177 0 0 1-5.45 7.826z">
+        </path>
+      </symbol>
+      <symbol id="aIconArrow">
+        <path
+          d="M9 9.204L1.322.658a.446.446 0 0 0-.68 0 .577.577 0 0 0 0 .757l8.02 8.927c.188.21.49.21.68 0l8.015-8.927a.571.571 0 0 0 0-.753.446.446 0 0 0-.68 0L9 9.204z"
+          fill="#4D4949"></path>
+      </symbol>
+    </svg>
+  </div>
+  <div class="container">
+    <header class="header" id="topOfPage">
+      <nav class="header__navigation">
+        <ul class="navigation">
+          <li class="navigation__logo">
+            <a class="navigation__logo-link" href="#">BlogWorld</a>
+          </li>
+          <li class="navigation__right">
+            <ul class="navigation__right-list">
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link" href="index.html">Home</a>
+              </li>
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link" href="index.html#latestPortfolio">Portfolio</a>
+              </li>
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link navigation--selected-menu-link" id="blogPage" href="#">Blog</a>
+              </li>
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link" href="post.html">Pages</a>
+              </li>
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link" href="index.html#aboutUs">About</a>
+              </li>
+              <li class="navigation__right-list-item">
+                <a class="navigation__right-list-link" href="index.html#contactUs">Contact</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main"></main>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__socials">
+        <a class="footer__facebook" href="#">
+          <svg class="footer--facebook">
+            <use href="#aIconFacebook"></use>
+          </svg>
+        </a>
+        <a class="footer__instagram" href="#">
+          <svg class="footer--instagram">
+            <use href="#aIconInstagram"></use>
+          </svg>
+        </a>
+        <a class="footer__activity" href="#">
+          <svg class="footer--activity">
+            <use href="#aIconLikeActive"></use>
+          </svg>
+        </a>
+      </div>
+      <h2 class="footer__logo">BlogWorld</h2>
+      <div class="footer__copyright">&copy;2019 All Rights Reserved.</div>
+      <a class="to-top" href="#topOfPage">
+        <svg class="to-top__arrow">
+          <use href="#aIconArrow"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/blog.js"></script>
+</body>
+
+</html>

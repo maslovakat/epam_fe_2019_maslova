@@ -1,0 +1,154 @@
+.sprite-block {
+  display: none;
+}
+
+.navigation {
+  &__logo {
+    @include make-all-media(2, 2, 2, 11);
+    @include make-all-media-offset(0, 0, 0, 0.2);
+
+    padding: 20px 0 0 0;
+
+    &-link {
+      text-decoration: none;
+      color: $primary-text;
+      font-size: nth($font-sizes, 4);
+      font-family: $hind-siliguri-bold;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__right {
+    @include make-all-media(5.04, 7, 7, 11.8);
+    @include make-all-media-offset(4.95, 3, 3, 0);
+
+    padding: 21px 0 0 0;
+
+    &-list {
+      &-item {
+        display: inline-block;
+
+        @include make-all-media-offset(0.8, 0.8, 0.6, 0.2);
+      }
+
+      &-link {
+        color: $primary-text;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 22px;
+        padding-bottom: 5px;
+        letter-spacing: 0.3px;
+
+        &:hover {
+          border-bottom: 1px solid $primary-text;
+        }
+      }
+    }
+  }
+
+  &--selected-menu-link {
+    border-bottom: 1px solid $primary-text;
+  }
+}
+
+.footer {
+  @include make-all-media(12, 12, 12, 12);
+
+  height: 71px;
+  clear: both;
+  box-sizing: border-box;
+  background-color: $next-step-bg;
+  z-index: 999;
+  padding: 0;
+
+  &__socials {
+    @include make-all-media(4.13, 4.13, 4.13, 3.7);
+    @include make-all-media-offset(0, 0, 0.2, 0.2);
+
+    clear: both;
+    padding: 0;
+    margin-top: 22px;
+  }
+
+  &__facebook,
+  &__instagram,
+  &__activity {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &--facebook {
+    @include make-social-icons(14px);
+
+    margin: 0 4.5% 0 0;
+  }
+
+  &--instagram {
+    @include make-social-icons(23px);
+
+    margin: 0 4.5% 0 0;
+  }
+
+  &--activity {
+    @include make-social-icons(23px);
+  }
+
+  &__logo {
+    @include make-all-media(3.74, 3.74, 3.74, 3.74);
+    @include make-all-media-offset(0, 0, 0, -0.2);
+
+    display: inline-block;
+    margin-top: 21px;
+    color: $primary-text;
+    padding: 0;
+    font-size: nth($font-sizes, 4);
+    font-family: $hind-siliguri-bold;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+
+  &__copyright {
+    @include make-all-media(4.13, 3.74, 3.74, 4.5);
+    @include make-all-media-offset(0, 0, 0, -0.2);
+
+    display: inline-block;
+    margin-top: 22px;
+    padding: 0;
+    color: $copyright-color;
+    font-size: nth($font-sizes, 5);
+    line-height: 25px;
+    text-align: right;
+    letter-spacing: -0.6px;
+  }
+}
+
+.to-top {
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 45px;
+  border: 1px solid $secondary-button;
+  border-radius: 5px;
+  background-color: $white;
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  z-index: 2;
+
+  &:hover {
+    box-shadow: 0 3px 10px 0 $arrow-button-shadow;
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    top: 14px;
+    left: 11px;
+    transform: rotate(180deg);
+  }
+}

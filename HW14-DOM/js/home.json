@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Ideas and perspectives you won’t find anywhere else.",
+        "text": "BlogWorld taps into the brains of the world’s most insightful writers, thinkers, and storytellers to bring you the smartest takes on topics that matter. So whatever your interest, you can always find fresh thinking and unique perspectives.",
+        "buttons": [
+            {
+                "name": "Explore",
+                "description": "explore"
+            },
+            {
+                "name": "Learn more",
+                "description": "learn-more"
+            }
+        ]
+    },
+    {
+        "title": "About us",
+        "description": "This is who we are - or at least who we strive to be…",
+        "folders": [
+            {
+                "name": "typography",
+                "title": "Typography",
+                "picture": "#aIconTypography"
+            },
+            {
+                "name": "icon-set",
+                "title": "Icon set",
+                "picture": "#aIconIconset"
+            },
+            {
+                "name": "accurate",
+                "title": "Accurate",
+                "picture": "#aIconAccurate"
+            }
+        ],
+        "video": [
+            {
+                "poster": "img/About-picture.jpg",
+                "src": "/"
+            }
+        ]
+    },
+    {
+        "title": "Latest posts",
+        "description": "Information is a source of learning. But unless it is organized, processed and available to the right people",
+        "posts": [
+            {
+                "title": "In the Future We Will All Live in Star Wars",
+                "text": "The thing you’re doing now, reading prose on a screen, is going out of fashion. The defining narrative of our online moment concerns the decline of text, and the exploding reach and power of audio and video…",
+                "img": "img/Img-post-1.jpg",
+                "imgDescription": "sky",
+                "date": "20 oct, 2019",
+                "read": "10 min read",
+                "commentSign": "#aIconComment",
+                "commentQuantity": "11"
+            },
+            {
+                "title": "Rubik’s Cube? No, Robotics and AI are…",
+                "text": "In other words, I will try to de-hype the crowd about the recent development in robotics. Concretely, OpenAI has claimed some pretty amazing results with learning to solve the Rubik’s cube with a robotic hand…",
+                "img": "img/Img-post-2.jpg",
+                "imgDescription": "confetti",
+                "date": "11 oct, 2019",
+                "read": "7 min read",
+                "commentSign": "#aIconComment",
+                "commentQuantity": "19"
+            },
+            {
+                "title": "How the Internet of Things will Transfo…",
+                "text": "The Internet of Things (IoT) promises to be the most important technological development for consumers since the advent of the smartphone. Experts believe that this collection of internet-connected technolog…",
+                "img": "img/Img-post-3.jpg",
+                "imgDescription": "ice",
+                "date": "28 sep, 2019",
+                "read": "16 min read",
+                "commentSign": "#aIconComment",
+                "commentQuantity": "41"
+            }
+        ]
+    },
+    {
+        "title": "Latest portfolio",
+        "description": "Put there articles successfully special warrant submit agree what along then",
+        "cards": [
+            {
+                "title": "Art Ocean",
+                "text": "Photography, art, nature",
+                "background": "ocean"
+            },
+            {
+                "title": "City guide",
+                "text": "Photography, city, way",
+                "background": "city"
+            },
+            {
+                "title": "Mountains",
+                "text": "Art, hiking",
+                "background": "mountains"
+            }
+        ],
+        "arrowSign": "#aIconArrow",
+        "button": "See all works"
+    },
+    {
+        "title": "Testimonials",
+        "quote": "We move at a fast pace. I’m always working on something. I am excited about it!",
+        "author": "Martin Oda",
+        "position": "Product desgner",
+        "photo": "img/User-img.jpg",
+        "photoDescription": "user portret",
+        "arrowSign": "#aIconArrow"
+    },
+    {
+        "title": "Contact us",
+        "description": "Put there articles successfully special warrant submit agree what along then",
+        "communicate": [
+            {
+                "sign": "#aIconFacebook",
+                "name": "facebook"
+            },
+            {
+                "sign": "#aIconInstagram",
+                "name": "instagram"
+            },
+            {
+                "sign": "#aIconLikeActive",
+                "name": "activity"
+            }
+        ]
+    },
+    {
+        "title": "What will be next step?",
+        "list": [
+            {
+                "title": "We’ll prepare a proposal",
+                "text": "Required scope, timeline and apr. price will be included if you provide us with detail information about a project."
+            },
+            {
+                "title": "Together we discuss it",
+                "text": "Let’s get acquainted and discuss all the possible variant and options. Google Hangouts or Skype usually wirks great."
+            },
+            {
+                "title": "Let’s start building",
+                "text": "When the contract is signed and all goals are set we can start the first sprint."
+            }
+        ],
+        "writeUs": [
+            {
+                "top": [
+                    {
+                        "mailSign": "#aIconMail",
+                        "text": "Write us a few words about your project and we will prepare proposal for you within 24 hours"
+                    }
+                ],
+                "formField": [
+                    {
+                        "name": "Your name",
+                        "email": "Email",
+                        "password": "Password",
+                        "show": "show",
+                        "text": "If you need to have a DNA first, just contact us at",
+                        "link": "email&#64;gmail.com"
+                    }
+                ],
+                "map": "img/map.jpg"
+            }
+        ]
+    }
+]

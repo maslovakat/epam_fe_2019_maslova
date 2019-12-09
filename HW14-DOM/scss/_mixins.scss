@@ -1,0 +1,431 @@
+@mixin make-all-media($lg, $md, $sm, $xs) {
+  @include make-xs-column($xs);
+  @include make-sm-column($sm);
+  @include make-md-column($md);
+  @include make-lg-column($lg);
+}
+
+@mixin make-all-media-offset($lg, $md, $sm, $xs) {
+  @include make-xs-column-offset($xs);
+  @include make-sm-column-offset($sm);
+  @include make-md-column-offset($md);
+  @include make-lg-column-offset($lg);
+}
+
+@mixin secondary-button($width) {
+  width: $width;
+  color: $secondary-text;
+  border: 1px solid $secondary-button;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+  font-size: nth($font-sizes, 5);
+  line-height: 25px;
+
+  &:hover {
+    background-color: $hover-button;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+
+    &:hover {
+      background-color: transparent;
+      color: $secondary-button;
+    }
+  }
+}
+
+@mixin primary-button($width) {
+  width: $width;
+  color: $white;
+  border-radius: 5px;
+  border: 1px solid $primary-button;
+  background-color: $primary-button;
+  outline: none;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+  font-size: nth($font-sizes, 5);
+  line-height: 25px;
+
+  &:hover {
+    background-color: $hover-button;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+
+    &:hover {
+      background-color: $primary-button;
+    }
+  }
+}
+
+@mixin make-section-header($border-width, $letter-spacing) {
+  &__header {
+    @include make-lg-column(11.55);
+
+    font-size: 23px;
+    font-family: $hind-siliguri-semiBold;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: -0.4px;
+    text-align: center;
+
+    &-underline {
+      clear: both;
+      box-sizing: border-box;
+      height: 8px;
+      width: $border-width;
+      border: 1px solid $secondary-button;
+      border-top: 0;
+      margin: 0 auto 0;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+
+  &__text {
+    @include make-all-media(5, 6, 8, 9);
+    @include make-all-media-offset(3.29, 2.6, 1.8, 1.5);
+
+    font-size: nth($font-sizes, 4);
+    line-height: 26px;
+    text-align: center;
+    padding: 14.5px 20px 0;
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin make-section-header-underline(
+  $width,
+  $height,
+  $top,
+  $left,
+  $right,
+  $bd-right,
+  $bd-bottom
+) {
+  &__header {
+    &-underline {
+      position: relative;
+
+      &::before {
+        width: $width;
+        height: $height;
+        border-bottom: $bd-bottom;
+        border-right: $bd-right;
+        left: $left;
+        top: $top;
+      }
+
+      &::after {
+        width: $width;
+        height: $height;
+        border-bottom: $bd-bottom;
+        border-right: $bd-right;
+        right: $right;
+        top: $top;
+      }
+    }
+  }
+}
+
+@mixin make-folder($linear, $bg-color, $margin, $side, $border-radius) {
+  background: $linear, $bg-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-icon {
+    @include make-lg-column(3);
+
+    width: 65px;
+    height: 64px;
+    margin: $margin;
+  }
+
+  &-header {
+    @include make-lg-column(12);
+    @include make-row();
+
+    font-family: $lucida-grande-bold;
+    font-size: nth($font-sizes, 4);
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    #{$side}: 0;
+    top: 0;
+    #{$border-radius}: 5px;
+    background-color: $white;
+  }
+}
+
+@mixin make-dot-in-info() {
+  &::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -10px;
+    top: -3px;
+    width: 3px;
+    height: 3px;
+    background-color: $info-color;
+    border-radius: 50%;
+  }
+}
+
+@mixin arrow-button-size() {
+  &-size {
+    box-sizing: border-box;
+    height: 45px;
+    width: 45px;
+    border: 1px solid $secondary-button;
+    border-radius: 5px;
+    background-color: $white;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 3px 10px 0 $arrow-button-shadow;
+    }
+  }
+
+  &-left-arrow {
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    transform: rotate(90deg);
+  }
+
+  &-right-arrow {
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    top: 16px;
+    left: 13px;
+    transform: rotate(-90deg);
+    float: right;
+  }
+}
+
+@mixin make-social-icons($width) {
+  display: inline-block;
+  height: 23px;
+  width: $width;
+  fill: $secondary-text;
+
+  &:hover {
+    fill: $default-input;
+  }
+}
+
+@mixin make-feedback() {
+  box-sizing: border-box;
+  background-color: $blog-feedback-bg;
+  border-radius: 5px;
+
+  &__user-photo {
+    width: 54px;
+    height: 54px;
+    float: left;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__header {
+    @include make-all-media(10, 10, 10, 10);
+
+    clear: both;
+    font-family: $hind-siliguri-medium;
+    font-size: nth($font-sizes, 3);
+    font-weight: 500;
+    line-height: 26px;
+    margin: 45px 0 0 0;
+    letter-spacing: -0.2px;
+  }
+
+  &__text {
+    clear: both;
+    font-size: nth($font-sizes, 4);
+    line-height: 26px;
+    letter-spacing: -0.29px;
+  }
+
+  &__read-more {
+    @include secondary-button(121px);
+
+    clear: both;
+    float: left;
+
+    &:hover {
+      background-color: $hover-button;
+      color: $white;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: auto;
+    }
+  }
+
+  &__block {
+    &-header {
+      @include make-all-media(8, 12, 12, 12);
+
+      font-family: $hind-siliguri-medium;
+      font-size: nth($font-sizes, 4);
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    &-info {
+      @include make-all-media(10, 10, 10, 10);
+
+      padding: 0;
+      color: $info-color;
+      font-weight: 300;
+      line-height: 15px;
+
+      &-date {
+        @include make-dot-in-info();
+
+        clear: both;
+        display: inline-block;
+        letter-spacing: -1px;
+        padding: 0 13px 0 0;
+        font-size: nth($font-sizes, 5);
+      }
+
+      &-read {
+        @include make-dot-in-info();
+
+        display: inline-block;
+        letter-spacing: -0.7px;
+        margin: 0 16px 0 0;
+        font-size: nth($font-sizes, 5);
+      }
+
+      &-comments {
+        display: inline-block;
+        font-size: nth($font-sizes, 5);
+        margin-left: -5px;
+
+        &-icon {
+          position: relative;
+          top: 2px;
+          left: 0;
+          height: 13px;
+          width: 14px;
+        }
+      }
+
+      &-star {
+        margin-right: -5px;
+        position: relative;
+        top: 2px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+@mixin make-media-post-sign($bg, $right, $top) {
+  &::before {
+    content: "";
+    display: inline-block;
+    background: $bg;
+    position: absolute;
+    right: $right;
+    top: $top;
+    box-sizing: border-box;
+    height: 76px;
+    width: 84px;
+    border: 3px solid $white;
+    border-radius: 5px;
+    background-color: $blog-feedback-bg;
+  }
+}
+
+@mixin post-shadow-hover() {
+  &:hover::after {
+    content: "";
+    display: block;
+    clear: both;
+    float: none;
+    border-radius: 1px;
+    box-shadow: 0 2px 20px 7px $post-shadow-gradient;
+    position: relative;
+    margin-bottom: -1px;
+    z-index: -1;
+  }
+}
+
+@mixin make-review-user-photo() {
+  &::after {
+    @include make-all-media-offset(0, 0, 0, 1.5);
+
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    width: 1px;
+    border: 1px solid $line-above-footer;
+    position: absolute;
+    top: 70px;
+    left: -57px;
+    z-index: -1;
+  }
+}
+
+@mixin make-post-aside-header() {
+  &__header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    font-family: $hind-siliguri-semiBold;
+    font-size: nth($font-sizes, 2);
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: -0.1px;
+    border-bottom: 1px solid $post-header-underline;
+  }
+}
+
+@mixin common-styles-for-aside-block($padding) {
+  padding: $padding;
+  clear: both;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $blog-feedback-bg;
+  margin-top: 70px;
+}
