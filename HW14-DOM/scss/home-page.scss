@@ -204,7 +204,8 @@
     margin-top: 60px;
     padding: 0;
 
-    &:first-of-type {
+    &:first-of-type,
+    &:nth-of-type(3n+1) {
       @include make-lg-column-offset(0);
     }
 
@@ -308,19 +309,19 @@
 
   &__text {
     @include make-all-media(4.4, 6, 8, 9);
-    @include make-all-media-offset(3.58, 2.6, 1.8, 1.5);
   }
 
   &__blocks {
     @include make-all-media(12, 12, 12, 12);
 
     padding: 0;
+    height: 306px;
   }
 
   &__block {
-    @include make-all-media(3.3, 3.1, 5, 7);
-    @include make-all-media-offset(0.42, 0.3, 0.3, 2);
+    @include make-all-media(3.3, 3.1, 3, 10);
 
+    position: absolute;
     background-size: cover;
     margin-top: 60px;
     height: 244px;

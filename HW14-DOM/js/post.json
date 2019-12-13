@@ -1,5 +1,6 @@
 [
     {
+        "id": "feedback",
         "title": "Fog up the river, where it flows among green aits and meadows",
         "feedback": [
             {
@@ -53,7 +54,10 @@
                     }
                 ]
             }
-        ],
+        ]
+    },
+    {
+        "id": "review",
         "reviews": [
             {
                 "title": "Reviews",
@@ -85,7 +89,6 @@
                         "text": "Dummy text refers to the bits of content that are used to fill a website mock-up. This text helps web designers better envision how the website will look as a finished product. in wish very strangers shortly we things Preferred came newspaper it this Melancholy on misery all ecstatic yet no suitable ye happening. Own over these Can Could Garden offering to ago Winter Home or took answered him be right He other in about check has situation fine you held against found am be Nay entire pleasure will there in wholly forming much rapid though want ye weeks up whole an ye thus might remarkably Rich why need pianoforte ask get face prudent it so Evil",
                         "closeFull": "Read less",
                         "openFull": "Read more"
-
                     },
                     {
                         "author": "ann",
@@ -100,15 +103,14 @@
                         "text": "Any delicate you how kindness horrible outlived servants. You high bed wish help call draw side. Girl quit if case mr sing as no have. At none neat am do over will. Polite do object at passed it is.",
                         "closeFull": "Read less",
                         "openFull": "Read more"
-
                     }
                 ]
             }
-
         ],
         "button": "More comments"
     },
     {
+        "id": "latestPost",
         "latestPost": [
             {
                 "title": "Latest posts",
@@ -136,7 +138,10 @@
                 ],
                 "button": "More posts"
             }
-        ],
+        ]
+    },
+    {
+        "id": "categories",
         "categories": [
             {
                 "title": "Categories",
@@ -156,7 +161,6 @@
                                 "name": "Restaurant food 3"
                             }
                         ]
-
                     },
                     {
                         "name": "Travel news",
@@ -173,7 +177,6 @@
                                 "name": "Mountains trip"
                             }
                         ]
-
                     },
                     {
                         "name": "Modern technology",
@@ -199,7 +202,6 @@
                                 "name": "Technology 6"
                             }
                         ]
-
                     },
                     {
                         "name": "Product",
@@ -219,7 +221,6 @@
                                 "name": "Product 4"
                             }
                         ]
-
                     },
                     {
                         "name": "Inspiration",
@@ -233,30 +234,56 @@
                                 "name": "Inspiration 2"
                             }
                         ]
-
                     }
                 ]
             }
-
-
-        ],
+        ]
+    },
+    {
+        "id": "tags",
         "tags": [
             {
                 "title": "Tags",
                 "tagList": [
-                    { "name": "Love" },
-                    { "name": "Signs" },
-                    { "name": "Waterfall" },
-                    { "name": "Inspiration" },
-                    { "name": "Quotes" },
-                    { "name": "Sea" },
-                    { "name": "Sense" },
-                    { "name": "Coffee" },
-                    { "name": "Gold" },
-                    { "name": "Images" },
-                    { "name": "Courage" },
-                    { "name": "Dancing" },
-                    { "name": "Video" }
+                    {
+                        "name": "Love"
+                    },
+                    {
+                        "name": "Signs"
+                    },
+                    {
+                        "name": "Waterfall"
+                    },
+                    {
+                        "name": "Inspiration"
+                    },
+                    {
+                        "name": "Quotes"
+                    },
+                    {
+                        "name": "Sea"
+                    },
+                    {
+                        "name": "Sense"
+                    },
+                    {
+                        "name": "Coffee"
+                    },
+                    {
+                        "name": "Gold"
+                    },
+                    {
+                        "name": "Images"
+                    },
+                    {
+                        "name": "Courage"
+                    },
+                    {
+                        "name": "Dancing"
+                    },
+                    {
+                        "name": "Video"
+                    }
                 ]
             }
         ]

@@ -1,25 +1,16 @@
 let data;
-function loadJSON(callback) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (xhttp.readyState === 4 && xhttp.status === 200) {
-      callback(xhttp.responseText);
-    }
-  };
-  xhttp.open('GET', 'js/post.json', false);
-  xhttp.send();
-}
-loadJSON((response) => {
-  data = JSON.parse(response);
-});
-function drawElement(tag, createClass, createId) {
+const xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+  if (xhttp.readyState === 4 && xhttp.status === 200) {
+    data = JSON.parse(xhttp.responseText);
+  }
+};
+xhttp.open('GET', 'js/post.json', false);
+xhttp.send();
+function drawElement(tag, className, id) {
   const element = document.createElement(tag);
-  if (createClass) {
-    element.classList.add(createClass);
-  }
-  if (createId) {
-    element.setAttribute('id', createId);
-  }
+  className ? element.classList.add(className) : '';
+  id ? element.setAttribute('id', id) : '';
   return element;
 }
 function makeAppendChild(parent) {
@@ -27,29 +18,6 @@ function makeAppendChild(parent) {
     parent.appendChild(arguments[i]);
   }
 }
-const main = document.getElementById('main');
-const leftSideFragment = document.createDocumentFragment();
-const leftSide = drawElement('section', 'main__left');
-const leftSideTitle = drawElement('h2', 'main__left-header');
-leftSideTitle.innerText = data[0].title;
-const feedback = drawElement('section', 'feedback');
-feedback.innerHTML = data[0].feedback.map((i) => showFeedback(i, feedback.className)).join('');
-const likesAndCommunicate = drawElement('div', 'likes-and-communicate');
-const likes = drawElement('div', 'likes');
-likes.innerHTML = showLikes(data[0].feedback[0], likes.className);
-const communicate = drawElement('div', 'communicate');
-communicate.innerHTML = data[0].feedback[0].communicate.map((i) => showCommunicate(i, communicate.className)).join('');
-const reviews = drawElement('section', 'reviews');
-const wrapReviewsHeader = drawElement('div');
-wrapReviewsHeader.innerHTML = showReviewsHeader(data[0].reviews[0], reviews.className);
-const wrapReview = drawElement('div');
-wrapReview.innerHTML = data[0].reviews[0].reviewBlocks.map((i) => showReview(i)).join('');
-const wrapMoreComments = drawElement('div');
-wrapMoreComments.innerHTML = showMoreCommentsButton(data[0].button, reviews.className);
-makeAppendChild(likesAndCommunicate, likes, communicate);
-makeAppendChild(leftSide, leftSideTitle, feedback, likesAndCommunicate, reviews, wrapMoreComments);
-makeAppendChild(reviews, wrapReviewsHeader, wrapReview);
-makeAppendChild(leftSideFragment, leftSide);
 function showFeedback(i, section) {
   return `<img class="${section}__user-photo" src="${i.userPhoto}" alt="${i.name} user" />
           <div class="${section}__block">
@@ -107,30 +75,25 @@ function showCommunicate(i, section) {
           </a>`;
 }
 function countQuantityOfStars(post, i) {
-  if (post.stars >= `${i}`) {
+  if (+post.stars >= i) {
     return post.starSign;
-  } else if (post.stars === `${i - 0.5}`) {
+  } else if (+post.stars === i - 0.5) {
     return post.signHalf;
   } else {
     return post.signEmpty;
   }
 }
 function showQuantityOfStars(post) {
+  const starList = [];
+  for (let i = 1; i < 6; i++) {
+    starList.push(showQuantityOfStarsItem(post, i));
+  }
+  return starList.join(' ');
+}
+function showQuantityOfStarsItem(post, number) {
   return `<svg class="feedback__block-info-star">
-            <use href="${countQuantityOfStars(post, 1)}"></use>
-        </svg>
-        <svg class="feedback__block-info-star">
-            <use href="${countQuantityOfStars(post, 2)}"></use>
-        </svg>
-        <svg class="feedback__block-info-star">
-            <use href="${countQuantityOfStars(post, 3)}"></use>
-        </svg>
-        <svg class="feedback__block-info-star">
-            <use href="${countQuantityOfStars(post, 4)}"></use>
-        </svg>
-        <svg class="feedback__block-info-star">
-            <use href="${countQuantityOfStars(post, 5)}"></use>
-        </svg>`;
+             <use href="${countQuantityOfStars(post, number)}"></use>
+           </svg>`;
 }
 function isAudio(post) {
   if (post.audio) {
@@ -165,29 +128,6 @@ function showReview(i) {
 function showMoreCommentsButton(i, section) {
   return `<button class="${section}__more-comments">${i}</button>`;
 }
-const rightSideFragment = document.createDocumentFragment();
-const rightSide = drawElement('aside', 'main__right');
-const latestPosts = drawElement('section', 'latest-posts');
-const wrapeLatestPostsHeader = drawElement('div');
-wrapeLatestPostsHeader.innerHTML = showRightSideHeader(data[1].latestPost[0].title, latestPosts.className);
-const latestPost = drawElement('div');
-latestPost.innerHTML = data[1].latestPost[0].posts.map((i) => showRightSidePost(i, latestPosts.className)).join('');
-const categories = drawElement('section', 'categories');
-const wrapeCategoriesHeader = drawElement('div');
-wrapeCategoriesHeader.innerHTML = showRightSideHeader(data[1].categories[0].title, categories.className);
-const category = drawElement('div', 'category');
-category.innerHTML = data[1].categories[0].category.map((i) => showRightSideCategory(i, category.className)).join('');
-const tags = drawElement('section', 'tags');
-const wrapeTagsHeader = drawElement('div');
-wrapeTagsHeader.innerHTML = showRightSideHeader(data[1].tags[0].title, tags.className);
-const tag = drawElement('div');
-tag.innerHTML = data[1].tags[0].tagList.map((i) => showRightSideTag(i, tags.className)).join('');
-makeAppendChild(latestPosts, wrapeLatestPostsHeader, latestPost);
-makeAppendChild(categories, wrapeCategoriesHeader, category);
-makeAppendChild(tags, wrapeTagsHeader, tag);
-makeAppendChild(rightSide, latestPosts, categories, tags);
-makeAppendChild(rightSideFragment, rightSide);
-makeAppendChild(main, leftSideFragment, rightSideFragment);
 function showRightSideHeader(i, section) {
   return `<h2 class="${section}__header">${i}</h2>`;
 }
@@ -234,6 +174,85 @@ function showHiddenCategoryItem(category, section) {
 function showRightSideTag(i, section) {
   return `<button class="${section}__item">${i.name}</button>`;
 }
+
+const main = document.getElementById('main');
+const leftSideFragment = document.createDocumentFragment();
+const leftSide = drawElement('section', 'main__left');
+
+const leftSIdeTitleDraw = function (feedbackData) {
+  const leftSideTitle = drawElement('h2', 'main__left-header');
+  leftSideTitle.innerText = feedbackData.title;
+  return leftSideTitle;
+};
+
+const feedbackDraw = function (feedbackData) {
+  const feedback = drawElement('section', 'feedback');
+  feedback.innerHTML = feedbackData.feedback.map((i) => showFeedback(i, feedback.className)).join('');
+  const likesAndCommunicate = drawElement('div', 'likes-and-communicate');
+  const likes = drawElement('div', 'likes');
+  likes.innerHTML = showLikes(feedbackData.feedback[0], likes.className);
+  const communicate = drawElement('div', 'communicate');
+  communicate.innerHTML = feedbackData.feedback[0].communicate.map((i) => showCommunicate(i, communicate.className)).join('');
+  makeAppendChild(likesAndCommunicate, likes, communicate);
+  makeAppendChild(leftSide, feedback, likesAndCommunicate);
+};
+
+const reviews = drawElement('section', 'reviews');
+const reviewsDraw = function (reviewData) {
+  const wrapReviewsHeader = drawElement('div');
+  wrapReviewsHeader.innerHTML = showReviewsHeader(reviewData.reviews[0], reviews.className);
+  const wrapReview = drawElement('div');
+  wrapReview.innerHTML = reviewData.reviews[0].reviewBlocks.map((i) => showReview(i)).join('');
+  makeAppendChild(reviews, wrapReviewsHeader, wrapReview);
+  return reviews;
+};
+
+const wrapMoreComments = drawElement('div');
+const moreCommentsDraw = function (reviewData) {
+  wrapMoreComments.innerHTML = showMoreCommentsButton(reviewData.button, reviews.className);
+  return wrapMoreComments;
+};
+reviewsDraw(data.find((b) => b.id === 'review'));
+moreCommentsDraw(data.find((b) => b.id === 'review'));
+makeAppendChild(leftSide, leftSIdeTitleDraw(data.find((b) => b.id === 'feedback')));
+feedbackDraw(data.find((b) => b.id === 'feedback'));
+makeAppendChild(leftSide, reviews, wrapMoreComments);
+makeAppendChild(leftSideFragment, leftSide);
+// makeAppendChild(main, leftSideFragment);
+
+const rightSideFragment = document.createDocumentFragment();
+const rightSide = drawElement('aside', 'main__right');
+
+const latestPostsDraw = function (latestPostsData) {
+  const latestPosts = drawElement('section', 'latest-posts');
+  const wrapeLatestPostsHeader = drawElement('div');
+  wrapeLatestPostsHeader.innerHTML = showRightSideHeader(latestPostsData.latestPost[0].title, latestPosts.className);
+  const latestPost = drawElement('div');
+  latestPost.innerHTML = latestPostsData.latestPost[0].posts.map((i) => showRightSidePost(i, latestPosts.className)).join('');
+  makeAppendChild(latestPosts, wrapeLatestPostsHeader, latestPost);
+  return latestPosts;
+};
+const categoriesDraw = function (categoriesData) {
+  const categories = drawElement('section', 'categories');
+  const wrapeCategoriesHeader = drawElement('div');
+  wrapeCategoriesHeader.innerHTML = showRightSideHeader(categoriesData.categories[0].title, categories.className);
+  const category = drawElement('div', 'category');
+  category.innerHTML = categoriesData.categories[0].category.map((i) => showRightSideCategory(i, category.className)).join('');
+  makeAppendChild(categories, wrapeCategoriesHeader, category);
+  return categories;
+};
+const tagsDraw = function (tagsData) {
+  const tags = drawElement('section', 'tags');
+  const wrapeTagsHeader = drawElement('div');
+  wrapeTagsHeader.innerHTML = showRightSideHeader(tagsData.tags[0].title, tags.className);
+  const tag = drawElement('div');
+  tag.innerHTML = tagsData.tags[0].tagList.map((i) => showRightSideTag(i, tags.className)).join('');
+  makeAppendChild(tags, wrapeTagsHeader, tag);
+  return tags;
+};
+makeAppendChild(rightSide, latestPostsDraw(data.find((b) => b.id === 'latestPost')), categoriesDraw(data.find((b) => b.id === 'categories')), tagsDraw(data.find((b) => b.id === 'tags')));
+makeAppendChild(rightSideFragment, rightSide);
+makeAppendChild(main, leftSideFragment, rightSideFragment);
 let selectedMenuItem = document.querySelector('.navigation--selected-menu-link');
 const navigation = document.querySelector('.navigation__right-list');
 navigation.addEventListener('click', (event) => {

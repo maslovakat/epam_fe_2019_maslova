@@ -2,6 +2,10 @@
   display: none;
 }
 
+.container {
+  overflow: hidden;
+}
+
 .navigation {
   &__logo {
     @include make-all-media(2, 2, 2, 11);

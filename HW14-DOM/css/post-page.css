@@ -306,6 +306,10 @@ body {
   display: none;
 }
 
+.container {
+  overflow: hidden;
+}
+
 .navigation__logo {
   position: relative;
   float: left;

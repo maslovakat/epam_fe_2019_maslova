@@ -306,6 +306,10 @@ body {
   display: none;
 }
 
+.container {
+  overflow: hidden;
+}
+
 .navigation__logo {
   position: relative;
   float: left;
@@ -1691,7 +1695,7 @@ body {
   }
 }
 @media (min-width: 1440px) {
-  .latest-posts__block:first-of-type {
+  .latest-posts__block:first-of-type, .latest-posts__block:nth-of-type(3n+1) {
     margin-left: 0%;
   }
 }
@@ -1956,7 +1960,6 @@ body {
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-left: 12.5%;
 }
 @media (min-width: 768px) {
   .latest-portfolio__text {
@@ -1974,21 +1977,6 @@ body {
   .latest-portfolio__text {
     float: left;
     width: 36.6666666667%;
-  }
-}
-@media (min-width: 768px) {
-  .latest-portfolio__text {
-    margin-left: 15%;
-  }
-}
-@media (min-width: 992px) {
-  .latest-portfolio__text {
-    margin-left: 21.6666666667%;
-  }
-}
-@media (min-width: 1440px) {
-  .latest-portfolio__text {
-    margin-left: 29.8333333333%;
   }
 }
 .latest-portfolio__blocks {
@@ -2011,6 +1999,7 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   padding: 0;
+  height: 306px;
 }
 @media (min-width: 768px) {
   .latest-portfolio__blocks {
@@ -2033,7 +2022,7 @@ body {
 .latest-portfolio__block {
   position: relative;
   float: left;
-  width: 58.3333333333%;
+  width: 83.3333333333%;
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
@@ -2049,7 +2038,7 @@ body {
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-left: 16.6666666667%;
+  position: absolute;
   background-size: cover;
   margin-top: 60px;
   height: 244px;
@@ -2059,7 +2048,7 @@ body {
 @media (min-width: 768px) {
   .latest-portfolio__block {
     float: left;
-    width: 41.6666666667%;
+    width: 25%;
   }
 }
 @media (min-width: 992px) {
@@ -2072,21 +2061,6 @@ body {
   .latest-portfolio__block {
     float: left;
     width: 27.5%;
-  }
-}
-@media (min-width: 768px) {
-  .latest-portfolio__block {
-    margin-left: 2.5%;
-  }
-}
-@media (min-width: 992px) {
-  .latest-portfolio__block {
-    margin-left: 2.5%;
-  }
-}
-@media (min-width: 1440px) {
-  .latest-portfolio__block {
-    margin-left: 3.5%;
   }
 }
 @media (min-width: 1440px) {

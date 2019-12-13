@@ -1,5 +1,6 @@
 [
     {
+        "id": "header",
         "title": "Blog",
         "searchIcon": "#aIconSearch2",
         "dropDown": [
@@ -21,6 +22,7 @@
         ]
     },
     {
+        "id": "post",
         "posts": [
             {
                 "mediaType": "video",
@@ -83,6 +85,7 @@
         ]
     },
     {
+        "id": "wholePost",
         "wholePosts": [
             {
                 "mediaTypeSign": "document",
@@ -103,6 +106,7 @@
         ]
     },
     {
+        "id": "bottomButton",
         "bottomPageButton": "Read more"
     }
 ]

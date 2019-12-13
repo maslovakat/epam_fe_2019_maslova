@@ -1,5 +1,6 @@
 [
     {
+        "id": "header",
         "title": "Ideas and perspectives you won’t find anywhere else.",
         "text": "BlogWorld taps into the brains of the world’s most insightful writers, thinkers, and storytellers to bring you the smartest takes on topics that matter. So whatever your interest, you can always find fresh thinking and unique perspectives.",
         "buttons": [
@@ -14,6 +15,7 @@
         ]
     },
     {
+        "id": "aboutUs",
         "title": "About us",
         "description": "This is who we are - or at least who we strive to be…",
         "folders": [
@@ -41,6 +43,7 @@
         ]
     },
     {
+        "id": "latestPost",
         "title": "Latest posts",
         "description": "Information is a source of learning. But unless it is organized, processed and available to the right people",
         "posts": [
@@ -77,9 +80,25 @@
         ]
     },
     {
+        "id": "latestPortfolio",
         "title": "Latest portfolio",
         "description": "Put there articles successfully special warrant submit agree what along then",
         "cards": [
+            {
+                "title": "Art Ocean",
+                "text": "Photography, art, nature",
+                "background": "ocean"
+            },
+            {
+                "title": "City guide",
+                "text": "Photography, city, way",
+                "background": "city"
+            },
+            {
+                "title": "Mountains",
+                "text": "Art, hiking",
+                "background": "mountains"
+            },
             {
                 "title": "Art Ocean",
                 "text": "Photography, art, nature",
@@ -100,6 +119,7 @@
         "button": "See all works"
     },
     {
+        "id": "testimonials",
         "title": "Testimonials",
         "quote": "We move at a fast pace. I’m always working on something. I am excited about it!",
         "author": "Martin Oda",
@@ -109,6 +129,7 @@
         "arrowSign": "#aIconArrow"
     },
     {
+        "id": "contactUs",
         "title": "Contact us",
         "description": "Put there articles successfully special warrant submit agree what along then",
         "communicate": [
@@ -127,6 +148,7 @@
         ]
     },
     {
+        "id": "nextSteps",
         "title": "What will be next step?",
         "list": [
             {
