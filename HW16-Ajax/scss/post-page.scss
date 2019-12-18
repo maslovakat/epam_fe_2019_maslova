@@ -1,0 +1,603 @@
+@import "main";
+
+.header {
+  box-sizing: border-box;
+  height: 80px;
+  background: $white;
+}
+
+.main {
+  clear: both;
+
+  &__left {
+    @include make-all-media(7.2, 7, 10, 12);
+    @include make-all-media-offset(-0.2, 0, 1.3, 0);
+
+    box-sizing: border-box;
+
+    &-header {
+      margin-top: 45px;
+      margin-bottom: 25px;
+      width: 100%;
+      font-family: $hind-siliguri-semiBold;
+      font-size: nth($font-sizes, 1);
+      font-weight: 500;
+      line-height: 37px;
+      letter-spacing: 0.05px;
+    }
+  }
+
+  &__right {
+    @include make-all-media(4.75, 4.75, 10, 11);
+    @include make-all-media-offset(0.25, 0, 1.3, 0.5);
+
+    box-sizing: border-box;
+  }
+}
+
+.feedback {
+  @include make-feedback();
+
+  background-color: $white;
+  clear: both;
+
+  &__user-photo {
+    left: -2px;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    &-header {
+      @include make-all-media(10, 10, 10, 10);
+      @include make-all-media-offset(-0.2, -0.2, -0.2, -0.2);
+    }
+
+    &-info {
+      @include make-all-media-offset(0.2, 0.2, 0.2, 0.2);
+    }
+  }
+
+  &__picture {
+    @include make-all-media(12, 7.4, 10, 10);
+    @include make-all-media-offset(-0.35, 2, 1, 0.5);
+
+    margin-bottom: 13px;
+    clear: both;
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  &__audio {
+    @include make-all-media(5.5, 6, 7, 9);
+    @include make-all-media-offset(-0.4, 0, 0, -0.5);
+
+    clear: both;
+    height: 54px;
+    margin-bottom: 15px;
+    outline: none;
+  }
+
+  &__text {
+    @include make-all-media(12, 10, 10, 10);
+    @include make-all-media-offset(-0.4, 0, 0, -0.5);
+
+    clear: both;
+    margin-bottom: 19px;
+    line-height: 26px;
+    letter-spacing: -0.35px;
+
+    &-marked {
+      font-size: nth($font-sizes, 4);
+      font-weight: bold;
+      letter-spacing: -0.5px;
+    }
+
+    &-line-through {
+      font-size: nth($font-sizes, 4);
+      text-decoration: line-through;
+    }
+
+    &-replace {
+      color: $secondary-text;
+      font-size: nth($font-sizes, 4);
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__header {
+    @include make-all-media(10, 10, 10, 10);
+    @include make-all-media-offset(-0.4, 0, 0, -0.5);
+
+    clear: both;
+    font-family: $hind-siliguri-semiBold;
+    font-size: nth($font-sizes, 2);
+    font-weight: 600;
+    line-height: 39px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    letter-spacing: -0.9px;
+  }
+
+  &__quote {
+    @include make-all-media(9.1, 10, 10, 10);
+    @include make-all-media-offset(0.15, 0, 0, -0.5);
+
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 28px;
+    font-family: $hind-siliguri-light;
+    font-size: nth($font-sizes, 5);
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -11px;
+      top: -7px;
+      height: 100%;
+      width: 5px;
+      padding-bottom: 15px;
+      background-color: #e6e6e6;
+    }
+  }
+}
+
+.likes-and-communicate {
+  clear: both;
+  padding-bottom: 70px;
+  border-bottom: 1px solid $line-above-footer;
+  margin-bottom: 35px;
+}
+
+.likes {
+  margin-top: 31px;
+  float: left;
+
+  &__hidden {
+    display: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    background: url("../img/a-icon-like-1.svg");
+
+    &:hover {
+      background: url("../img/a-icon-like-hover.svg");
+    }
+
+    &:active {
+      background: url("../img/a-icon-like-active.svg");
+    }
+  }
+
+  &__quantity {
+    position: relative;
+    top: -3px;
+    font-size: nth($font-sizes, 5);
+    line-height: 25px;
+  }
+}
+
+.communicate {
+  margin-top: 31px;
+  float: right;
+  padding: 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  &__facebook,
+  &__instagram,
+  &__activity {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &--facebook {
+    @include make-social-icons(14px);
+
+    margin: 0 21px 0 0;
+  }
+
+  &--instagram {
+    @include make-social-icons(23px);
+
+    margin: 0 0 0 21px;
+  }
+
+  &--activity {
+    @include make-social-icons(23px);
+  }
+}
+
+.reviews {
+  position: relative;
+
+  &__line {
+    @include make-all-media-offset(0, -0.4, -0.2, -0.9);
+
+    box-sizing: border-box;
+    height: 100%;
+    width: 1px;
+    border: 1px solid $line-above-footer;
+    position: absolute;
+    top: 70px;
+    left: 39px;
+    z-index: -1;
+
+    &::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      height: 16px;
+      width: 16px;
+      border: 2px solid $line-above-footer;
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      top: -16px;
+      left: -8px;
+    }
+  }
+
+  &__header {
+    font-family: $hind-siliguri-semiBold;
+    font-size: nth($font-sizes, 2);
+    font-weight: 500;
+    line-height: 39px;
+    margin-bottom: 63px;
+  }
+
+  &__more-comments {
+    @include secondary-button(158px);
+    @include make-all-media-offset(5.35, 4, 4, 3);
+
+    margin-bottom: 82px;
+  }
+}
+
+.review {
+  @include make-all-media(9.3, 9.3, 9.3, 9.3);
+  @include make-all-media-offset(1.77, 1.77, 1.77, 1.77);
+
+  clear: both;
+  border-radius: 5px;
+  background-color: $blog-feedback-bg;
+  position: relative;
+  margin-bottom: 72px;
+
+  &__user-photo {
+    @include make-all-media(1.8, 2.5, 1.8, 1.8);
+    @include make-all-media-offset(-3, -3.8, -3.2, -3.8);
+
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    float: left;
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  &--emma {
+    @include make-review-user-photo();
+  }
+
+  &--jack {
+    @include make-review-user-photo();
+  }
+
+  &--ann {
+    @include make-review-user-photo();
+
+    margin-bottom: 102px;
+
+    &::after {
+      top: 20%;
+    }
+
+    &::before {
+      @include make-all-media-offset(0, 0, 0, 1.5);
+
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      height: 16px;
+      width: 16px;
+      border: 2px solid $line-above-footer;
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      top: 120%;
+      left: -64px;
+      z-index: 2;
+    }
+  }
+
+  &__name {
+    @include make-all-media(9, 7, 7, 7);
+    @include make-all-media-offset(-0.5, -0.5, -0.5, -0.5);
+
+    float: left;
+    box-sizing: border-box;
+    padding-top: 3px;
+    margin-bottom: 15px;
+  }
+
+  &__header {
+    display: inline-block;
+    font-family: $lucida-grande-bold;
+    font-size: nth($font-sizes, 4);
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__star {
+    width: 14px;
+    height: 14px;
+    margin-right: -5px;
+  }
+
+  &__time {
+    @include make-all-media(2.05, 2.5, 2.5, 2.5);
+    @include make-all-media-offset(1.45, 2.2, 2.2, 2.2);
+
+    padding: 0;
+    padding-top: 15px;
+
+    &-ago {
+      float: right;
+      color: $info-color;
+      font-family: $hind-siliguri-light;
+      font-size: nth($font-sizes, 5);
+      font-weight: 300;
+      line-height: 15px;
+      letter-spacing: -0.9px;
+    }
+  }
+
+  &__clock {
+    width: 14px;
+    height: 14px;
+    float: left;
+  }
+
+  &__text {
+    clear: both;
+    font-size: nth($font-sizes, 5);
+    line-height: 25px;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+
+  &__read {
+    clear: both;
+    float: right;
+    color: $secondary-text;
+    font-family: $hind-siliguri-medium;
+    font-size: nth($font-sizes, 5);
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.3px;
+    margin-bottom: 10px;
+  }
+}
+
+.latest-posts {
+  @include make-row();
+  @include common-styles-for-aside-block(0 30px);
+  @include make-post-aside-header();
+
+  margin-top: 216px;
+
+  &__post {
+    clear: both;
+  }
+
+  &__picture {
+    @include make-all-media(4.75, 4.75, 4.75, 12);
+    @include make-all-media-offset(0, 0, 0, 0);
+
+    padding: 0;
+    margin-bottom: 30px;
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  &__text-block {
+    @include make-all-media(7.25, 4.75, 4.75, 12);
+    @include make-all-media-offset(0, 0, 0, 0);
+
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 0;
+    margin-top: 31px;
+
+    &-header {
+      display: block;
+      font-family: $hind-siliguri-medium;
+      font-size: nth($font-sizes, 4);
+      color: $secondary-text;
+      font-weight: bold;
+      line-height: 23px;
+      letter-spacing: -0.4px;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+  }
+
+  &__block {
+    &-info {
+      @include make-all-media(12, 10, 10, 10);
+
+      clear: both;
+      margin-bottom: 63px;
+      padding: 0;
+      color: $info-color;
+      font-weight: 300;
+      line-height: 15px;
+
+      &-date {
+        @include make-dot-in-info();
+
+        clear: both;
+        display: inline-block;
+        letter-spacing: -1px;
+        padding: 0 10px 0 0;
+        font-size: nth($font-sizes, 5);
+
+        &::after {
+          right: -12px;
+        }
+      }
+
+      &-read {
+        @include make-dot-in-info();
+
+        display: inline-block;
+        letter-spacing: -0.7px;
+        margin: 0 14px 0 0;
+        font-size: nth($font-sizes, 5);
+      }
+
+      &-comments {
+        display: inline-block;
+        font-size: nth($font-sizes, 5);
+        margin-left: -5px;
+        letter-spacing: -0.9px;
+
+        &-icon {
+          position: relative;
+          top: 2px;
+          left: 0;
+          height: 13px;
+          width: 14px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    @include secondary-button(125px);
+
+    margin-bottom: 30px;
+    float: right;
+  }
+}
+
+.categories {
+  @include make-row();
+  @include common-styles-for-aside-block(0 30px 10px);
+  @include make-post-aside-header();
+}
+
+.category {
+  margin-bottom: 20px;
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    margin-bottom: 15px;
+  }
+
+  &__header {
+    padding-bottom: 4px;
+    font-size: nth($font-sizes, 4);
+    line-height: 28px;
+    font-weight: 300;
+    padding-left: 5px;
+    letter-spacing: -0.4px;
+    border-bottom: 1px solid $post-header-underline;
+    position: relative;
+
+    &-arrow {
+      width: 18px;
+      position: absolute;
+      top: -4px;
+      right: 0;
+      transform: rotate(0);
+      transition: transform 0.5s;
+      cursor: pointer;
+    }
+
+    &-arrow-item {
+      height: 11px;
+      width: 18px;
+    }
+  }
+
+  &__hidden-block {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+
+    &-item {
+      font-family: $hind-siliguri-light;
+      font-size: nth($font-sizes, 5);
+      font-weight: 300;
+      line-height: 25px;
+      cursor: pointer;
+      padding-top: 6px;
+
+      &:hover {
+        font-family: $hind-siliguri-medium;
+        font-weight: 500;
+      }
+
+      &:first-child {
+        padding-top: 8px;
+      }
+
+      &:last-child {
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  &__check-hidden {
+    display: none;
+  }
+
+  &__check-hidden:checked ~ &__header-arrow {
+    transform: rotate(180deg);
+    top: 5px;
+    transition: transform 0.5s;
+  }
+
+  &__check-hidden:checked ~ &__hidden-block {
+    height: auto;
+    transition: height 0.5s;
+  }
+}
+
+.tags {
+  @include make-row();
+  @include common-styles-for-aside-block(0 30px 15px 29px);
+  @include make-post-aside-header();
+
+  margin-bottom: 80px;
+
+  &__item {
+    @include secondary-button(auto);
+
+    height: auto;
+    padding: 4px 14px;
+    margin-bottom: 14px;
+    margin-right: 8px;
+    letter-spacing: -0.4px;
+  }
+}
