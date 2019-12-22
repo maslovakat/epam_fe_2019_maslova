@@ -12,13 +12,13 @@
     "jest": true
   },
   "rules": {
-    "no-console":
-    [
-      "error",
-      {
-        "allow": ["warn", "error"]
-      }
-    ],
+    // "no-console":
+    // [
+    //   "error",
+    //   {
+    //     "allow": ["warn", "error"]
+    //   }
+    // ],
     "dot-notation": "error",
     "dot-location": [
       "error",
