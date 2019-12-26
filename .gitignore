@@ -1,3 +1,10 @@
 node_modules
 dist
 .idea/
+server/*.js
+server/*.html
+server/*.json
+server/*.md
+server/node_modules/
+server/libs/
+server/config/

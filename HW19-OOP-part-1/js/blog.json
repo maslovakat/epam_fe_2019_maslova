@@ -1,0 +1,112 @@
+[
+    {
+        "id": "header",
+        "title": "Blog",
+        "searchIcon": "#aIconSearch2",
+        "dropDown": [
+            {
+                "name": "Jack Johnson",
+                "photo": "img/Group 3-1.jpg",
+                "descriptionPhoto": "Johnson user photo"
+            },
+            {
+                "name": "Jack Gordon",
+                "photo": "img/Group 3-2.jpg",
+                "descriptionPhoto": "Gordon user photo"
+            },
+            {
+                "name": "Jack King",
+                "photo": "img/Group 3-3.jpg",
+                "descriptionPhoto": "King user photo"
+            }
+        ]
+    },
+    {
+        "id": "post",
+        "posts": [
+            {
+                "mediaType": "video",
+                "mediaTypeSign": "video",
+                "poster": "img/Img-post-1.jpg",
+                "src": "/",
+                "userPhoto": "img/Neil.jpg",
+                "name": "Neil Richards",
+                "date": "11 oct, 2019",
+                "read": "7 min read",
+                "commentSign": "#aIconComment",
+                "comments": "19",
+                "stars": "2.5",
+                "starSign": "#star1",
+                "signHalf": "#group",
+                "signEmpty": "#star2",
+                "title": "In the Future We Will All Live in Star Wars",
+                "text": "The thing you’re doing now, reading prose on a screen, is going out of fashion. The defining narrative of our online moment concerns the decline of text, and the exploding reach and power of audio and video …",
+                "button": "Read more"
+            },
+            {
+                "mediaType": "img",
+                "mediaTypeSign": "audio",
+                "srcDescription": "table with flower",
+                "src": "img/Imgage-post-2.jpg",
+                "userPhoto": "img/Sarah.jpg",
+                "name": "Sarah Healy",
+                "date": "02 oct, 2019",
+                "read": "12 min read",
+                "commentSign": "#aIconComment",
+                "comments": "4",
+                "stars": "1",
+                "starSign": "#star1",
+                "signHalf": "#group",
+                "signEmpty": "#star2",
+                "title": "Far far away, behind the word mountains",
+                "audio": "/",
+                "text": "Fog down the river, where it rolls deified among the tiers of shipping and the waterside pollutions of a great (and dirty) …",
+                "button": "Read more"
+            },
+            {
+                "mediaType": "img",
+                "mediaTypeSign": "picture",
+                "srcDescription": "bedroom",
+                "src": "img/Image-post-3.jpg",
+                "userPhoto": "img/Grace.jpg",
+                "name": "Grace Noh",
+                "date": "23 sep, 2019",
+                "read": "16 min read",
+                "commentSign": "#aIconComment",
+                "comments": "421",
+                "stars": "2",
+                "starSign": "#star1",
+                "signHalf": "#group",
+                "signEmpty": "#star2",
+                "title": "In the Future We Will All Live in Star Wars",
+                "text": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted …",
+                "button": "Read more"
+            }
+        ]
+    },
+    {
+        "id": "wholePost",
+        "wholePosts": [
+            {
+                "mediaTypeSign": "document",
+                "userPhoto": "img/Alex.jpg",
+                "name": "Alex Zlatkus",
+                "date": "11 Aug, 2019",
+                "read": "17 min read",
+                "commentSign": "#aIconComment",
+                "comments": "77",
+                "stars": "3",
+                "starSign": "#star1",
+                "signHalf": "#group",
+                "signEmpty": "#star2",
+                "title": "In the Future We Will All Live in Star Wars",
+                "text": "Fog down the river, where it rolls deified among the tiers of shipping and the waterside pollutions of a great (and dirty) city. Fog on the Essex marshes, fog on the Kentish heights. Fog creeping into the cabooses of collier-brigs; fog lying out on. Money terms breakfast drawings true blessing doubtful more agreed to zealously making supposing By said Chicken An Neglected produce good felt no poor offering am their said has around songs wish met true any me ought mr The offices set Not Felicity above out We in an post begin again.",
+                "button": "Read more"
+            }
+        ]
+    },
+    {
+        "id": "bottomButton",
+        "bottomPageButton": "Read more"
+    }
+]
