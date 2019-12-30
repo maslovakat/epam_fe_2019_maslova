@@ -1,0 +1,28 @@
+[
+    {
+        "id": "header",
+        "title": "Blog",
+        "searchIcon": "#aIconSearch2",
+        "dropDown": [
+            {
+                "name": "Jack Johnson",
+                "photo": "img/Group 3-1.jpg",
+                "descriptionPhoto": "Johnson user photo"
+            },
+            {
+                "name": "Jack Gordon",
+                "photo": "img/Group 3-2.jpg",
+                "descriptionPhoto": "Gordon user photo"
+            },
+            {
+                "name": "Jack King",
+                "photo": "img/Group 3-3.jpg",
+                "descriptionPhoto": "King user photo"
+            }
+        ]
+    },
+    {
+        "id": "bottomButton",
+        "bottomPageButton": "Read more"
+    }
+]
